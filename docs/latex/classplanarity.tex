@@ -1,0 +1,366 @@
+\hypertarget{classplanarity}{}\section{planarity Class Reference}
+\label{classplanarity}\index{planarity@{planarity}}
+
+
+Tests if a graph can be drawn on a plane without any edge crossings.  
+
+
+
+
+{\ttfamily \#include $<$planarity.\+h$>$}
+
+Inheritance diagram for planarity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classplanarity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classplanarity_ab0377cf75279277a848f7e2eed507d00}{planarity}} ()
+\begin{DoxyCompactList}\small\item\em Creates an object of the planarity test algorithm. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classplanarity_a3e0c0f1a724191042947dfecc640bf05}\label{classplanarity_a3e0c0f1a724191042947dfecc640bf05}} 
+\mbox{\hyperlink{classplanarity_a3e0c0f1a724191042947dfecc640bf05}{$\sim$planarity}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classplanarity_ae06c471d957a116aad14e338c341f8b1}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\begin{DoxyCompactList}\small\item\em Checks whether planarity test can be applied to {\ttfamily G}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\begin{DoxyCompactList}\small\item\em Runs planarity test on {\ttfamily G}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplanarity_aca500e3d46a99c6231aff86afa2a71b1}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets algorithm object, such that it can be applied to another graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplanarity_a1679e285a7135b48b572764f5e8e773d}{calc\+\_\+embedding}} (bool p)
+\begin{DoxyCompactList}\small\item\em If {\ttfamily p} is true a planar embedding will be calculated in the next run. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classplanarity_aea94b0de2deb46ef774179dd3572bf2d}{calc\+\_\+embedding}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if a planar embedding will be calculated in the next run. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplanarity_a7b8e8e5414a4eedb0f99253d3b62ffa3}{calc\+\_\+obstruction}} (bool p)
+\begin{DoxyCompactList}\small\item\em If {\ttfamily p} is true the obstructions to planarity will be calculated in the next run. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classplanarity_a0c520ff8f91336a2dc644f9e4ed8bb2e}{calc\+\_\+obstruction}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the obstructions to planarity will be calculated in the next run. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplanarity_af67236533dce559d2670eae581750f54}{make\+\_\+biconnected}} (bool p)
+\begin{DoxyCompactList}\small\item\em Determines the strategy used to test a graph which is not biconnected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classplanarity_a822d67100814e1887494e7213e6f0531}{make\+\_\+biconnected}} () const
+\begin{DoxyCompactList}\small\item\em Returns strategy for testing graphs, which are not biconnected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classplanarity_af60c3d06cffa7ce3a470797fd758be5f}{is\+\_\+planar}} () const
+\begin{DoxyCompactList}\small\item\em Result of last test. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \& \mbox{\hyperlink{classplanarity_a9ab79a340e361c3300cc08e82edd4e12}{get\+\_\+embedding}} ()
+\begin{DoxyCompactList}\small\item\em If graph in last \mbox{\hyperlink{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}{run}} was planar a planar embedding is calculated during the reductions. This function gives access to it. \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \& \mbox{\hyperlink{classplanarity_ac9021696934cc24afbc36aa307b2919b}{get\+\_\+obstruction\+\_\+edges}} ()
+\begin{DoxyCompactList}\small\item\em Returns the edges of a subgraph homeomorphic to either K3,3 or K5 if graph in last run was not planar. \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{classnode}{node}} $>$ \& \mbox{\hyperlink{classplanarity_ac1bee50e38d398f3868a3308164caa31}{get\+\_\+obstruction\+\_\+nodes}} ()
+\begin{DoxyCompactList}\small\item\em Returns the nodes of a subgraph homeomorphic to either K3,3 or K5 if graph in last run was not planar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Tests if a graph can be drawn on a plane without any edge crossings. 
+
+\begin{DoxyParagraph}{Date}
+2019/05/07 18\+:17\+:08 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Revision}
+1.\+22 
+\end{DoxyParagraph}
+
+
+This class implements the Lempel-\/\+Even-\/\+Cederbaum planarity test using P\+Q-\/trees. In case the graph is planar a planar embedding is obtained, i.\+e. for each node in the graph an ordered adjacency list is calculated, such that there exists a planar drawing in which all adjacent edges around a node apply to this order.
+
+If the graph is not planar Kuratowski\textquotesingle{}s famous theorem states that it must contain a subgraph hoemeomorphic to either K5 (the complete graph with five nodes) or K3,3 (the complete bipartite graph with three nodes each side). In this case the nodes and edges of the tested graph that form either of these two are calculated.
+
+In case the graph is planar and has $N$ nodes the algorithm needs $\mathcal{O}(N)$ time for the test (including the planar embedding). In case the graph isn\textquotesingle{}t planar it needs at most $\mathcal{O}(E)$ time if $E$ is the number of edges for both the test and the detection of K5 or K3,3. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classplanarity_ab0377cf75279277a848f7e2eed507d00}\label{classplanarity_ab0377cf75279277a848f7e2eed507d00}} 
+\index{planarity@{planarity}!planarity@{planarity}}
+\index{planarity@{planarity}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{planarity()}{planarity()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+K\+G\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE planarity\+::planarity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates an object of the planarity test algorithm. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm}{algorithm}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classplanarity_a1679e285a7135b48b572764f5e8e773d}\label{classplanarity_a1679e285a7135b48b572764f5e8e773d}} 
+\index{planarity@{planarity}!calc\+\_\+embedding@{calc\+\_\+embedding}}
+\index{calc\+\_\+embedding@{calc\+\_\+embedding}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{calc\+\_\+embedding()}{calc\_embedding()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void planarity\+::calc\+\_\+embedding (\begin{DoxyParamCaption}\item[{bool}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If {\ttfamily p} is true a planar embedding will be calculated in the next run. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & {\ttfamily true} iff embedding should be calculated\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_a9ab79a340e361c3300cc08e82edd4e12}{get\+\_\+embedding}} 
+
+\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classplanarity_aea94b0de2deb46ef774179dd3572bf2d}\label{classplanarity_aea94b0de2deb46ef774179dd3572bf2d}} 
+\index{planarity@{planarity}!calc\+\_\+embedding@{calc\+\_\+embedding}}
+\index{calc\+\_\+embedding@{calc\+\_\+embedding}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{calc\+\_\+embedding()}{calc\_embedding()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool planarity\+::calc\+\_\+embedding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if a planar embedding will be calculated in the next run. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff embedding will be calculated\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_a9ab79a340e361c3300cc08e82edd4e12}{get\+\_\+embedding}} 
+
+\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classplanarity_a7b8e8e5414a4eedb0f99253d3b62ffa3}\label{classplanarity_a7b8e8e5414a4eedb0f99253d3b62ffa3}} 
+\index{planarity@{planarity}!calc\+\_\+obstruction@{calc\+\_\+obstruction}}
+\index{calc\+\_\+obstruction@{calc\+\_\+obstruction}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{calc\+\_\+obstruction()}{calc\_obstruction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void planarity\+::calc\+\_\+obstruction (\begin{DoxyParamCaption}\item[{bool}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If {\ttfamily p} is true the obstructions to planarity will be calculated in the next run. 
+
+This implies the calculation of an embedding.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & {\ttfamily true} iff obstructions to planarity should be calculated\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_ac9021696934cc24afbc36aa307b2919b}{get\+\_\+obstruction\+\_\+edges}} 
+
+\mbox{\hyperlink{classplanarity_ac1bee50e38d398f3868a3308164caa31}{get\+\_\+obstruction\+\_\+nodes}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classplanarity_a0c520ff8f91336a2dc644f9e4ed8bb2e}\label{classplanarity_a0c520ff8f91336a2dc644f9e4ed8bb2e}} 
+\index{planarity@{planarity}!calc\+\_\+obstruction@{calc\+\_\+obstruction}}
+\index{calc\+\_\+obstruction@{calc\+\_\+obstruction}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{calc\+\_\+obstruction()}{calc\_obstruction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool planarity\+::calc\+\_\+obstruction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the obstructions to planarity will be calculated in the next run. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff obstructions to planarity will be calculated\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_ac9021696934cc24afbc36aa307b2919b}{get\+\_\+obstruction\+\_\+edges}} 
+
+\mbox{\hyperlink{classplanarity_ac1bee50e38d398f3868a3308164caa31}{get\+\_\+obstruction\+\_\+nodes}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classplanarity_ae06c471d957a116aad14e338c341f8b1}\label{classplanarity_ae06c471d957a116aad14e338c341f8b1}} 
+\index{planarity@{planarity}!check@{check}}
+\index{check@{check}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int planarity\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks whether planarity test can be applied to {\ttfamily G}. 
+
+This should return always {\ttfamily K\+G\+L\+\_\+\+OK}. There aren\textquotesingle{}t any restrictions on {\ttfamily G}, even multiple edges and selfloops are tolerated.
+
+\begin{DoxyNote}{Note}
+Selfloops and multiple edges will not be added to the planar embedding. \mbox{\hyperlink{classplanar__embedding_ab04859be18352bc53a120b0676a499ba}{planar\+\_\+embedding\+::selfloops}} and \mbox{\hyperlink{classplanar__embedding_afb50ef8f3b5b2c6690b9d364db21f36f}{planar\+\_\+embedding\+::multiple\+\_\+edges}} can be used to get these.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em G} & arbitrary graph\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em K\+G\+L\+\_\+\+OK} & if planarity test can be applied \\
+\hline
+{\em K\+G\+L\+\_\+\+E\+R\+R\+OR} & if not\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+
+\mbox{\Hypertarget{classplanarity_a9ab79a340e361c3300cc08e82edd4e12}\label{classplanarity_a9ab79a340e361c3300cc08e82edd4e12}} 
+\index{planarity@{planarity}!get\+\_\+embedding@{get\+\_\+embedding}}
+\index{get\+\_\+embedding@{get\+\_\+embedding}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{get\+\_\+embedding()}{get\_embedding()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}}\& planarity\+::get\+\_\+embedding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If graph in last \mbox{\hyperlink{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}{run}} was planar a planar embedding is calculated during the reductions. This function gives access to it. 
+
+\begin{DoxyReturn}{Returns}
+planar embedding of graph in last run
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_a1679e285a7135b48b572764f5e8e773d}{calc\+\_\+embedding}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classplanarity_ac9021696934cc24afbc36aa307b2919b}\label{classplanarity_ac9021696934cc24afbc36aa307b2919b}} 
+\index{planarity@{planarity}!get\+\_\+obstruction\+\_\+edges@{get\+\_\+obstruction\+\_\+edges}}
+\index{get\+\_\+obstruction\+\_\+edges@{get\+\_\+obstruction\+\_\+edges}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{get\+\_\+obstruction\+\_\+edges()}{get\_obstruction\_edges()}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{classedge}{edge}}$>$\& planarity\+::get\+\_\+obstruction\+\_\+edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the edges of a subgraph homeomorphic to either K3,3 or K5 if graph in last run was not planar. 
+
+\begin{DoxyReturn}{Returns}
+edges of subgraph homeomorphic to either K3,3 or K5
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_ac1bee50e38d398f3868a3308164caa31}{get\+\_\+obstruction\+\_\+nodes}} 
+
+\mbox{\hyperlink{classplanarity_a7b8e8e5414a4eedb0f99253d3b62ffa3}{calc\+\_\+obstruction}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classplanarity_ac1bee50e38d398f3868a3308164caa31}\label{classplanarity_ac1bee50e38d398f3868a3308164caa31}} 
+\index{planarity@{planarity}!get\+\_\+obstruction\+\_\+nodes@{get\+\_\+obstruction\+\_\+nodes}}
+\index{get\+\_\+obstruction\+\_\+nodes@{get\+\_\+obstruction\+\_\+nodes}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{get\+\_\+obstruction\+\_\+nodes()}{get\_obstruction\_nodes()}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{classnode}{node}}$>$\& planarity\+::get\+\_\+obstruction\+\_\+nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the nodes of a subgraph homeomorphic to either K3,3 or K5 if graph in last run was not planar. 
+
+\begin{DoxyReturn}{Returns}
+nodes of subgraph homeomorphic to either K3,3 or K5
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_ac9021696934cc24afbc36aa307b2919b}{get\+\_\+obstruction\+\_\+edges}} 
+
+\mbox{\hyperlink{classplanarity_a7b8e8e5414a4eedb0f99253d3b62ffa3}{calc\+\_\+obstruction}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classplanarity_af60c3d06cffa7ce3a470797fd758be5f}\label{classplanarity_af60c3d06cffa7ce3a470797fd758be5f}} 
+\index{planarity@{planarity}!is\+\_\+planar@{is\+\_\+planar}}
+\index{is\+\_\+planar@{is\+\_\+planar}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{is\+\_\+planar()}{is\_planar()}}
+{\footnotesize\ttfamily bool planarity\+::is\+\_\+planar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Result of last test. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff graph in last run was planar. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classplanarity_af67236533dce559d2670eae581750f54}\label{classplanarity_af67236533dce559d2670eae581750f54}} 
+\index{planarity@{planarity}!make\+\_\+biconnected@{make\+\_\+biconnected}}
+\index{make\+\_\+biconnected@{make\+\_\+biconnected}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{make\+\_\+biconnected()}{make\_biconnected()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void planarity\+::make\+\_\+biconnected (\begin{DoxyParamCaption}\item[{bool}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determines the strategy used to test a graph which is not biconnected. 
+
+If this is enabled the graph will be made biconnected by adding some new edges. This is usually faster than testing the biconnected components one by one, which is done if this option is disabled. By default this is enabled.
+
+\begin{DoxyNote}{Note}
+This is not fully tested, i.\+e. at the moment this feature should be used only for the test without embedding or kuratowski graphs.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & true iff graph should be made biconnected\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a774fd08203a6d164605afc4cdc8b9201}{biconnectivity\+::make\+\_\+biconnected}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classplanarity_a822d67100814e1887494e7213e6f0531}\label{classplanarity_a822d67100814e1887494e7213e6f0531}} 
+\index{planarity@{planarity}!make\+\_\+biconnected@{make\+\_\+biconnected}}
+\index{make\+\_\+biconnected@{make\+\_\+biconnected}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{make\+\_\+biconnected()}{make\_biconnected()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool planarity\+::make\+\_\+biconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns strategy for testing graphs, which are not biconnected. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff graph will be made biconnected before test\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a774fd08203a6d164605afc4cdc8b9201}{biconnectivity\+::make\+\_\+biconnected}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classplanarity_aca500e3d46a99c6231aff86afa2a71b1}\label{classplanarity_aca500e3d46a99c6231aff86afa2a71b1}} 
+\index{planarity@{planarity}!reset@{reset}}
+\index{reset@{reset}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void planarity\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets algorithm object, such that it can be applied to another graph. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm\+::reset}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+
+\mbox{\Hypertarget{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}\label{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}} 
+\index{planarity@{planarity}!run@{run}}
+\index{run@{run}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int planarity\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Runs planarity test on {\ttfamily G}. 
+
+This should return always {\ttfamily K\+G\+L\+\_\+\+OK}. The return value only tracks errors that might occur, it is definitly {\itshape not} the result of the test itself. The result of the test is stored in a member variable and can be accessed via \mbox{\hyperlink{classplanarity_af60c3d06cffa7ce3a470797fd758be5f}{is\+\_\+planar}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & arbitrary graph\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em K\+G\+L\+\_\+\+OK} & if planarity test was sucessfully applied \\
+\hline
+{\em K\+G\+L\+\_\+\+E\+R\+R\+OR} & if not\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/planarity.\+h\item 
+src/planarity.\+cpp\end{DoxyCompactItemize}

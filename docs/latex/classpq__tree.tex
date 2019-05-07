@@ -1,0 +1,232 @@
+\hypertarget{classpq__tree}{}\section{pq\+\_\+tree Class Reference}
+\label{classpq__tree}\index{pq\+\_\+tree@{pq\+\_\+tree}}
+
+
+P\+Q-\/\+Trees.  
+
+
+
+
+{\ttfamily \#include $<$pq\+\_\+tree.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpq__tree_a241e516724fdb5ca21239772164458f3}\label{classpq__tree_a241e516724fdb5ca21239772164458f3}} 
+typedef \mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ $>$ {\bfseries sons\+\_\+list}
+\item 
+\mbox{\Hypertarget{classpq__tree_ab47263066d4b0acc70e00043870d748a}\label{classpq__tree_ab47263066d4b0acc70e00043870d748a}} 
+typedef \mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ $>$\+::iterator {\bfseries sons\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpq__tree_afea06921780eb07ddb36294b109964d0}\label{classpq__tree_afea06921780eb07ddb36294b109964d0}} 
+\mbox{\hyperlink{classpq__tree_afea06921780eb07ddb36294b109964d0}{pq\+\_\+tree}} ()
+\begin{DoxyCompactList}\small\item\em Creates empty \mbox{\hyperlink{classpq__tree}{pq\+\_\+tree}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpq__tree_a2929a77b0e62274989884fd63db7fbe1}{pq\+\_\+tree}} (int id, \mbox{\hyperlink{classnode}{node}} n, const list$<$ \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$>$ \&le)
+\begin{DoxyCompactList}\small\item\em Creates a P\+Q-\/tree consisting of a single P-\/node whose whose children are the leaves given in list {\ttfamily le}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpq__tree_ae6b44b3a6db8914beb368aee2bf7cc92}\label{classpq__tree_ae6b44b3a6db8914beb368aee2bf7cc92}} 
+\mbox{\hyperlink{classpq__tree_ae6b44b3a6db8914beb368aee2bf7cc92}{$\sim$pq\+\_\+tree}} ()
+\begin{DoxyCompactList}\small\item\em Deletes P\+Q-\/tree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpq__tree_a89b995f33c70db329b5e0cdd2ebe12b0}{reduce}} (list$<$ \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$>$ \&leaves)
+\begin{DoxyCompactList}\small\item\em Applies so called template matchings to the tree until either all leaves labeled with {\ttfamily id} are consecutive in all equivalent trees or until it is recognized that this can\textquotesingle{}t be achieved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpq__tree_ae201bdcb7bb1d53f36685c7c35b8d9dd}{replace\+\_\+pert}} (int id, \mbox{\hyperlink{classnode}{node}} n, const list$<$ \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$>$ \&le, \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} $\ast$em=0, list$<$ \mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}} $>$ $\ast$dirs=0)
+\begin{DoxyCompactList}\small\item\em Replaces all the pertinent parts of the P\+Q-\/tree after a (successful) reduction by a new P-\/node, whose children are given in {\ttfamily le}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpq__tree_a37f329b20436db734e9a73e3840d7521}{get\+\_\+frontier}} (\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&em, list$<$ \mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}} $>$ \&dirs)
+\begin{DoxyCompactList}\small\item\em Scans whole tree from left to right and stores edges (in the graph) represented by the leaves in {\ttfamily em}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpq__tree_a1e2bdfb9af85972e9254260d74c63651}\label{classpq__tree_a1e2bdfb9af85972e9254260d74c63651}} 
+void \mbox{\hyperlink{classpq__tree_a1e2bdfb9af85972e9254260d74c63651}{reset}} ()
+\begin{DoxyCompactList}\small\item\em After a (successful) reduction {\ttfamily reset} has to be called in order to prepare the tree for the next reduction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ \mbox{\hyperlink{classpq__tree_ad5788903c1411626e69e49aaa1b6541b}{get\+\_\+fail}} ()
+\begin{DoxyCompactList}\small\item\em Returns the (P\+Q-\/) node to which none of the template matchings were applicable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpq__tree_ab320f9d84cba3198a95cc5f33fde0813}{is\+\_\+fail\+\_\+root}} ()
+\begin{DoxyCompactList}\small\item\em Returns true iff fail is the root of the pertinent subtree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsymlist__iterator}{sons\+\_\+iterator}} \mbox{\hyperlink{classpq__tree_a68737f5cebd17670d9b73b797ca01a74}{remove\+\_\+dir\+\_\+ind}} (\mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$q\+\_\+fail, \mbox{\hyperlink{structsymlist__iterator}{sons\+\_\+iterator}} s\+\_\+it)
+\begin{DoxyCompactList}\small\item\em Remove a direction indicator among sons of a Q-\/node. Needed for computation of the obstruction set. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpq__tree_a170813af06d7b02083c3a7785e080de5}{integrity\+\_\+check}} () const
+\begin{DoxyCompactList}\small\item\em Checks the structure of the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpq__tree_a2e8bee8ed51cc9d2567b69099c4d7cca}\label{classpq__tree_a2e8bee8ed51cc9d2567b69099c4d7cca}} 
+K\+G\+L\+\_\+\+E\+X\+T\+E\+RN friend ostream \& {\bfseries operator$<$$<$} (ostream \&, const \mbox{\hyperlink{classpq__tree}{pq\+\_\+tree}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+Q-\/\+Trees. 
+
+\begin{DoxyParagraph}{Date}
+2019/05/07 18\+:17\+:08 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Revision}
+1.\+20 
+\end{DoxyParagraph}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpq__tree_a2929a77b0e62274989884fd63db7fbe1}\label{classpq__tree_a2929a77b0e62274989884fd63db7fbe1}} 
+\index{pq\+\_\+tree@{pq\+\_\+tree}!pq\+\_\+tree@{pq\+\_\+tree}}
+\index{pq\+\_\+tree@{pq\+\_\+tree}!pq\+\_\+tree@{pq\+\_\+tree}}
+\subsubsection{\texorpdfstring{pq\+\_\+tree()}{pq\_tree()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+K\+G\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE pq\+\_\+tree\+::pq\+\_\+tree (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{n,  }\item[{const list$<$ \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$>$ \&}]{le }\end{DoxyParamCaption})}
+
+
+
+Creates a P\+Q-\/tree consisting of a single P-\/node whose whose children are the leaves given in list {\ttfamily le}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & st-\/number of {\ttfamily n} \\
+\hline
+{\em n} & node in the graph to which the P-\/node refers \\
+\hline
+{\em le} & list of children \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpq__tree_ad5788903c1411626e69e49aaa1b6541b}\label{classpq__tree_ad5788903c1411626e69e49aaa1b6541b}} 
+\index{pq\+\_\+tree@{pq\+\_\+tree}!get\+\_\+fail@{get\+\_\+fail}}
+\index{get\+\_\+fail@{get\+\_\+fail}!pq\+\_\+tree@{pq\+\_\+tree}}
+\subsubsection{\texorpdfstring{get\+\_\+fail()}{get\_fail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$ pq\+\_\+tree\+::get\+\_\+fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the (P\+Q-\/) node to which none of the template matchings were applicable. 
+
+\begin{DoxyReturn}{Returns}
+P\+Q-\/node at which the reduction failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpq__tree_a37f329b20436db734e9a73e3840d7521}\label{classpq__tree_a37f329b20436db734e9a73e3840d7521}} 
+\index{pq\+\_\+tree@{pq\+\_\+tree}!get\+\_\+frontier@{get\+\_\+frontier}}
+\index{get\+\_\+frontier@{get\+\_\+frontier}!pq\+\_\+tree@{pq\+\_\+tree}}
+\subsubsection{\texorpdfstring{get\+\_\+frontier()}{get\_frontier()}}
+{\footnotesize\ttfamily void pq\+\_\+tree\+::get\+\_\+frontier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&}]{em,  }\item[{list$<$ \mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}} $>$ \&}]{dirs }\end{DoxyParamCaption})}
+
+
+
+Scans whole tree from left to right and stores edges (in the graph) represented by the leaves in {\ttfamily em}. 
+
+All direction indicators in the tree are stored in {\ttfamily dirs}. This is used in planarity test to get the upward embedding of the last node, because no reduction is needed in this case since all leaves are labeled with the same number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em em} & planar embedding \\
+\hline
+{\em dirs} & direction indicators in tree \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpq__tree_a170813af06d7b02083c3a7785e080de5}\label{classpq__tree_a170813af06d7b02083c3a7785e080de5}} 
+\index{pq\+\_\+tree@{pq\+\_\+tree}!integrity\+\_\+check@{integrity\+\_\+check}}
+\index{integrity\+\_\+check@{integrity\+\_\+check}!pq\+\_\+tree@{pq\+\_\+tree}}
+\subsubsection{\texorpdfstring{integrity\+\_\+check()}{integrity\_check()}}
+{\footnotesize\ttfamily bool pq\+\_\+tree\+::integrity\+\_\+check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks the structure of the tree. 
+
+\begin{DoxyNote}{Note}
+Use this only for debugging since it scans the whole tree, which isn\textquotesingle{}t acceptable in terms of performance in most cases.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff tree passes checks \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classpq__tree_ab320f9d84cba3198a95cc5f33fde0813}\label{classpq__tree_ab320f9d84cba3198a95cc5f33fde0813}} 
+\index{pq\+\_\+tree@{pq\+\_\+tree}!is\+\_\+fail\+\_\+root@{is\+\_\+fail\+\_\+root}}
+\index{is\+\_\+fail\+\_\+root@{is\+\_\+fail\+\_\+root}!pq\+\_\+tree@{pq\+\_\+tree}}
+\subsubsection{\texorpdfstring{is\+\_\+fail\+\_\+root()}{is\_fail\_root()}}
+{\footnotesize\ttfamily bool pq\+\_\+tree\+::is\+\_\+fail\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true iff fail is the root of the pertinent subtree. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff reduction failed at the root of the pertinent subtree. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classpq__tree_a89b995f33c70db329b5e0cdd2ebe12b0}\label{classpq__tree_a89b995f33c70db329b5e0cdd2ebe12b0}} 
+\index{pq\+\_\+tree@{pq\+\_\+tree}!reduce@{reduce}}
+\index{reduce@{reduce}!pq\+\_\+tree@{pq\+\_\+tree}}
+\subsubsection{\texorpdfstring{reduce()}{reduce()}}
+{\footnotesize\ttfamily bool pq\+\_\+tree\+::reduce (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$>$ \&}]{leaves }\end{DoxyParamCaption})}
+
+
+
+Applies so called template matchings to the tree until either all leaves labeled with {\ttfamily id} are consecutive in all equivalent trees or until it is recognized that this can\textquotesingle{}t be achieved. 
+
+This operation is guaranteed to perform in O(\+P\+P\+T), where P\+PT is the size of the so called {\itshape pruned} {\itshape pertinent} {\itshape subtree}, which can be constructed, by cutting away all the parts of the P\+Q-\/tree, that do not contain a leaf labeled with {\ttfamily id}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em leaves} & list of full leaves\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if tree was successfully reduced \\
+\hline
+{\em false} & if reduction failed \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classpq__tree_a68737f5cebd17670d9b73b797ca01a74}\label{classpq__tree_a68737f5cebd17670d9b73b797ca01a74}} 
+\index{pq\+\_\+tree@{pq\+\_\+tree}!remove\+\_\+dir\+\_\+ind@{remove\+\_\+dir\+\_\+ind}}
+\index{remove\+\_\+dir\+\_\+ind@{remove\+\_\+dir\+\_\+ind}!pq\+\_\+tree@{pq\+\_\+tree}}
+\subsubsection{\texorpdfstring{remove\+\_\+dir\+\_\+ind()}{remove\_dir\_ind()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsymlist__iterator}{pq\+\_\+tree\+::sons\+\_\+iterator}} pq\+\_\+tree\+::remove\+\_\+dir\+\_\+ind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$}]{q\+\_\+fail,  }\item[{\mbox{\hyperlink{structsymlist__iterator}{sons\+\_\+iterator}}}]{s\+\_\+it }\end{DoxyParamCaption})}
+
+
+
+Remove a direction indicator among sons of a Q-\/node. Needed for computation of the obstruction set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+\_\+fail} & the Q-\/node on which the reduction failed \\
+\hline
+{\em the} & position of the direction indicator among the sons\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em next} & valid sons iterator \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classpq__tree_ae201bdcb7bb1d53f36685c7c35b8d9dd}\label{classpq__tree_ae201bdcb7bb1d53f36685c7c35b8d9dd}} 
+\index{pq\+\_\+tree@{pq\+\_\+tree}!replace\+\_\+pert@{replace\+\_\+pert}}
+\index{replace\+\_\+pert@{replace\+\_\+pert}!pq\+\_\+tree@{pq\+\_\+tree}}
+\subsubsection{\texorpdfstring{replace\+\_\+pert()}{replace\_pert()}}
+{\footnotesize\ttfamily void pq\+\_\+tree\+::replace\+\_\+pert (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{n,  }\item[{const list$<$ \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$>$ \&}]{le,  }\item[{\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} $\ast$}]{em = {\ttfamily 0},  }\item[{list$<$ \mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}} $>$ $\ast$}]{dirs = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Replaces all the pertinent parts of the P\+Q-\/tree after a (successful) reduction by a new P-\/node, whose children are given in {\ttfamily le}. 
+
+The edges (in the graph), represented by the leaves are stored in left to right order in {\ttfamily em}\mbox{[}n\mbox{]} They form (up to reversion) the so called upward-\/embedding. A direction indicator representing the direction in which the leaves were scanned is added to the sons of the root of the pertinent subtree (if neccessary). All direction indicators in the pertinent subtree are stored in {\ttfamily dirs}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & st-\/number of {\ttfamily n} \\
+\hline
+{\em n} & node in the graph to which the new P-\/node refers \\
+\hline
+{\em le} & list of children \\
+\hline
+{\em em} & planar embedding \\
+\hline
+{\em dirs} & direction indicators in pertinent subtree \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/pq\+\_\+tree.\+h\item 
+src/pq\+\_\+tree.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{structsymlist__iterator}{}\section{symlist\+\_\+iterator$<$ T, Ref $>$ Struct Template Reference}
+\label{structsymlist__iterator}\index{symlist\+\_\+iterator$<$ T, Ref $>$@{symlist\+\_\+iterator$<$ T, Ref $>$}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_ae1426e0085d4c88445c0a84675ee7d38}\label{structsymlist__iterator_ae1426e0085d4c88445c0a84675ee7d38}} 
+typedef \mbox{\hyperlink{structsymlist__iterator}{symlist\+\_\+iterator}}$<$ T, Ref $>$ {\bfseries self}
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_ad9462ba519f8ca01ea64e04e25ee3750}\label{structsymlist__iterator_ad9462ba519f8ca01ea64e04e25ee3750}} 
+typedef \mbox{\hyperlink{structsymnode}{symnode}}$<$ T $>$ $\ast$ {\bfseries linktype}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_ad2bfdc772635fde5f302c197e3aecb3a}\label{structsymlist__iterator_ad2bfdc772635fde5f302c197e3aecb3a}} 
+{\bfseries symlist\+\_\+iterator} (const \mbox{\hyperlink{structsymlist__iterator}{self}} \&it)
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_addbd9bd7f755bf6272b0f4cc0c37cd5e}\label{structsymlist__iterator_addbd9bd7f755bf6272b0f4cc0c37cd5e}} 
+{\bfseries symlist\+\_\+iterator} (\mbox{\hyperlink{structsymnode}{linktype}} \+\_\+act, int \+\_\+dir)
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_a747f066c9c718ffc91688c5c4ed96f59}\label{structsymlist__iterator_a747f066c9c718ffc91688c5c4ed96f59}} 
+{\bfseries symlist\+\_\+iterator} (\mbox{\hyperlink{structsymnode}{linktype}} \+\_\+act, \mbox{\hyperlink{structsymnode}{linktype}} \+\_\+prev)
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_a06f2e1a93beb87afd09795b7f3898bdd}\label{structsymlist__iterator_a06f2e1a93beb87afd09795b7f3898bdd}} 
+\mbox{\hyperlink{structsymlist__iterator}{self}} \& {\bfseries operator=} (const \mbox{\hyperlink{structsymlist__iterator}{self}} \&it)
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_ace4bd4255b49937b7ee77d2f726ccf0b}\label{structsymlist__iterator_ace4bd4255b49937b7ee77d2f726ccf0b}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{structsymlist__iterator}{self}} \&it) const
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_ac440e4e4d3f66483a699eebc8ba1ed6e}\label{structsymlist__iterator_ac440e4e4d3f66483a699eebc8ba1ed6e}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{structsymlist__iterator}{self}} \&it) const
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_adcb398097fb58caeb6c55ef78744bccf}\label{structsymlist__iterator_adcb398097fb58caeb6c55ef78744bccf}} 
+Ref {\bfseries operator$\ast$} ()
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_a04939591b3f553d3e59b004d07cc8598}\label{structsymlist__iterator_a04939591b3f553d3e59b004d07cc8598}} 
+\mbox{\hyperlink{structsymlist__iterator}{self}} \& {\bfseries operator++} ()
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_a510c633d2c7d830afa57acfa36434e52}\label{structsymlist__iterator_a510c633d2c7d830afa57acfa36434e52}} 
+\mbox{\hyperlink{structsymlist__iterator}{self}} \& {\bfseries operator-\/-\/} ()
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_a4135864290fda971467e41869b20e904}\label{structsymlist__iterator_a4135864290fda971467e41869b20e904}} 
+void {\bfseries reverse} ()
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_ad363a9756ff599c960668320a93532ed}\label{structsymlist__iterator_ad363a9756ff599c960668320a93532ed}} 
+\mbox{\hyperlink{structsymnode}{linktype}} \& {\bfseries next} ()
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_a30f1c0a962713ded0c24871093089fb0}\label{structsymlist__iterator_a30f1c0a962713ded0c24871093089fb0}} 
+\mbox{\hyperlink{structsymnode}{linktype}} \& {\bfseries prev} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_a260b63ae284e3f07ae510105c7edd6a0}\label{structsymlist__iterator_a260b63ae284e3f07ae510105c7edd6a0}} 
+static int {\bfseries where} (\mbox{\hyperlink{structsymnode}{linktype}} \+\_\+act, \mbox{\hyperlink{structsymnode}{linktype}} \+\_\+prev)
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_abeee238d3bfff557cdbf08a05b632fa8}\label{structsymlist__iterator_abeee238d3bfff557cdbf08a05b632fa8}} 
+static int {\bfseries where\+\_\+not} (\mbox{\hyperlink{structsymnode}{linktype}} \+\_\+act, \mbox{\hyperlink{structsymnode}{linktype}} \+\_\+prev)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_a1c7a0193ab85baa7705070975d841fc8}\label{structsymlist__iterator_a1c7a0193ab85baa7705070975d841fc8}} 
+\mbox{\hyperlink{structsymnode}{linktype}} {\bfseries act}
+\item 
+\mbox{\Hypertarget{structsymlist__iterator_a8433e558ceb6b17b225414ef46b4a3e2}\label{structsymlist__iterator_a8433e558ceb6b17b225414ef46b4a3e2}} 
+int {\bfseries dir}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/symlist.\+h\end{DoxyCompactItemize}

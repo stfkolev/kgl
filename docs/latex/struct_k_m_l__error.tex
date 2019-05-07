@@ -1,0 +1,66 @@
+\hypertarget{struct_k_m_l__error}{}\section{K\+M\+L\+\_\+error Struct Reference}
+\label{struct_k_m_l__error}\index{K\+M\+L\+\_\+error@{K\+M\+L\+\_\+error}}
+
+
+Reason and position of an error in a G\+ML file.  
+
+
+
+
+{\ttfamily \#include $<$kml\+\_\+scanner.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+K\+M\+L\+\_\+error\+\_\+value \mbox{\hyperlink{struct_k_m_l__error_af529c360a62a01e2db8ed6b4a9ee0bf2}{err\+\_\+num}}
+\item 
+int \mbox{\hyperlink{struct_k_m_l__error_a2598fe26a2482414d4305d3fbcb17929}{line}}
+\item 
+int \mbox{\hyperlink{struct_k_m_l__error_a8c04fdee854b2dd5e3266776fb6d596f}{column}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reason and position of an error in a G\+ML file. 
+
+When an error occurs while parsing the structure of a G\+ML file {\ttfamily \mbox{\hyperlink{struct_k_m_l__error}{K\+M\+L\+\_\+error}}} is used to return the type and position of the error detected. Position is specified by {\ttfamily line} and {\ttfamily column}, but might be somewhat imprecise. However at least the line number should not differ too much from the real position.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classgraph_a35749ff66d1acd6bbef9852df4f39c95}{graph\+::load}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_k_m_l__error_a8c04fdee854b2dd5e3266776fb6d596f}\label{struct_k_m_l__error_a8c04fdee854b2dd5e3266776fb6d596f}} 
+\index{K\+M\+L\+\_\+error@{K\+M\+L\+\_\+error}!column@{column}}
+\index{column@{column}!K\+M\+L\+\_\+error@{K\+M\+L\+\_\+error}}
+\subsubsection{\texorpdfstring{column}{column}}
+{\footnotesize\ttfamily int K\+M\+L\+\_\+error\+::column}
+
+Contains the column, where the error was detected. \mbox{\Hypertarget{struct_k_m_l__error_af529c360a62a01e2db8ed6b4a9ee0bf2}\label{struct_k_m_l__error_af529c360a62a01e2db8ed6b4a9ee0bf2}} 
+\index{K\+M\+L\+\_\+error@{K\+M\+L\+\_\+error}!err\+\_\+num@{err\+\_\+num}}
+\index{err\+\_\+num@{err\+\_\+num}!K\+M\+L\+\_\+error@{K\+M\+L\+\_\+error}}
+\subsubsection{\texorpdfstring{err\+\_\+num}{err\_num}}
+{\footnotesize\ttfamily K\+M\+L\+\_\+error\+\_\+value K\+M\+L\+\_\+error\+::err\+\_\+num}
+
+Contains the error description as symbolic constant\+: 
+\begin{DoxyItemize}
+\item {\ttfamily K\+M\+L\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}\+: A file with that name doesn\textquotesingle{}t exist. 
+\item {\ttfamily K\+M\+L\+\_\+\+OK}\+: No error \+:-\/) 
+\item {\ttfamily K\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+B\+R\+A\+C\+K\+E\+TS}\+: A mismatch of brackets was detected, i.\+e. there were too many closing brackets ({\ttfamily \mbox{]}}). 
+\item {\ttfamily K\+M\+L\+\_\+\+O\+P\+E\+N\+\_\+\+B\+R\+A\+C\+K\+ET}\+: Now, there were too many opening brackets ({\ttfamily \mbox{[}}) 
+\item {\ttfamily K\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+I\+G\+I\+TS}\+: The number of digits a integer or floating point value can have is limited to 1024, this should be enough \+:-\/) 
+\item {\ttfamily K\+M\+L\+\_\+\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OF}\+: An E\+OF occured, where it wasn\textquotesingle{}t expected, e.\+g. while scanning a string. 
+\item {\ttfamily K\+M\+L\+\_\+\+S\+Y\+N\+T\+AX}\+: The file isn\textquotesingle{}t a valid G\+ML file, e.\+g. a mismatch in the key-\/value pairs. 
+\item {\ttfamily K\+M\+L\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED}\+: A character occured, where it makes no sense, e.\+g. non-\/numerical characters in numbers or keys beginning with numbers 
+\end{DoxyItemize}\mbox{\Hypertarget{struct_k_m_l__error_a2598fe26a2482414d4305d3fbcb17929}\label{struct_k_m_l__error_a2598fe26a2482414d4305d3fbcb17929}} 
+\index{K\+M\+L\+\_\+error@{K\+M\+L\+\_\+error}!line@{line}}
+\index{line@{line}!K\+M\+L\+\_\+error@{K\+M\+L\+\_\+error}}
+\subsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily int K\+M\+L\+\_\+error\+::line}
+
+Contains the line, where the error was detected. This will usually be near the line where the error really is located. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/kml\+\_\+scanner.\+h\end{DoxyCompactItemize}

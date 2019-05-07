@@ -1,0 +1,88 @@
+\hypertarget{classnode__map}{}\section{node\+\_\+map$<$ T, Alloc $>$ Class Template Reference}
+\label{classnode__map}\index{node\+\_\+map$<$ T, Alloc $>$@{node\+\_\+map$<$ T, Alloc $>$}}
+
+
+A specialized map with nodes as keys.  
+
+
+
+
+{\ttfamily \#include $<$node\+\_\+map.\+h$>$}
+
+Inheritance diagram for node\+\_\+map$<$ T, Alloc $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnode__map}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnode__map_a7a4c767f07f348d31a1004776485d17b}{node\+\_\+map}} ()
+\item 
+\mbox{\hyperlink{classnode__map_a5bd24349e3a56379592889abbe4c6b09}{node\+\_\+map}} (const \mbox{\hyperlink{classgraph}{graph}} \&g, T t=T())
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class Alloc = allocator$<$\+T$>$$>$\newline
+class node\+\_\+map$<$ T, Alloc $>$}
+
+A specialized map with nodes as keys. 
+
+A {\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}} is a specialized and optimized map implementation with nodes as keys. Using a {\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}} is the standard way to attach user defined information to the nodes of a {\ttfamily graph}.
+
+An example of usage\+: 
+\begin{DoxyPre}
+  graph g;\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  node v1 = g.new\_node();
+  node v2 = g.new\_node();\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  \mbox{\hyperlink{classnode__map}{node\_map}}<string> label(g, "Default Label");\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  label[v1] = "v1";
+  label[v2] = "v2";\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  assert(label[v1] != label[v2]);
+\end{DoxyPre}
+
+
+The nodes used as keys for a {\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}} M\+U\+ST be nodes of the same graph. If you want to use nodes from different graphs, use a {\ttfamily map$<$node,T$>$} instead. A graph and a copy of it are considered to be different.
+
+Most of the functionality of {\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}} is inherited from \mbox{\hyperlink{classne__map}{ne\+\_\+map}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnode__map_a7a4c767f07f348d31a1004776485d17b}\label{classnode__map_a7a4c767f07f348d31a1004776485d17b}} 
+\index{node\+\_\+map@{node\+\_\+map}!node\+\_\+map@{node\+\_\+map}}
+\index{node\+\_\+map@{node\+\_\+map}!node\+\_\+map@{node\+\_\+map}}
+\subsubsection{\texorpdfstring{node\+\_\+map()}{node\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T, class Alloc = allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classnode__map}{node\+\_\+map}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an empty {\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}} not associated with any {\ttfamily graph}. You may (but need not) call {\ttfamily ne\+\_\+map\+::init(const graph \&, T)} to associate it to a {\ttfamily graph}. \mbox{\Hypertarget{classnode__map_a5bd24349e3a56379592889abbe4c6b09}\label{classnode__map_a5bd24349e3a56379592889abbe4c6b09}} 
+\index{node\+\_\+map@{node\+\_\+map}!node\+\_\+map@{node\+\_\+map}}
+\index{node\+\_\+map@{node\+\_\+map}!node\+\_\+map@{node\+\_\+map}}
+\subsubsection{\texorpdfstring{node\+\_\+map()}{node\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T, class Alloc = allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classnode__map}{node\+\_\+map}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{g,  }\item[{T}]{t = {\ttfamily T()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Constructs a {\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}} associated to the graph {\ttfamily g}. The value associated to each node in {\ttfamily g} is set to {\ttfamily t}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/node\+\_\+map.\+h\end{DoxyCompactItemize}

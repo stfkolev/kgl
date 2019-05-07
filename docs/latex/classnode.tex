@@ -1,0 +1,392 @@
+\hypertarget{classnode}{}\section{node Class Reference}
+\label{classnode}\index{node@{node}}
+
+
+A node in a graph.  
+
+
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+Inheritance diagram for node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.499331cm]{classnode}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnode_a3576579529747e88ab7d1a8ba3122f2e}\label{classnode_a3576579529747e88ab7d1a8ba3122f2e}} 
+typedef list$<$ \mbox{\hyperlink{classedge}{edge}} $>$\+::const\+\_\+iterator {\bfseries in\+\_\+edges\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classnode_a4715326ede44c91e24aba42f49089da4}\label{classnode_a4715326ede44c91e24aba42f49089da4}} 
+typedef list$<$ \mbox{\hyperlink{classedge}{edge}} $>$\+::const\+\_\+iterator {\bfseries out\+\_\+edges\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnode_ad603259398d5667e3b97a6322a2bcc20}{node}} ()
+\item 
+int \mbox{\hyperlink{classnode_a1e5e94e426da180a069cf307616e38e3}{degree}} () const
+\item 
+int \mbox{\hyperlink{classnode_a32adc45c4132e2642ccd2233d79ffe67}{outdeg}} () const
+\item 
+int \mbox{\hyperlink{classnode_a749bfd1316584b96f8c9b0e44ad512f0}{indeg}} () const
+\item 
+\mbox{\Hypertarget{classnode_a5d38b4152c3cedb235e45de7eb3f4469}\label{classnode_a5d38b4152c3cedb235e45de7eb3f4469}} 
+int {\bfseries id} () const
+\item 
+const \mbox{\hyperlink{classnode}{node}} \& \mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (\mbox{\hyperlink{classedge}{edge}} e) const
+\item 
+\mbox{\Hypertarget{classnode_aa27614c7a557ea4b5b1d621c887e3ca5}\label{classnode_aa27614c7a557ea4b5b1d621c887e3ca5}} 
+list$<$ \mbox{\hyperlink{classnode}{node}} $>$ {\bfseries opposites} (\mbox{\hyperlink{classedge}{edge}}) const
+\item 
+bool \mbox{\hyperlink{classnode_af948e15fd00a31e67928c9061acda582}{is\+\_\+hidden}} () const
+\item 
+int \mbox{\hyperlink{classnode_aba6b3a48e7b951f08ebbbf3275f0ce9a}{excentricity}} () const
+\item 
+adj\+\_\+nodes\+\_\+iterator \mbox{\hyperlink{classnode_a6cd2febf910bc6572c4aecba6278b100}{adj\+\_\+nodes\+\_\+begin}} () const
+\item 
+adj\+\_\+nodes\+\_\+iterator \mbox{\hyperlink{classnode_a2477fa92c56a19d29464082444a3043a}{adj\+\_\+nodes\+\_\+end}} () const
+\item 
+adj\+\_\+edges\+\_\+iterator \mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\+\_\+edges\+\_\+begin}} () const
+\item 
+adj\+\_\+edges\+\_\+iterator \mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\+\_\+edges\+\_\+end}} () const
+\item 
+in\+\_\+edges\+\_\+iterator \mbox{\hyperlink{classnode_a0c32377f370ae52ed2134ff8d4dac584}{in\+\_\+edges\+\_\+begin}} () const
+\item 
+in\+\_\+edges\+\_\+iterator \mbox{\hyperlink{classnode_a785cd330f8b4c5c47d3b6e936a7e744e}{in\+\_\+edges\+\_\+end}} () const
+\item 
+out\+\_\+edges\+\_\+iterator \mbox{\hyperlink{classnode_a7dcb80df22118cea04f77ca8c952d9c2}{out\+\_\+edges\+\_\+begin}} () const
+\item 
+out\+\_\+edges\+\_\+iterator \mbox{\hyperlink{classnode_a7ce2ba5195a63d4df6b44299a02a9378}{out\+\_\+edges\+\_\+end}} () const
+\item 
+inout\+\_\+edges\+\_\+iterator \mbox{\hyperlink{classnode_a8677f4dc2acfb64310de1ea866c17340}{inout\+\_\+edges\+\_\+begin}} () const
+\item 
+inout\+\_\+edges\+\_\+iterator \mbox{\hyperlink{classnode_ad4eec3efcc3c1e572b0492276e20980c}{inout\+\_\+edges\+\_\+end}} () const
+\item 
+\mbox{\Hypertarget{classnode_a12cb1a2167f5f03c054de5e707d3156f}\label{classnode_a12cb1a2167f5f03c054de5e707d3156f}} 
+{\bfseries adj\+\_\+edges\+\_\+iterator} ()
+\item 
+\mbox{\Hypertarget{classnode_a1b7aa43ddd3e7f392479c479400ebb75}\label{classnode_a1b7aa43ddd3e7f392479c479400ebb75}} 
+{\bfseries adj\+\_\+edges\+\_\+iterator} (\mbox{\hyperlink{classnode}{node}}, bool)
+\item 
+\mbox{\Hypertarget{classnode_a7ae20e73507364af0c1df22ecd0df444}\label{classnode_a7ae20e73507364af0c1df22ecd0df444}} 
+bool {\bfseries operator==} (const adj\+\_\+edges\+\_\+iterator \&) const
+\item 
+\mbox{\Hypertarget{classnode_aa30fcffcf193cc94d3e1f3fe419ce42a}\label{classnode_aa30fcffcf193cc94d3e1f3fe419ce42a}} 
+bool {\bfseries operator!=} (const adj\+\_\+edges\+\_\+iterator \&) const
+\item 
+\mbox{\Hypertarget{classnode_a5849d021a696f38d1b2e1d3d3372bbe7}\label{classnode_a5849d021a696f38d1b2e1d3d3372bbe7}} 
+adj\+\_\+edges\+\_\+iterator \& {\bfseries operator++} ()
+\item 
+\mbox{\Hypertarget{classnode_ac112a3065e69e4897d38c11980fe1789}\label{classnode_ac112a3065e69e4897d38c11980fe1789}} 
+adj\+\_\+edges\+\_\+iterator {\bfseries operator++} (int)
+\item 
+\mbox{\Hypertarget{classnode_a99fdb299b044facd9cb3f90f18a559fd}\label{classnode_a99fdb299b044facd9cb3f90f18a559fd}} 
+adj\+\_\+edges\+\_\+iterator \& {\bfseries operator-\/-\/} ()
+\item 
+\mbox{\Hypertarget{classnode_a1e5751de7ba220836ffee941707c277b}\label{classnode_a1e5751de7ba220836ffee941707c277b}} 
+adj\+\_\+edges\+\_\+iterator {\bfseries operator-\/-\/} (int)
+\item 
+\mbox{\Hypertarget{classnode_a914c034c6f43029ad9b7f0826dd2614f}\label{classnode_a914c034c6f43029ad9b7f0826dd2614f}} 
+const \mbox{\hyperlink{classedge}{edge}} \& {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{classnode_a71b168f27cc7338906814f6a3ecc176f}\label{classnode_a71b168f27cc7338906814f6a3ecc176f}} 
+const \mbox{\hyperlink{classedge}{edge}} $\ast$ {\bfseries operator-\/$>$} () const
+\item 
+\mbox{\Hypertarget{classnode_a854d596611e6a3342090cce71cedf300}\label{classnode_a854d596611e6a3342090cce71cedf300}} 
+{\bfseries inout\+\_\+edges\+\_\+iterator} ()
+\item 
+\mbox{\Hypertarget{classnode_a2990a550ae39da89f6d18e6b5faf519e}\label{classnode_a2990a550ae39da89f6d18e6b5faf519e}} 
+{\bfseries inout\+\_\+edges\+\_\+iterator} (\mbox{\hyperlink{classnode}{node}} n, bool start)
+\item 
+\mbox{\Hypertarget{classnode_ae6b790b8b1dd9733be73b1d2c84716df}\label{classnode_ae6b790b8b1dd9733be73b1d2c84716df}} 
+bool {\bfseries operator==} (const inout\+\_\+edges\+\_\+iterator \&) const
+\item 
+\mbox{\Hypertarget{classnode_ac4efb2e8423b3502f9d3a1bd6de80e73}\label{classnode_ac4efb2e8423b3502f9d3a1bd6de80e73}} 
+bool {\bfseries operator!=} (const inout\+\_\+edges\+\_\+iterator \&) const
+\item 
+\mbox{\Hypertarget{classnode_a934fd5ac6865ae23f3b2758a573550ec}\label{classnode_a934fd5ac6865ae23f3b2758a573550ec}} 
+inout\+\_\+edges\+\_\+iterator \& {\bfseries operator++} ()
+\item 
+\mbox{\Hypertarget{classnode_a754f5fcf2ab3d5bf26e1e4fdc47cc766}\label{classnode_a754f5fcf2ab3d5bf26e1e4fdc47cc766}} 
+inout\+\_\+edges\+\_\+iterator {\bfseries operator++} (int)
+\item 
+\mbox{\Hypertarget{classnode_a046088eba56244e29945d0197f6b642f}\label{classnode_a046088eba56244e29945d0197f6b642f}} 
+inout\+\_\+edges\+\_\+iterator \& {\bfseries operator-\/-\/} ()
+\item 
+\mbox{\Hypertarget{classnode_a9b906907ed01bb04c06bed300428da11}\label{classnode_a9b906907ed01bb04c06bed300428da11}} 
+inout\+\_\+edges\+\_\+iterator {\bfseries operator-\/-\/} (int)
+\item 
+\mbox{\Hypertarget{classnode_a914c034c6f43029ad9b7f0826dd2614f}\label{classnode_a914c034c6f43029ad9b7f0826dd2614f}} 
+const \mbox{\hyperlink{classedge}{edge}} \& {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{classnode_a71b168f27cc7338906814f6a3ecc176f}\label{classnode_a71b168f27cc7338906814f6a3ecc176f}} 
+const \mbox{\hyperlink{classedge}{edge}} $\ast$ {\bfseries operator-\/$>$} () const
+\item 
+\mbox{\Hypertarget{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}\label{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}} 
+{\bfseries adj\+\_\+nodes\+\_\+iterator} ()
+\item 
+\mbox{\Hypertarget{classnode_ade9ca1b2c63a0467be176756545b3c2c}\label{classnode_ade9ca1b2c63a0467be176756545b3c2c}} 
+{\bfseries adj\+\_\+nodes\+\_\+iterator} (const \mbox{\hyperlink{classnode}{node}} \&, bool)
+\item 
+\mbox{\Hypertarget{classnode_abe20131c7427c6f045ab4c23916efa3c}\label{classnode_abe20131c7427c6f045ab4c23916efa3c}} 
+bool {\bfseries operator==} (const adj\+\_\+nodes\+\_\+iterator \&) const
+\item 
+\mbox{\Hypertarget{classnode_abfcd7e8ce1391bd60f155a5de47419c5}\label{classnode_abfcd7e8ce1391bd60f155a5de47419c5}} 
+bool {\bfseries operator!=} (const adj\+\_\+nodes\+\_\+iterator \&) const
+\item 
+\mbox{\Hypertarget{classnode_a5c9569e6719a8bebd6dd78266a0da533}\label{classnode_a5c9569e6719a8bebd6dd78266a0da533}} 
+adj\+\_\+nodes\+\_\+iterator \& {\bfseries operator++} ()
+\item 
+\mbox{\Hypertarget{classnode_af12ab69bcd07d4d41052b50801690520}\label{classnode_af12ab69bcd07d4d41052b50801690520}} 
+adj\+\_\+nodes\+\_\+iterator {\bfseries operator++} (int)
+\item 
+\mbox{\Hypertarget{classnode_abd4b60efd003b18db13d9fde0a25f91a}\label{classnode_abd4b60efd003b18db13d9fde0a25f91a}} 
+adj\+\_\+nodes\+\_\+iterator \& {\bfseries operator-\/-\/} ()
+\item 
+\mbox{\Hypertarget{classnode_ae7cdb2be553782c2dcf48c6ec8ef9d67}\label{classnode_ae7cdb2be553782c2dcf48c6ec8ef9d67}} 
+adj\+\_\+nodes\+\_\+iterator {\bfseries operator-\/-\/} (int)
+\item 
+\mbox{\Hypertarget{classnode_a59fdf9aff393a47b4c60c3f21a4ccbc8}\label{classnode_a59fdf9aff393a47b4c60c3f21a4ccbc8}} 
+const \mbox{\hyperlink{classnode}{node}} \& {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{classnode_a82d46c8753db26b34382fcfd9f887c12}\label{classnode_a82d46c8753db26b34382fcfd9f887c12}} 
+const \mbox{\hyperlink{classnode}{node}} $\ast$ {\bfseries operator-\/$>$} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnode_ab8b0dbc1b36724e5e4635ac651c218cb}\label{classnode_ab8b0dbc1b36724e5e4635ac651c218cb}} 
+class {\bfseries graph}
+\item 
+\mbox{\Hypertarget{classnode_a534891c80172dde5e777a3908cc6e2f1}\label{classnode_a534891c80172dde5e777a3908cc6e2f1}} 
+class {\bfseries edge}
+\item 
+\mbox{\Hypertarget{classnode_abdd49248203010f2d5432dfef22d017a}\label{classnode_abdd49248203010f2d5432dfef22d017a}} 
+class {\bfseries adj\+\_\+edges\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classnode_a19ea521fd5b3813e179997758f1109f0}\label{classnode_a19ea521fd5b3813e179997758f1109f0}} 
+K\+G\+L\+\_\+\+E\+X\+T\+E\+RN friend bool {\bfseries operator==} (\mbox{\hyperlink{classnode}{node}}, \mbox{\hyperlink{classnode}{node}})
+\item 
+\mbox{\Hypertarget{classnode_ac95f53a475a3895dff3f9495ab87bf75}\label{classnode_ac95f53a475a3895dff3f9495ab87bf75}} 
+K\+G\+L\+\_\+\+E\+X\+T\+E\+RN friend bool {\bfseries operator!=} (\mbox{\hyperlink{classnode}{node}}, \mbox{\hyperlink{classnode}{node}})
+\item 
+\mbox{\Hypertarget{classnode_a01896810a81fff14def134f6e9638f99}\label{classnode_a01896810a81fff14def134f6e9638f99}} 
+K\+G\+L\+\_\+\+E\+X\+T\+E\+RN friend bool {\bfseries operator$<$} (\mbox{\hyperlink{classnode}{node}}, \mbox{\hyperlink{classnode}{node}})
+\item 
+\mbox{\Hypertarget{classnode_a6252a93f7623a3554f5b877874639f4e}\label{classnode_a6252a93f7623a3554f5b877874639f4e}} 
+K\+G\+L\+\_\+\+E\+X\+T\+E\+RN friend ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \mbox{\hyperlink{classnode}{node}} \&n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A node in a graph. 
+
+Iterator for adjacent nodes of a node.
+
+Iterator for all incident edges of a node.
+
+Iterator for adjacent edges of a node. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnode_ad603259398d5667e3b97a6322a2bcc20}\label{classnode_ad603259398d5667e3b97a6322a2bcc20}} 
+\index{node@{node}!node@{node}}
+\index{node@{node}!node@{node}}
+\subsubsection{\texorpdfstring{node()}{node()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+K\+G\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE node\+::node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. Creates an invalid node. The only way to obtain a valid node is through \mbox{\hyperlink{classgraph_ab9505335c20558319b6cce25aed23524}{graph\+::new\+\_\+node}} Example\+: 
+\begin{DoxyPre}
+  graph g;
+  node n;\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  n = g.new\_node();
+\end{DoxyPre}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classgraph_ab9505335c20558319b6cce25aed23524}{graph\+::new\+\_\+node}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnode_a788d3e932a5c164caa5ec82aa47551b2}\label{classnode_a788d3e932a5c164caa5ec82aa47551b2}} 
+\index{node@{node}!adj\+\_\+edges\+\_\+begin@{adj\+\_\+edges\+\_\+begin}}
+\index{adj\+\_\+edges\+\_\+begin@{adj\+\_\+edges\+\_\+begin}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+edges\+\_\+begin()}{adj\_edges\_begin()}}
+{\footnotesize\ttfamily node\+::adj\+\_\+edges\+\_\+iterator node\+::adj\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all adjacent edges.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all adjacent edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_aa1e7887d29390297580769454f769ad6}\label{classnode_aa1e7887d29390297580769454f769ad6}} 
+\index{node@{node}!adj\+\_\+edges\+\_\+end@{adj\+\_\+edges\+\_\+end}}
+\index{adj\+\_\+edges\+\_\+end@{adj\+\_\+edges\+\_\+end}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+edges\+\_\+end()}{adj\_edges\_end()}}
+{\footnotesize\ttfamily node\+::adj\+\_\+edges\+\_\+iterator node\+::adj\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all adjacent edges.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all adjacent edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_a6cd2febf910bc6572c4aecba6278b100}\label{classnode_a6cd2febf910bc6572c4aecba6278b100}} 
+\index{node@{node}!adj\+\_\+nodes\+\_\+begin@{adj\+\_\+nodes\+\_\+begin}}
+\index{adj\+\_\+nodes\+\_\+begin@{adj\+\_\+nodes\+\_\+begin}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+nodes\+\_\+begin()}{adj\_nodes\_begin()}}
+{\footnotesize\ttfamily node\+::adj\+\_\+nodes\+\_\+iterator node\+::adj\+\_\+nodes\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all adjacent nodes.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all adjacent nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_a2477fa92c56a19d29464082444a3043a}\label{classnode_a2477fa92c56a19d29464082444a3043a}} 
+\index{node@{node}!adj\+\_\+nodes\+\_\+end@{adj\+\_\+nodes\+\_\+end}}
+\index{adj\+\_\+nodes\+\_\+end@{adj\+\_\+nodes\+\_\+end}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+nodes\+\_\+end()}{adj\_nodes\_end()}}
+{\footnotesize\ttfamily node\+::adj\+\_\+nodes\+\_\+iterator node\+::adj\+\_\+nodes\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all adjacent nodes.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all adjacent nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_a1e5e94e426da180a069cf307616e38e3}\label{classnode_a1e5e94e426da180a069cf307616e38e3}} 
+\index{node@{node}!degree@{degree}}
+\index{degree@{degree}!node@{node}}
+\subsubsection{\texorpdfstring{degree()}{degree()}}
+{\footnotesize\ttfamily int node\+::degree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the degree of the node, i. e. \mbox{\hyperlink{classnode_a32adc45c4132e2642ccd2233d79ffe67}{node\+::outdeg}} + \mbox{\hyperlink{classnode_a749bfd1316584b96f8c9b0e44ad512f0}{node\+::indeg}} . \mbox{\Hypertarget{classnode_aba6b3a48e7b951f08ebbbf3275f0ce9a}\label{classnode_aba6b3a48e7b951f08ebbbf3275f0ce9a}} 
+\index{node@{node}!excentricity@{excentricity}}
+\index{excentricity@{excentricity}!node@{node}}
+\subsubsection{\texorpdfstring{excentricity()}{excentricity()}}
+{\footnotesize\ttfamily int node\+::excentricity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the excentricity of the node, i.\+e. the maximum graph-\/theoretic distance to another node
+
+\begin{DoxyReturn}{Returns}
+excentricity of node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_a0c32377f370ae52ed2134ff8d4dac584}\label{classnode_a0c32377f370ae52ed2134ff8d4dac584}} 
+\index{node@{node}!in\+\_\+edges\+\_\+begin@{in\+\_\+edges\+\_\+begin}}
+\index{in\+\_\+edges\+\_\+begin@{in\+\_\+edges\+\_\+begin}!node@{node}}
+\subsubsection{\texorpdfstring{in\+\_\+edges\+\_\+begin()}{in\_edges\_begin()}}
+{\footnotesize\ttfamily node\+::in\+\_\+edges\+\_\+iterator node\+::in\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all incoming edges.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all incoming edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_a785cd330f8b4c5c47d3b6e936a7e744e}\label{classnode_a785cd330f8b4c5c47d3b6e936a7e744e}} 
+\index{node@{node}!in\+\_\+edges\+\_\+end@{in\+\_\+edges\+\_\+end}}
+\index{in\+\_\+edges\+\_\+end@{in\+\_\+edges\+\_\+end}!node@{node}}
+\subsubsection{\texorpdfstring{in\+\_\+edges\+\_\+end()}{in\_edges\_end()}}
+{\footnotesize\ttfamily node\+::in\+\_\+edges\+\_\+iterator node\+::in\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all incoming edges.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all incoming edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_a749bfd1316584b96f8c9b0e44ad512f0}\label{classnode_a749bfd1316584b96f8c9b0e44ad512f0}} 
+\index{node@{node}!indeg@{indeg}}
+\index{indeg@{indeg}!node@{node}}
+\subsubsection{\texorpdfstring{indeg()}{indeg()}}
+{\footnotesize\ttfamily int node\+::indeg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the in degree of the node, i. e. the number of incoming edges. \mbox{\Hypertarget{classnode_a8677f4dc2acfb64310de1ea866c17340}\label{classnode_a8677f4dc2acfb64310de1ea866c17340}} 
+\index{node@{node}!inout\+\_\+edges\+\_\+begin@{inout\+\_\+edges\+\_\+begin}}
+\index{inout\+\_\+edges\+\_\+begin@{inout\+\_\+edges\+\_\+begin}!node@{node}}
+\subsubsection{\texorpdfstring{inout\+\_\+edges\+\_\+begin()}{inout\_edges\_begin()}}
+{\footnotesize\ttfamily node\+::inout\+\_\+edges\+\_\+iterator node\+::inout\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all incoming {\itshape and} outgoing edges.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all incoming and outgoing edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_ad4eec3efcc3c1e572b0492276e20980c}\label{classnode_ad4eec3efcc3c1e572b0492276e20980c}} 
+\index{node@{node}!inout\+\_\+edges\+\_\+end@{inout\+\_\+edges\+\_\+end}}
+\index{inout\+\_\+edges\+\_\+end@{inout\+\_\+edges\+\_\+end}!node@{node}}
+\subsubsection{\texorpdfstring{inout\+\_\+edges\+\_\+end()}{inout\_edges\_end()}}
+{\footnotesize\ttfamily node\+::inout\+\_\+edges\+\_\+iterator node\+::inout\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all incoming {\itshape and} outgoing edges.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all incoming and outgoing edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_af948e15fd00a31e67928c9061acda582}\label{classnode_af948e15fd00a31e67928c9061acda582}} 
+\index{node@{node}!is\+\_\+hidden@{is\+\_\+hidden}}
+\index{is\+\_\+hidden@{is\+\_\+hidden}!node@{node}}
+\subsubsection{\texorpdfstring{is\+\_\+hidden()}{is\_hidden()}}
+{\footnotesize\ttfamily bool node\+::is\+\_\+hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns true iff node is hidden.
+
+\begin{DoxyReturn}{Returns}
+true iff node is hidden. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classgraph_ab2f8520bcac080d73c55228fecc61825}{graph\+::hide\+\_\+edge}} 
+
+\mbox{\hyperlink{classgraph_a2e5426682a0897b9f9104b019970bedc}{graph\+::restore\+\_\+edge}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classnode_a13dbd1809a33a5efede64a359e53a363}\label{classnode_a13dbd1809a33a5efede64a359e53a363}} 
+\index{node@{node}!opposite@{opposite}}
+\index{opposite@{opposite}!node@{node}}
+\subsubsection{\texorpdfstring{opposite()}{opposite()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classnode}{node}} \& node\+::opposite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classedge}{edge}}}]{e }\end{DoxyParamCaption}) const}
+
+Returns the node on the opposite side of {\ttfamily e}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & an edge incident to the node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnode_a7dcb80df22118cea04f77ca8c952d9c2}\label{classnode_a7dcb80df22118cea04f77ca8c952d9c2}} 
+\index{node@{node}!out\+\_\+edges\+\_\+begin@{out\+\_\+edges\+\_\+begin}}
+\index{out\+\_\+edges\+\_\+begin@{out\+\_\+edges\+\_\+begin}!node@{node}}
+\subsubsection{\texorpdfstring{out\+\_\+edges\+\_\+begin()}{out\_edges\_begin()}}
+{\footnotesize\ttfamily node\+::out\+\_\+edges\+\_\+iterator node\+::out\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all outgoing edges.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all outgoing edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_a7ce2ba5195a63d4df6b44299a02a9378}\label{classnode_a7ce2ba5195a63d4df6b44299a02a9378}} 
+\index{node@{node}!out\+\_\+edges\+\_\+end@{out\+\_\+edges\+\_\+end}}
+\index{out\+\_\+edges\+\_\+end@{out\+\_\+edges\+\_\+end}!node@{node}}
+\subsubsection{\texorpdfstring{out\+\_\+edges\+\_\+end()}{out\_edges\_end()}}
+{\footnotesize\ttfamily node\+::out\+\_\+edges\+\_\+iterator node\+::out\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all outgoing edges.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all outgoing edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnode_a32adc45c4132e2642ccd2233d79ffe67}\label{classnode_a32adc45c4132e2642ccd2233d79ffe67}} 
+\index{node@{node}!outdeg@{outdeg}}
+\index{outdeg@{outdeg}!node@{node}}
+\subsubsection{\texorpdfstring{outdeg()}{outdeg()}}
+{\footnotesize\ttfamily int node\+::outdeg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the out degree of the node, i. e. the number of outgoing edges. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/node.\+h\item 
+src/node.\+cpp\end{DoxyCompactItemize}

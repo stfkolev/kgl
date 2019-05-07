@@ -1,0 +1,513 @@
+\hypertarget{classdijkstra}{}\section{dijkstra Class Reference}
+\label{classdijkstra}\index{dijkstra@{dijkstra}}
+
+
+Dijkstra\textquotesingle{}s Algorithm for computing single source shortest path.  
+
+
+
+
+{\ttfamily \#include $<$dijkstra.\+h$>$}
+
+Inheritance diagram for dijkstra\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdijkstra}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdijkstra_a2bdd8d3b57860b5715d01e65664e810f}\label{classdijkstra_a2bdd8d3b57860b5715d01e65664e810f}} 
+enum {\bfseries node\+\_\+color} \{ {\bfseries white}, 
+{\bfseries grey}, 
+{\bfseries black}
+ \}
+\item 
+\mbox{\Hypertarget{classdijkstra_a5062e9a8339848666efcf2143c4c1881}\label{classdijkstra_a5062e9a8339848666efcf2143c4c1881}} 
+typedef list$<$ \mbox{\hyperlink{classnode}{node}} $>$\+::const\+\_\+iterator \mbox{\hyperlink{classdijkstra_a5062e9a8339848666efcf2143c4c1881}{shortest\+\_\+path\+\_\+node\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Iterator type for traversing nodes on one shortest path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdijkstra_ad35d95d4ed7a4202a5d048a63aa115b9}\label{classdijkstra_ad35d95d4ed7a4202a5d048a63aa115b9}} 
+typedef list$<$ \mbox{\hyperlink{classedge}{edge}} $>$\+::const\+\_\+iterator \mbox{\hyperlink{classdijkstra_ad35d95d4ed7a4202a5d048a63aa115b9}{shortest\+\_\+path\+\_\+edge\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Iterator type for traversing edges on one shortest path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdijkstra_a64a1fcb9cca32ff932b9b98a08cff106}{dijkstra}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classdijkstra_a871e3c8097b7f0bc17358473b1149515}{$\sim$dijkstra}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdijkstra_a9689f2628f76ddb3747ea18c91bd7041}{source}} (const \mbox{\hyperlink{classnode}{node}} \&n)
+\begin{DoxyCompactList}\small\item\em Sets source node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdijkstra_a1e9971d767046306574551a461aa2238}{target}} (const \mbox{\hyperlink{classnode}{node}} \&n)
+\begin{DoxyCompactList}\small\item\em Sets target node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdijkstra_a92f4394b757f6ffcb372535114a6cbf6}{weights}} (const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ double $>$ \&weight)
+\begin{DoxyCompactList}\small\item\em Sets weights of the edges. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdijkstra_af79383dbbb6b737afcefd8e32350192d}{store\+\_\+preds}} (bool set)
+\begin{DoxyCompactList}\small\item\em Enables or disables the storing of predecessors. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classdijkstra_a51ff4657e0ddb1ca5231a21e6dea1808}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\begin{DoxyCompactList}\small\item\em Checks whether the preconditions for Dijkstra are satisfied. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdijkstra_a7b30f3d8ad42baae27989bc14befe0d0}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\begin{DoxyCompactList}\small\item\em Runs shortest path algorithm on {\ttfamily G}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classdijkstra_a69772d19321b5e4deac66174ec546caa}{source}} () const
+\begin{DoxyCompactList}\small\item\em Returns source node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classdijkstra_a4957ef4369386ef2153359ea97da9d88}{target}} () const
+\begin{DoxyCompactList}\small\item\em Returns target node if set, {\ttfamily \mbox{\hyperlink{classnode_ad603259398d5667e3b97a6322a2bcc20}{node\+::node()}}} else. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdijkstra_a8ef3ee087994a56b774f48fd331725a3}{store\+\_\+preds}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the storing of predecessors is enabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdijkstra_a405ff80abfc9ad98668534032eed6a5b}{reached}} (const \mbox{\hyperlink{classnode}{node}} \&n) const
+\begin{DoxyCompactList}\small\item\em Returns whether {\ttfamily n} is reachable from source node. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdijkstra_ae350a266dd47091d7f620a7328619426}{distance}} (const \mbox{\hyperlink{classnode}{node}} \&n) const
+\begin{DoxyCompactList}\small\item\em Returns the distance from source node to node {\ttfamily n}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classdijkstra_a99c17ee7c2b55574ea8c2952fac09faf}{predecessor\+\_\+node}} (const \mbox{\hyperlink{classnode}{node}} \&n) const
+\begin{DoxyCompactList}\small\item\em Predecessor node of node {\ttfamily n} on the shortest path from the source node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classedge}{edge}} \mbox{\hyperlink{classdijkstra_aa3ef1a7d7dfc33e4a39aff309f873929}{predecessor\+\_\+edge}} (const \mbox{\hyperlink{classnode}{node}} \&n) const
+\begin{DoxyCompactList}\small\item\em Predecessor edge of node {\ttfamily n} on the shortest path from the source node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdijkstra_a5062e9a8339848666efcf2143c4c1881}{shortest\+\_\+path\+\_\+node\+\_\+iterator}} \mbox{\hyperlink{classdijkstra_ae30c66319d925387ed858aab9ce419ae}{shortest\+\_\+path\+\_\+nodes\+\_\+begin}} (const \mbox{\hyperlink{classnode}{node}} \&dest)
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the beginning (to the source node) of a shortest node path to node {\ttfamily dest}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdijkstra_a5062e9a8339848666efcf2143c4c1881}{shortest\+\_\+path\+\_\+node\+\_\+iterator}} \mbox{\hyperlink{classdijkstra_ae9846beeabd53a8cf0c0c1af328235b2}{shortest\+\_\+path\+\_\+nodes\+\_\+end}} (const \mbox{\hyperlink{classnode}{node}} \&dest)
+\begin{DoxyCompactList}\small\item\em Returns an iterator one after the end (one after node {\ttfamily dest}) of a shortest node path to node {\ttfamily dest}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdijkstra_ad35d95d4ed7a4202a5d048a63aa115b9}{shortest\+\_\+path\+\_\+edge\+\_\+iterator}} \mbox{\hyperlink{classdijkstra_ad7ef6f747b68f8951322b265844dbb8a}{shortest\+\_\+path\+\_\+edges\+\_\+begin}} (const \mbox{\hyperlink{classnode}{node}} \&dest)
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the beginning edge of a shortest edge path to node {\ttfamily dest}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdijkstra_ad35d95d4ed7a4202a5d048a63aa115b9}{shortest\+\_\+path\+\_\+edge\+\_\+iterator}} \mbox{\hyperlink{classdijkstra_a031e6fef10aa40aad10edc1053ad9cf0}{shortest\+\_\+path\+\_\+edges\+\_\+end}} (const \mbox{\hyperlink{classnode}{node}} \&dest)
+\begin{DoxyCompactList}\small\item\em Returns an iterator one after the end of a shortest edge path to node {\ttfamily dest}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classdijkstra_a444c288b3a49ec1c2973459dad55ffb3}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets Dijkstra\textquotesingle{}s algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dijkstra\textquotesingle{}s Algorithm for computing single source shortest path. 
+
+This class implements Dijkstra\textquotesingle{}s algorithm for computing single source shortest path in $\mathcal{O}((|V| + |E|) log |V|)$ worst case.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbellman__ford}{bellman\+\_\+ford}}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Stf Kolev \href{mailto:inkyzfx@gmail.com}{\tt inkyzfx@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdijkstra_a64a1fcb9cca32ff932b9b98a08cff106}\label{classdijkstra_a64a1fcb9cca32ff932b9b98a08cff106}} 
+\index{dijkstra@{dijkstra}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{dijkstra()}{dijkstra()}}
+{\footnotesize\ttfamily dijkstra\+::dijkstra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Enables only the calculation of shortest paths.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_ab79e1ddec2f2afdf4b36b10724db8b15}{algorithm\+::algorithm}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classdijkstra_a871e3c8097b7f0bc17358473b1149515}\label{classdijkstra_a871e3c8097b7f0bc17358473b1149515}} 
+\index{dijkstra@{dijkstra}!````~dijkstra@{$\sim$dijkstra}}
+\index{````~dijkstra@{$\sim$dijkstra}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{$\sim$dijkstra()}{~dijkstra()}}
+{\footnotesize\ttfamily dijkstra\+::$\sim$dijkstra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_adca9b1e7fa3afd914519a9dbb44e9fd5}{algorithm\+::$\sim$algorithm}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdijkstra_a51ff4657e0ddb1ca5231a21e6dea1808}\label{classdijkstra_a51ff4657e0ddb1ca5231a21e6dea1808}} 
+\index{dijkstra@{dijkstra}!check@{check}}
+\index{check@{check}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int dijkstra\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks whether the preconditions for Dijkstra are satisfied. 
+
+Necessary preconditions are\+:
+\begin{DoxyItemize}
+\item the weights of the edges are set
+\item the graph {\ttfamily G} has at least one node
+\item all edge weights must be $\ge 0$
+\item the source node and (if set) target node must be found in {\ttfamily G} 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf}{algorithm\+::\+K\+G\+L\+\_\+\+OK}}} & if algorithm can be applied \\
+\hline
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556}{algorithm\+::\+K\+G\+L\+\_\+\+E\+R\+R\+OR}}} & otherwise\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classdijkstra_a9689f2628f76ddb3747ea18c91bd7041}{dijkstra\+::source}} 
+
+\mbox{\hyperlink{classdijkstra_a92f4394b757f6ffcb372535114a6cbf6}{dijkstra\+::weights}} 
+
+\mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+
+\mbox{\Hypertarget{classdijkstra_ae350a266dd47091d7f620a7328619426}\label{classdijkstra_ae350a266dd47091d7f620a7328619426}} 
+\index{dijkstra@{dijkstra}!distance@{distance}}
+\index{distance@{distance}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily double dijkstra\+::distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Returns the distance from source node to node {\ttfamily n}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance if {\ttfamily n} is \mbox{\hyperlink{classdijkstra_a405ff80abfc9ad98668534032eed6a5b}{dijkstra\+::reached}}, {\ttfamily -\/1.\+0} else 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdijkstra_aa3ef1a7d7dfc33e4a39aff309f873929}\label{classdijkstra_aa3ef1a7d7dfc33e4a39aff309f873929}} 
+\index{dijkstra@{dijkstra}!predecessor\+\_\+edge@{predecessor\+\_\+edge}}
+\index{predecessor\+\_\+edge@{predecessor\+\_\+edge}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{predecessor\+\_\+edge()}{predecessor\_edge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge}{edge}} dijkstra\+::predecessor\+\_\+edge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Predecessor edge of node {\ttfamily n} on the shortest path from the source node. 
+
+If {\ttfamily n} is a root or wasn\textquotesingle{}t reached the return value is the invalid edge \mbox{\hyperlink{classedge_a41859d2473a15e24255d7bc0de1f49b4}{edge\+::edge()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+predecessor edge of {\ttfamily n} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classdijkstra_af79383dbbb6b737afcefd8e32350192d}{dijkstra\+::store\+\_\+preds}} 
+
+\mbox{\hyperlink{classdijkstra_a99c17ee7c2b55574ea8c2952fac09faf}{dijkstra\+::predecessor\+\_\+node}}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+The method requires that predecessor calculation option was enabled during last run. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classdijkstra_a99c17ee7c2b55574ea8c2952fac09faf}\label{classdijkstra_a99c17ee7c2b55574ea8c2952fac09faf}} 
+\index{dijkstra@{dijkstra}!predecessor\+\_\+node@{predecessor\+\_\+node}}
+\index{predecessor\+\_\+node@{predecessor\+\_\+node}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{predecessor\+\_\+node()}{predecessor\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} dijkstra\+::predecessor\+\_\+node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Predecessor node of node {\ttfamily n} on the shortest path from the source node. 
+
+If {\ttfamily n} is a root or wasn\textquotesingle{}t reached the return value is the invalid node \mbox{\hyperlink{classnode_ad603259398d5667e3b97a6322a2bcc20}{node\+::node()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+predecessor node of {\ttfamily n} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classdijkstra_af79383dbbb6b737afcefd8e32350192d}{dijkstra\+::store\+\_\+preds}} 
+
+\mbox{\hyperlink{classdijkstra_aa3ef1a7d7dfc33e4a39aff309f873929}{dijkstra\+::predecessor\+\_\+edge}}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+The method requires that predecessor calculation option was enabled during last run. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classdijkstra_a405ff80abfc9ad98668534032eed6a5b}\label{classdijkstra_a405ff80abfc9ad98668534032eed6a5b}} 
+\index{dijkstra@{dijkstra}!reached@{reached}}
+\index{reached@{reached}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{reached()}{reached()}}
+{\footnotesize\ttfamily bool dijkstra\+::reached (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether {\ttfamily n} is reachable from source node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} iff {\ttfamily n} was reached from source 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdijkstra_a444c288b3a49ec1c2973459dad55ffb3}\label{classdijkstra_a444c288b3a49ec1c2973459dad55ffb3}} 
+\index{dijkstra@{dijkstra}!reset@{reset}}
+\index{reset@{reset}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void dijkstra\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets Dijkstra\textquotesingle{}s algorithm. 
+
+It prepares the algorithm to be applied again, possibly to another graph.
+
+\begin{DoxyNote}{Note}
+The weights are not reset. You can apply this algorithms
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm\+::reset}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+
+\mbox{\Hypertarget{classdijkstra_a7b30f3d8ad42baae27989bc14befe0d0}\label{classdijkstra_a7b30f3d8ad42baae27989bc14befe0d0}} 
+\index{dijkstra@{dijkstra}!run@{run}}
+\index{run@{run}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int dijkstra\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Runs shortest path algorithm on {\ttfamily G}. 
+
+This should return always \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf}{algorithm\+::\+K\+G\+L\+\_\+\+OK}}. The return value only tracks errors that might occur. Afterwards the result of the test can be accessed via access methods.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf}{algorithm\+::\+K\+G\+L\+\_\+\+OK}}} & on success \\
+\hline
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556}{algorithm\+::\+K\+G\+L\+\_\+\+E\+R\+R\+OR}}} & otherwise\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+
+\mbox{\Hypertarget{classdijkstra_ad7ef6f747b68f8951322b265844dbb8a}\label{classdijkstra_ad7ef6f747b68f8951322b265844dbb8a}} 
+\index{dijkstra@{dijkstra}!shortest\+\_\+path\+\_\+edges\+\_\+begin@{shortest\+\_\+path\+\_\+edges\+\_\+begin}}
+\index{shortest\+\_\+path\+\_\+edges\+\_\+begin@{shortest\+\_\+path\+\_\+edges\+\_\+begin}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{shortest\+\_\+path\+\_\+edges\+\_\+begin()}{shortest\_path\_edges\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdijkstra_ad35d95d4ed7a4202a5d048a63aa115b9}{dijkstra\+::shortest\+\_\+path\+\_\+edge\+\_\+iterator}} dijkstra\+::shortest\+\_\+path\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{dest }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator to the beginning edge of a shortest edge path to node {\ttfamily dest}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & target node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+beginning edge iterator of a shortest path
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The method requires that predecessor calculation option was enabled during last run. If this method is called on the shortest path to {\ttfamily dest} for the first time (before \mbox{\hyperlink{classdijkstra_a031e6fef10aa40aad10edc1053ad9cf0}{dijkstra\+::shortest\+\_\+path\+\_\+edges\+\_\+end}}) it needs $\mathcal{O}(\mbox{length of this path})$ time. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classdijkstra_a031e6fef10aa40aad10edc1053ad9cf0}\label{classdijkstra_a031e6fef10aa40aad10edc1053ad9cf0}} 
+\index{dijkstra@{dijkstra}!shortest\+\_\+path\+\_\+edges\+\_\+end@{shortest\+\_\+path\+\_\+edges\+\_\+end}}
+\index{shortest\+\_\+path\+\_\+edges\+\_\+end@{shortest\+\_\+path\+\_\+edges\+\_\+end}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{shortest\+\_\+path\+\_\+edges\+\_\+end()}{shortest\_path\_edges\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdijkstra_ad35d95d4ed7a4202a5d048a63aa115b9}{dijkstra\+::shortest\+\_\+path\+\_\+edge\+\_\+iterator}} dijkstra\+::shortest\+\_\+path\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{dest }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator one after the end of a shortest edge path to node {\ttfamily dest}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & target node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shortest path end edge iterator
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The method requires that predecessor calculation option was enabled during last run. If this method is called on the shortest path to {\ttfamily dest} for the first time (before \mbox{\hyperlink{classdijkstra_ad7ef6f747b68f8951322b265844dbb8a}{dijkstra\+::shortest\+\_\+path\+\_\+edges\+\_\+begin}}) it needs $\mathcal{O}(\mbox{length of this path})$ time. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classdijkstra_ae30c66319d925387ed858aab9ce419ae}\label{classdijkstra_ae30c66319d925387ed858aab9ce419ae}} 
+\index{dijkstra@{dijkstra}!shortest\+\_\+path\+\_\+nodes\+\_\+begin@{shortest\+\_\+path\+\_\+nodes\+\_\+begin}}
+\index{shortest\+\_\+path\+\_\+nodes\+\_\+begin@{shortest\+\_\+path\+\_\+nodes\+\_\+begin}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{shortest\+\_\+path\+\_\+nodes\+\_\+begin()}{shortest\_path\_nodes\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdijkstra_a5062e9a8339848666efcf2143c4c1881}{dijkstra\+::shortest\+\_\+path\+\_\+node\+\_\+iterator}} dijkstra\+::shortest\+\_\+path\+\_\+nodes\+\_\+begin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{dest }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator to the beginning (to the source node) of a shortest node path to node {\ttfamily dest}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & target node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+beginning node iterator of a shortest path
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The method requires that predecessor calculation option was enabled during last run. If this method is called on the shortest path to {\ttfamily dest} for the first time (before \mbox{\hyperlink{classdijkstra_ae9846beeabd53a8cf0c0c1af328235b2}{dijkstra\+::shortest\+\_\+path\+\_\+nodes\+\_\+end}}) it needs $\mathcal{O}(\mbox{length of this path})$ time. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classdijkstra_ae9846beeabd53a8cf0c0c1af328235b2}\label{classdijkstra_ae9846beeabd53a8cf0c0c1af328235b2}} 
+\index{dijkstra@{dijkstra}!shortest\+\_\+path\+\_\+nodes\+\_\+end@{shortest\+\_\+path\+\_\+nodes\+\_\+end}}
+\index{shortest\+\_\+path\+\_\+nodes\+\_\+end@{shortest\+\_\+path\+\_\+nodes\+\_\+end}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{shortest\+\_\+path\+\_\+nodes\+\_\+end()}{shortest\_path\_nodes\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdijkstra_a5062e9a8339848666efcf2143c4c1881}{dijkstra\+::shortest\+\_\+path\+\_\+node\+\_\+iterator}} dijkstra\+::shortest\+\_\+path\+\_\+nodes\+\_\+end (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{dest }\end{DoxyParamCaption})}
+
+
+
+Returns an iterator one after the end (one after node {\ttfamily dest}) of a shortest node path to node {\ttfamily dest}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & target node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shortest path end node iterator
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The method requires that predecessor calculation option was enabled during last run. If this method is called on the shortest path to {\ttfamily dest} for the first time (before \mbox{\hyperlink{classdijkstra_ae30c66319d925387ed858aab9ce419ae}{dijkstra\+::shortest\+\_\+path\+\_\+nodes\+\_\+begin}}) it needs $\mathcal{O}(\mbox{length of this path})$ time. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classdijkstra_a9689f2628f76ddb3747ea18c91bd7041}\label{classdijkstra_a9689f2628f76ddb3747ea18c91bd7041}} 
+\index{dijkstra@{dijkstra}!source@{source}}
+\index{source@{source}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{source()}{source()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void dijkstra\+::source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Sets source node. 
+
+The default source is the invalid node (\mbox{\hyperlink{classnode_ad603259398d5667e3b97a6322a2bcc20}{node\+::node()}}), in this case an arbitrary node is chosen and stored when this algorithm is run.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & source node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdijkstra_a69772d19321b5e4deac66174ec546caa}\label{classdijkstra_a69772d19321b5e4deac66174ec546caa}} 
+\index{dijkstra@{dijkstra}!source@{source}}
+\index{source@{source}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{source()}{source()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} dijkstra\+::source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns source node. 
+
+\begin{DoxyReturn}{Returns}
+source node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdijkstra_af79383dbbb6b737afcefd8e32350192d}\label{classdijkstra_af79383dbbb6b737afcefd8e32350192d}} 
+\index{dijkstra@{dijkstra}!store\+\_\+preds@{store\+\_\+preds}}
+\index{store\+\_\+preds@{store\+\_\+preds}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{store\+\_\+preds()}{store\_preds()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void dijkstra\+::store\+\_\+preds (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})}
+
+
+
+Enables or disables the storing of predecessors. 
+
+If enabled for every node the predecessor on the shortest path from will be stored.
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & {\ttfamily true} if predecessors should be stored\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classdijkstra_a99c17ee7c2b55574ea8c2952fac09faf}{dijkstra\+::predecessor\+\_\+node}} 
+
+\mbox{\hyperlink{classdijkstra_aa3ef1a7d7dfc33e4a39aff309f873929}{dijkstra\+::predecessor\+\_\+edge}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classdijkstra_a8ef3ee087994a56b774f48fd331725a3}\label{classdijkstra_a8ef3ee087994a56b774f48fd331725a3}} 
+\index{dijkstra@{dijkstra}!store\+\_\+preds@{store\+\_\+preds}}
+\index{store\+\_\+preds@{store\+\_\+preds}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{store\+\_\+preds()}{store\_preds()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool dijkstra\+::store\+\_\+preds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the storing of predecessors is enabled. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} iff the storing of predecessors is enabled
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+dijkstra\+::predecessor 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classdijkstra_a1e9971d767046306574551a461aa2238}\label{classdijkstra_a1e9971d767046306574551a461aa2238}} 
+\index{dijkstra@{dijkstra}!target@{target}}
+\index{target@{target}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{target()}{target()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void dijkstra\+::target (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Sets target node. 
+
+If a target is set with this method the algorithm stops if a shortest distance to {\ttfamily n} is found. Ohterwise shortest paths are computed from source to any node in the graph.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & target node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdijkstra_a4957ef4369386ef2153359ea97da9d88}\label{classdijkstra_a4957ef4369386ef2153359ea97da9d88}} 
+\index{dijkstra@{dijkstra}!target@{target}}
+\index{target@{target}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{target()}{target()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} dijkstra\+::target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns target node if set, {\ttfamily \mbox{\hyperlink{classnode_ad603259398d5667e3b97a6322a2bcc20}{node\+::node()}}} else. 
+
+\begin{DoxyReturn}{Returns}
+target node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdijkstra_a92f4394b757f6ffcb372535114a6cbf6}\label{classdijkstra_a92f4394b757f6ffcb372535114a6cbf6}} 
+\index{dijkstra@{dijkstra}!weights@{weights}}
+\index{weights@{weights}!dijkstra@{dijkstra}}
+\subsubsection{\texorpdfstring{weights()}{weights()}}
+{\footnotesize\ttfamily void dijkstra\+::weights (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ double $>$ \&}]{weight }\end{DoxyParamCaption})}
+
+
+
+Sets weights of the edges. 
+
+This method {\bfseries must} be called before check run.
+
+
+\begin{DoxyParams}{Parameters}
+{\em weight} & weights of the edges \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/dijkstra.\+h\item 
+src/dijkstra.\+cpp\end{DoxyCompactItemize}

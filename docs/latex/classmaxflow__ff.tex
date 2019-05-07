@@ -1,0 +1,295 @@
+\hypertarget{classmaxflow__ff}{}\section{maxflow\+\_\+ff Class Reference}
+\label{classmaxflow__ff}\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+
+
+Maximum flow algorithm (Edmonds-\/\+Karp).  
+
+
+
+
+{\ttfamily \#include $<$maxflow\+\_\+ff.\+h$>$}
+
+Inheritance diagram for maxflow\+\_\+ff\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmaxflow__ff}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmaxflow__ff_a47280ecd91e227e529455249ee390ca3}{maxflow\+\_\+ff}} ()
+\item 
+virtual \mbox{\hyperlink{classmaxflow__ff_ae1c3c5ba0b8c55cdba429ee906bce7d9}{$\sim$maxflow\+\_\+ff}} ()
+\item 
+void \mbox{\hyperlink{classmaxflow__ff_ad2485a4c093dbcfa045d1e6e5d78f533}{set\+\_\+vars}} (const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ double $>$ \&edge\+\_\+capacity)
+\item 
+void \mbox{\hyperlink{classmaxflow__ff_a1e715030d70080e0c9ecf118dd81e8f6}{set\+\_\+vars}} (const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ double $>$ \&edge\+\_\+capacity, const \mbox{\hyperlink{classnode}{node}} \&net\+\_\+source, const \mbox{\hyperlink{classnode}{node}} \&net\+\_\+target)
+\item 
+virtual int \mbox{\hyperlink{classmaxflow__ff_a4d0deee7d70bac4c9dad942341d87e37}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+int \mbox{\hyperlink{classmaxflow__ff_a0a4391b9093d6966b47c023a555099e2}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+double \mbox{\hyperlink{classmaxflow__ff_a4c120a7ea9be23d908036ebd2fb9298c}{get\+\_\+max\+\_\+flow}} (const \mbox{\hyperlink{classedge}{edge}} \&e) const
+\item 
+double \mbox{\hyperlink{classmaxflow__ff_a04d1ea509c13e500b62cad061ee8a2b9}{get\+\_\+max\+\_\+flow}} () const
+\item 
+double \mbox{\hyperlink{classmaxflow__ff_a3b66acf996ff5be94de8b2cfdb3164c3}{get\+\_\+rem\+\_\+cap}} (const \mbox{\hyperlink{classedge}{edge}} \&e) const
+\item 
+virtual void \mbox{\hyperlink{classmaxflow__ff_a893e5136d4f7f1d4b67ef5b67306d17b}{reset}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a08dc6e5c5fe20a9f9d93721f8c273592}\label{classmaxflow__ff_a08dc6e5c5fe20a9f9d93721f8c273592}} 
+enum \{ {\bfseries S\+P\+\_\+\+F\+O\+U\+ND} = 2, 
+{\bfseries N\+O\+\_\+\+S\+P\+\_\+\+F\+O\+U\+ND} = 3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_ad2634e4325012773d793e9cf8f1a3dcf}\label{classmaxflow__ff_ad2634e4325012773d793e9cf8f1a3dcf}} 
+void {\bfseries create\+\_\+artif\+\_\+source\+\_\+target} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a8ad20b45a7d30070bb65e68758c2f7d3}\label{classmaxflow__ff_a8ad20b45a7d30070bb65e68758c2f7d3}} 
+void {\bfseries prepare\+\_\+run} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a22a432bb072e0410f20bb418dfd4d3a9}\label{classmaxflow__ff_a22a432bb072e0410f20bb418dfd4d3a9}} 
+void {\bfseries comp\+\_\+single\+\_\+flow} (\mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \&last\+\_\+edge)
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a532b1285a791d23ab318791bc093fde7}\label{classmaxflow__ff_a532b1285a791d23ab318791bc093fde7}} 
+int {\bfseries get\+\_\+sp} (const \mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \&last\+\_\+edge)
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a3a9d93d6796ae0846d0137aa46f29c30}\label{classmaxflow__ff_a3a9d93d6796ae0846d0137aa46f29c30}} 
+int {\bfseries comp\+\_\+sp} (const \mbox{\hyperlink{classgraph}{graph}} \&G, queue$<$ \mbox{\hyperlink{classnode}{node}} $>$ \&next\+\_\+nodes, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ bool $>$ \&visited, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \&last\+\_\+edge)
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a410a7c5b9b75225ec0a48402dc2f6555}\label{classmaxflow__ff_a410a7c5b9b75225ec0a48402dc2f6555}} 
+double {\bfseries extra\+\_\+charge} (const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \&last\+\_\+edge) const
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_aea04831f46fb86990c9ba21fb19d0382}\label{classmaxflow__ff_aea04831f46fb86990c9ba21fb19d0382}} 
+void {\bfseries create\+\_\+back\+\_\+edge} (\mbox{\hyperlink{classgraph}{graph}} \&G, const \mbox{\hyperlink{classedge}{edge}} \&org\+\_\+edge)
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a560d27c4c62b46dcb0a36ac60ebc1efb}\label{classmaxflow__ff_a560d27c4c62b46dcb0a36ac60ebc1efb}} 
+void {\bfseries comp\+\_\+max\+\_\+flow} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a31a13c79918964a49fa18b4eb514c584}\label{classmaxflow__ff_a31a13c79918964a49fa18b4eb514c584}} 
+void {\bfseries restore\+\_\+graph} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a1ec31e7053722875a2e90659f79396a3}\label{classmaxflow__ff_a1ec31e7053722875a2e90659f79396a3}} 
+bool {\bfseries artif\+\_\+source\+\_\+target}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a2551a00303d9b81ccc6b3d1f575d7956}\label{classmaxflow__ff_a2551a00303d9b81ccc6b3d1f575d7956}} 
+bool {\bfseries set\+\_\+vars\+\_\+executed}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a7a2f530f9c95b6f37f4c349427a0f9bb}\label{classmaxflow__ff_a7a2f530f9c95b6f37f4c349427a0f9bb}} 
+double {\bfseries max\+\_\+graph\+\_\+flow}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a2e4cc02ce8c9d929f2896525c686d6c1}\label{classmaxflow__ff_a2e4cc02ce8c9d929f2896525c686d6c1}} 
+\mbox{\hyperlink{classnode}{node}} {\bfseries net\+\_\+source}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a94d5db73364cf5824ec3d3d530b57319}\label{classmaxflow__ff_a94d5db73364cf5824ec3d3d530b57319}} 
+\mbox{\hyperlink{classnode}{node}} {\bfseries net\+\_\+target}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a5798d469fb86dc7635a36dcf327a1906}\label{classmaxflow__ff_a5798d469fb86dc7635a36dcf327a1906}} 
+list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ {\bfseries edges\+\_\+not\+\_\+org}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_aa9fd46b8da1a67678b132a17e7a41c91}\label{classmaxflow__ff_aa9fd46b8da1a67678b132a17e7a41c91}} 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ bool $>$ {\bfseries edge\+\_\+org}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a686006593b17dfd3ad9a5e02b1ad9e92}\label{classmaxflow__ff_a686006593b17dfd3ad9a5e02b1ad9e92}} 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ bool $>$ {\bfseries back\+\_\+edge\+\_\+exists}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_abceef8f9ee5acf7a992301de6d0c80de}\label{classmaxflow__ff_abceef8f9ee5acf7a992301de6d0c80de}} 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ {\bfseries back\+\_\+edge}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a5b38943e093c77a57eb70f1a4190b8a6}\label{classmaxflow__ff_a5b38943e093c77a57eb70f1a4190b8a6}} 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ double $>$ {\bfseries edge\+\_\+capacity}
+\item 
+\mbox{\Hypertarget{classmaxflow__ff_a669f36f1fae2dd0f6cfc0172e3ae0e8f}\label{classmaxflow__ff_a669f36f1fae2dd0f6cfc0172e3ae0e8f}} 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ double $>$ {\bfseries edge\+\_\+max\+\_\+flow}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Maximum flow algorithm (Edmonds-\/\+Karp). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmaxflow__ff_a47280ecd91e227e529455249ee390ca3}\label{classmaxflow__ff_a47280ecd91e227e529455249ee390ca3}} 
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\subsubsection{\texorpdfstring{maxflow\+\_\+ff()}{maxflow\_ff()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+K\+G\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE maxflow\+\_\+ff\+::maxflow\+\_\+ff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. Enables only the calculation of maximum flow.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_ab79e1ddec2f2afdf4b36b10724db8b15}{algorithm\+::algorithm}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classmaxflow__ff_ae1c3c5ba0b8c55cdba429ee906bce7d9}\label{classmaxflow__ff_ae1c3c5ba0b8c55cdba429ee906bce7d9}} 
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!````~maxflow\+\_\+ff@{$\sim$maxflow\+\_\+ff}}
+\index{````~maxflow\+\_\+ff@{$\sim$maxflow\+\_\+ff}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\subsubsection{\texorpdfstring{$\sim$maxflow\+\_\+ff()}{~maxflow\_ff()}}
+{\footnotesize\ttfamily maxflow\+\_\+ff\+::$\sim$maxflow\+\_\+ff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_adca9b1e7fa3afd914519a9dbb44e9fd5}{algorithm\+::$\sim$algorithm}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmaxflow__ff_a4d0deee7d70bac4c9dad942341d87e37}\label{classmaxflow__ff_a4d0deee7d70bac4c9dad942341d87e37}} 
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!check@{check}}
+\index{check@{check}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int maxflow\+\_\+ff\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks whether following preconditions are satisfied\+: 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classmaxflow__ff_ad2485a4c093dbcfa045d1e6e5d78f533}{maxflow\+\_\+ff\+::set\+\_\+vars}} has been executed before. 
+\item only edge\+\_\+capacities $>$= 0 are applied. 
+\item {\ttfamily G} is directed. 
+\item {\ttfamily G} is connected. 
+\item {\ttfamily G} has at least one edge and two nodes. 
+\item if not applied, start-\/nodes and end-\/nodes exists. 
+\item if applied, start-\/node is not the same node as end-\/node. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf}{algorithm\+::\+K\+G\+L\+\_\+\+OK}}} on success {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556}{algorithm\+::\+K\+G\+L\+\_\+\+E\+R\+R\+OR}}} otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+
+\mbox{\Hypertarget{classmaxflow__ff_a4c120a7ea9be23d908036ebd2fb9298c}\label{classmaxflow__ff_a4c120a7ea9be23d908036ebd2fb9298c}} 
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!get\+\_\+max\+\_\+flow@{get\+\_\+max\+\_\+flow}}
+\index{get\+\_\+max\+\_\+flow@{get\+\_\+max\+\_\+flow}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\subsubsection{\texorpdfstring{get\+\_\+max\+\_\+flow()}{get\_max\_flow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double maxflow\+\_\+ff\+::get\+\_\+max\+\_\+flow (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classedge}{edge}} \&}]{e }\end{DoxyParamCaption}) const}
+
+Returns the maximum flow of an edge.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & edge of a graph G \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+maximum flow value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmaxflow__ff_a04d1ea509c13e500b62cad061ee8a2b9}\label{classmaxflow__ff_a04d1ea509c13e500b62cad061ee8a2b9}} 
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!get\+\_\+max\+\_\+flow@{get\+\_\+max\+\_\+flow}}
+\index{get\+\_\+max\+\_\+flow@{get\+\_\+max\+\_\+flow}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\subsubsection{\texorpdfstring{get\+\_\+max\+\_\+flow()}{get\_max\_flow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double maxflow\+\_\+ff\+::get\+\_\+max\+\_\+flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the maximum flow of the whole graph G.
+
+\begin{DoxyReturn}{Returns}
+maximum flow value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmaxflow__ff_a3b66acf996ff5be94de8b2cfdb3164c3}\label{classmaxflow__ff_a3b66acf996ff5be94de8b2cfdb3164c3}} 
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!get\+\_\+rem\+\_\+cap@{get\+\_\+rem\+\_\+cap}}
+\index{get\+\_\+rem\+\_\+cap@{get\+\_\+rem\+\_\+cap}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\subsubsection{\texorpdfstring{get\+\_\+rem\+\_\+cap()}{get\_rem\_cap()}}
+{\footnotesize\ttfamily double maxflow\+\_\+ff\+::get\+\_\+rem\+\_\+cap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classedge}{edge}} \&}]{e }\end{DoxyParamCaption}) const}
+
+Returns the remaining free capacity of an edge.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & edge of a graph G \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+remaining capacity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmaxflow__ff_a893e5136d4f7f1d4b67ef5b67306d17b}\label{classmaxflow__ff_a893e5136d4f7f1d4b67ef5b67306d17b}} 
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!reset@{reset}}
+\index{reset@{reset}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void maxflow\+\_\+ff\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Resets maximum flow algorithm, i.\+e. prepares the algorithm to be applied to another graph.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm\+::reset}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+
+\mbox{\Hypertarget{classmaxflow__ff_a0a4391b9093d6966b47c023a555099e2}\label{classmaxflow__ff_a0a4391b9093d6966b47c023a555099e2}} 
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!run@{run}}
+\index{run@{run}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int maxflow\+\_\+ff\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Computes maximum flow of graph {\ttfamily G}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf}{algorithm\+::\+K\+G\+L\+\_\+\+OK}}} on success {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556}{algorithm\+::\+K\+G\+L\+\_\+\+E\+R\+R\+OR}}} otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+
+\mbox{\Hypertarget{classmaxflow__ff_ad2485a4c093dbcfa045d1e6e5d78f533}\label{classmaxflow__ff_ad2485a4c093dbcfa045d1e6e5d78f533}} 
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!set\+\_\+vars@{set\+\_\+vars}}
+\index{set\+\_\+vars@{set\+\_\+vars}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void maxflow\+\_\+ff\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ double $>$ \&}]{edge\+\_\+capacity }\end{DoxyParamCaption})}
+
+Sets capacity of every edge for maximum flow calculation where artificial start-\/node and end\+\_\+node will be computed automatically.
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge\+\_\+capacity} & capacity of every edge \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmaxflow__ff_a1e715030d70080e0c9ecf118dd81e8f6}\label{classmaxflow__ff_a1e715030d70080e0c9ecf118dd81e8f6}} 
+\index{maxflow\+\_\+ff@{maxflow\+\_\+ff}!set\+\_\+vars@{set\+\_\+vars}}
+\index{set\+\_\+vars@{set\+\_\+vars}!maxflow\+\_\+ff@{maxflow\+\_\+ff}}
+\subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void maxflow\+\_\+ff\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ double $>$ \&}]{edge\+\_\+capacity,  }\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{net\+\_\+source,  }\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{net\+\_\+target }\end{DoxyParamCaption})}
+
+Sets capacity of every edge for maximum flow calculation
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge\+\_\+capacity} & capacity of every edge \\
+\hline
+{\em net\+\_\+source} & start-\/node \\
+\hline
+{\em net\+\_\+target} & end-\/node \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/maxflow\+\_\+ff.\+h\item 
+src/maxflow\+\_\+ff.\+cpp\end{DoxyCompactItemize}

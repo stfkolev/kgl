@@ -1,0 +1,294 @@
+\hypertarget{classplanar__embedding}{}\section{planar\+\_\+embedding Class Reference}
+\label{classplanar__embedding}\index{planar\+\_\+embedding@{planar\+\_\+embedding}}
+
+
+Ordered adjacency lists as a result of planarity testing.  
+
+
+
+
+{\ttfamily \#include $<$embedding.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classplanar__embedding_a2f2057ce2f9c23616696042457fd52ff}\label{classplanar__embedding_a2f2057ce2f9c23616696042457fd52ff}} 
+typedef \mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ {\bfseries adj\+\_\+list}
+\item 
+\mbox{\Hypertarget{classplanar__embedding_a2a2da42b192eb461aad874f0a7e1e430}\label{classplanar__embedding_a2a2da42b192eb461aad874f0a7e1e430}} 
+typedef \mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$\+::\mbox{\hyperlink{structsymlist__iterator}{iterator}} {\bfseries iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classplanar__embedding_ac3bce79522ec180819470bd0370eda87}{planar\+\_\+embedding}} (const \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&em)
+\item 
+virtual \mbox{\hyperlink{classplanar__embedding_ae5605eb5f21346f3f8194dd2db9de117}{$\sim$planar\+\_\+embedding}} ()
+\item 
+\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \& \mbox{\hyperlink{classplanar__embedding_afb772a5c6a3a03fafa6bbc17a4c42a23}{operator=}} (const \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&em)
+\item 
+\mbox{\hyperlink{classsymlist}{adj\+\_\+list}} \& \mbox{\hyperlink{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}{adjacency}} (\mbox{\hyperlink{classnode}{node}} n)
+\item 
+const \mbox{\hyperlink{classsymlist}{adj\+\_\+list}} \& \mbox{\hyperlink{classplanar__embedding_aa52d4454ff761f0130e8739a53efbe83}{adjacency}} (\mbox{\hyperlink{classnode}{node}} n) const
+\item 
+\mbox{\hyperlink{structsymlist__iterator}{iterator}} \mbox{\hyperlink{classplanar__embedding_ac0b41dd43adb80ed898b597e791230d8}{adj\+\_\+edges\+\_\+begin}} (\mbox{\hyperlink{classnode}{node}} n)
+\item 
+\mbox{\hyperlink{structsymlist__iterator}{iterator}} \mbox{\hyperlink{classplanar__embedding_a1345ee93995019d81cc78fb2806acc88}{adj\+\_\+edges\+\_\+end}} (\mbox{\hyperlink{classnode}{node}} n)
+\item 
+\mbox{\hyperlink{classedge}{edge}} \mbox{\hyperlink{classplanar__embedding_a4498733be831e1468044db038452efa4}{cyclic\+\_\+next}} (\mbox{\hyperlink{classnode}{node}} n, \mbox{\hyperlink{classedge}{edge}} e)
+\item 
+\mbox{\hyperlink{classedge}{edge}} \mbox{\hyperlink{classplanar__embedding_ae4d5e8226c1088c17e15ee6447133383}{cyclic\+\_\+prev}} (\mbox{\hyperlink{classnode}{node}} n, \mbox{\hyperlink{classedge}{edge}} e)
+\item 
+void \mbox{\hyperlink{classplanar__embedding_ab2870ca51d0df44f8006ab69c3ee74d4}{write\+\_\+st}} (ostream \&os, \mbox{\hyperlink{classst__number}{st\+\_\+number}} \&st)
+\item 
+list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \& \mbox{\hyperlink{classplanar__embedding_ab04859be18352bc53a120b0676a499ba}{selfloops}} ()
+\item 
+const list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \& \mbox{\hyperlink{classplanar__embedding_a25e47defbdda4552bf1ff98a3e7682e5}{selfloops}} () const
+\item 
+list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \& \mbox{\hyperlink{classplanar__embedding_afb50ef8f3b5b2c6690b9d364db21f36f}{multiple\+\_\+edges}} ()
+\item 
+const list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \& \mbox{\hyperlink{classplanar__embedding_aebec933f9aac54914ee7439028e37418}{multiple\+\_\+edges}} () const
+\item 
+bool \mbox{\hyperlink{classplanar__embedding_a6462d40327bf7c4c91523b888bb45cb3}{check}} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classplanar__embedding_ab6a02224dbc06343d95919289aec77c8}\label{classplanar__embedding_ab6a02224dbc06343d95919289aec77c8}} 
+class {\bfseries planarity}
+\item 
+\mbox{\Hypertarget{classplanar__embedding_a0a5be4bb438c891059fae98f607f2a9c}\label{classplanar__embedding_a0a5be4bb438c891059fae98f607f2a9c}} 
+class {\bfseries pq\+\_\+tree}
+\item 
+\mbox{\Hypertarget{classplanar__embedding_ac972f6f97db38c01e25404f661bc9355}\label{classplanar__embedding_ac972f6f97db38c01e25404f661bc9355}} 
+K\+G\+L\+\_\+\+E\+X\+T\+E\+RN friend ostream \& {\bfseries operator$<$$<$} (ostream \&, \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ordered adjacency lists as a result of planarity testing. 
+
+It is known that if a graph is planar the adjacency list of every node can be ordered in such a way that it reflects the order the adjacent edges will have in a planar drawing around the node. Although the tested graph might have been directed the planar embedding one gets will always correspond to the underlying undirected graph, i.\+e. an edge from {\ttfamily n1} to {\ttfamily n2} will occurr in both adjacency lists. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classplanar__embedding_ac3bce79522ec180819470bd0370eda87}\label{classplanar__embedding_ac3bce79522ec180819470bd0370eda87}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{planar\+\_\+embedding()}{planar\_embedding()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+K\+G\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE planar\+\_\+embedding\+::planar\+\_\+embedding (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&}]{em }\end{DoxyParamCaption})}
+
+Make this object a copy of {\ttfamily em}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em em} & planar embedding \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classplanar__embedding_ae5605eb5f21346f3f8194dd2db9de117}\label{classplanar__embedding_ae5605eb5f21346f3f8194dd2db9de117}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!````~planar\+\_\+embedding@{$\sim$planar\+\_\+embedding}}
+\index{````~planar\+\_\+embedding@{$\sim$planar\+\_\+embedding}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{$\sim$planar\+\_\+embedding()}{~planar\_embedding()}}
+{\footnotesize\ttfamily virtual planar\+\_\+embedding\+::$\sim$planar\+\_\+embedding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classplanar__embedding_ac0b41dd43adb80ed898b597e791230d8}\label{classplanar__embedding_ac0b41dd43adb80ed898b597e791230d8}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!adj\+\_\+edges\+\_\+begin@{adj\+\_\+edges\+\_\+begin}}
+\index{adj\+\_\+edges\+\_\+begin@{adj\+\_\+edges\+\_\+begin}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{adj\+\_\+edges\+\_\+begin()}{adj\_edges\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsymlist__iterator}{iterator}} planar\+\_\+embedding\+::adj\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Start iteration through adjacency list of node {\ttfamily n}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+start iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classplanar__embedding_a1345ee93995019d81cc78fb2806acc88}\label{classplanar__embedding_a1345ee93995019d81cc78fb2806acc88}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!adj\+\_\+edges\+\_\+end@{adj\+\_\+edges\+\_\+end}}
+\index{adj\+\_\+edges\+\_\+end@{adj\+\_\+edges\+\_\+end}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{adj\+\_\+edges\+\_\+end()}{adj\_edges\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsymlist__iterator}{iterator}} planar\+\_\+embedding\+::adj\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+End of iteration through adjacency list of node {\ttfamily n}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}\label{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!adjacency@{adjacency}}
+\index{adjacency@{adjacency}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{adjacency()}{adjacency()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsymlist}{adj\+\_\+list}}\& planar\+\_\+embedding\+::adjacency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns reference to ordered adjacency list of node {\ttfamily n}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ordered adjacency list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classplanar__embedding_aa52d4454ff761f0130e8739a53efbe83}\label{classplanar__embedding_aa52d4454ff761f0130e8739a53efbe83}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!adjacency@{adjacency}}
+\index{adjacency@{adjacency}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{adjacency()}{adjacency()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classsymlist}{adj\+\_\+list}}\& planar\+\_\+embedding\+::adjacency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns reference to ordered adjacency list of node {\ttfamily n}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ordered adjacency list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classplanar__embedding_a6462d40327bf7c4c91523b888bb45cb3}\label{classplanar__embedding_a6462d40327bf7c4c91523b888bb45cb3}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!check@{check}}
+\index{check@{check}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool planar\+\_\+embedding\+::check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Used for debugging only. Checks whether this is a correct planar embedding by checking the faces of the graph, i.\+e. at any node starting with an arbitrary adjacent edge and advancing along {\ttfamily cyclic\+\_\+next} the start node must be met through the edge given by {\ttfamily cyclic\+\_\+prev} of the edge we started with.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff embedding is correct \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classplanar__embedding_a4498733be831e1468044db038452efa4}\label{classplanar__embedding_a4498733be831e1468044db038452efa4}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!cyclic\+\_\+next@{cyclic\+\_\+next}}
+\index{cyclic\+\_\+next@{cyclic\+\_\+next}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{cyclic\+\_\+next()}{cyclic\_next()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge}{edge}} planar\+\_\+embedding\+::cyclic\+\_\+next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n,  }\item[{\mbox{\hyperlink{classedge}{edge}}}]{e }\end{DoxyParamCaption})}
+
+Returns the cyclic successor of edge {\ttfamily e} in the adjacency list of node {\ttfamily n}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node \\
+\hline
+{\em e} & edge adjacent to {\ttfamily n} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+edge following {\ttfamily e} in adjacency of {\ttfamily n} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classplanar__embedding_ae4d5e8226c1088c17e15ee6447133383}\label{classplanar__embedding_ae4d5e8226c1088c17e15ee6447133383}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!cyclic\+\_\+prev@{cyclic\+\_\+prev}}
+\index{cyclic\+\_\+prev@{cyclic\+\_\+prev}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{cyclic\+\_\+prev()}{cyclic\_prev()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge}{edge}} planar\+\_\+embedding\+::cyclic\+\_\+prev (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n,  }\item[{\mbox{\hyperlink{classedge}{edge}}}]{e }\end{DoxyParamCaption})}
+
+Returns the cyclic predecessor of edge {\ttfamily e} in the adjacency list of node {\ttfamily n}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node \\
+\hline
+{\em e} & edge adjacent to {\ttfamily n} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+edge preceding {\ttfamily e} in adjacency of {\ttfamily n} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classplanar__embedding_afb50ef8f3b5b2c6690b9d364db21f36f}\label{classplanar__embedding_afb50ef8f3b5b2c6690b9d364db21f36f}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!multiple\+\_\+edges@{multiple\+\_\+edges}}
+\index{multiple\+\_\+edges@{multiple\+\_\+edges}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{multiple\+\_\+edges()}{multiple\_edges()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{classedge}{edge}}$>$\& planar\+\_\+embedding\+::multiple\+\_\+edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns list of multiple edges contained in the graph. These are edges for which there is already another edge connecting the same endpoints is contained in the adjacency lists. Please note that the notion \char`\"{}connecting\char`\"{} is meant in an undirected sense. These edges will not occur it the adjacency lists.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em list} & of multiple edges \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classplanar__embedding_aebec933f9aac54914ee7439028e37418}\label{classplanar__embedding_aebec933f9aac54914ee7439028e37418}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!multiple\+\_\+edges@{multiple\+\_\+edges}}
+\index{multiple\+\_\+edges@{multiple\+\_\+edges}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{multiple\+\_\+edges()}{multiple\_edges()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const list$<$\mbox{\hyperlink{classedge}{edge}}$>$\& planar\+\_\+embedding\+::multiple\+\_\+edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns list of multiple edges contained in the graph. These are edges for which there is already another edge connecting the same endpoints is contained in the adjacency lists. Please note that the notion \char`\"{}connecting\char`\"{} is meant in an undirected sense. These edges will not occur it the adjacency lists.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em list} & of multiple edges \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classplanar__embedding_afb772a5c6a3a03fafa6bbc17a4c42a23}\label{classplanar__embedding_afb772a5c6a3a03fafa6bbc17a4c42a23}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!operator=@{operator=}}
+\index{operator=@{operator=}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \& planar\+\_\+embedding\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&}]{em }\end{DoxyParamCaption})}
+
+Assigns {\ttfamily em} to this object. All former information in this object will be deleted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em em} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classplanar__embedding_ab04859be18352bc53a120b0676a499ba}\label{classplanar__embedding_ab04859be18352bc53a120b0676a499ba}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!selfloops@{selfloops}}
+\index{selfloops@{selfloops}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{selfloops()}{selfloops()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{classedge}{edge}}$>$\& planar\+\_\+embedding\+::selfloops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns list of selfloops contained in the graph. These will not occur in the adjacency lists.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em list} & of selfloops \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classplanar__embedding_a25e47defbdda4552bf1ff98a3e7682e5}\label{classplanar__embedding_a25e47defbdda4552bf1ff98a3e7682e5}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!selfloops@{selfloops}}
+\index{selfloops@{selfloops}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{selfloops()}{selfloops()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const list$<$\mbox{\hyperlink{classedge}{edge}}$>$\& planar\+\_\+embedding\+::selfloops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns list of selfloops contained in the graph. These will not occur in the adjacency lists.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em list} & of selfloops \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classplanar__embedding_ab2870ca51d0df44f8006ab69c3ee74d4}\label{classplanar__embedding_ab2870ca51d0df44f8006ab69c3ee74d4}} 
+\index{planar\+\_\+embedding@{planar\+\_\+embedding}!write\+\_\+st@{write\+\_\+st}}
+\index{write\+\_\+st@{write\+\_\+st}!planar\+\_\+embedding@{planar\+\_\+embedding}}
+\subsubsection{\texorpdfstring{write\+\_\+st()}{write\_st()}}
+{\footnotesize\ttfamily void planar\+\_\+embedding\+::write\+\_\+st (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{\mbox{\hyperlink{classst__number}{st\+\_\+number}} \&}]{st }\end{DoxyParamCaption})}
+
+Writes embedding with st-\/numbers as given by {\ttfamily st} to {\ttfamily os}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & output stream\\
+\hline
+{\em st} & st-\/numbers \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/embedding.\+h\item 
+src/embedding.\+cpp\end{DoxyCompactItemize}
