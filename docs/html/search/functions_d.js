@@ -3,7 +3,7 @@ var searchData=
   ['planar_5fembedding',['planar_embedding',['../classplanar__embedding.html#ac3bce79522ec180819470bd0370eda87',1,'planar_embedding']]],
   ['planarity',['planarity',['../classplanarity.html#ab0377cf75279277a848f7e2eed507d00',1,'planarity']]],
   ['pop',['pop',['../classbin__heap.html#ab463bc655b2f46cd5ff021cab28b1210',1,'bin_heap']]],
-  ['popped_5fnode_5fhandler',['popped_node_handler',['../classbfs.html#a3f161fe9f45e0a69892f355a889c3516',1,'bfs']]],
+  ['popped_5fnode_5fhandler',['popped_node_handler',['../classbfs.html#a4ae61f9bbdfddf3f3a8b083e1aed9eeb',1,'bfs']]],
   ['post_5fclear_5fhandler',['post_clear_handler',['../classgraph.html#a870633528590b7925cd27776bdd2bbd2',1,'graph']]],
   ['post_5fdel_5fedge_5fhandler',['post_del_edge_handler',['../classgraph.html#ab9ac8bcc7288986de69cd467beb33600',1,'graph']]],
   ['post_5fdel_5fnode_5fhandler',['post_del_node_handler',['../classgraph.html#a4e08a559e3f1007a1a16a53c9a15cb0f',1,'graph']]],
@@ -28,7 +28,7 @@ var searchData=
   ['pre_5fnew_5fnode_5fhandler',['pre_new_node_handler',['../classgraph.html#afb7606eaa8d673b6599af24437c0546c',1,'graph']]],
   ['pre_5frestore_5fedge_5fhandler',['pre_restore_edge_handler',['../classgraph.html#a4c3634093c7d8877b6c229bcbfa4702b',1,'graph']]],
   ['pre_5frestore_5fnode_5fhandler',['pre_restore_node_handler',['../classgraph.html#a7da481e2f363380343a68d52acc8473b',1,'graph']]],
-  ['predecessor_5fedge',['predecessor_edge',['../classbellman__ford.html#a39f93b0b1e427cf26059fa6141c6f61c',1,'bellman_ford::predecessor_edge()'],['../classdijkstra.html#aa3ef1a7d7dfc33e4a39aff309f873929',1,'dijkstra::predecessor_edge()']]],
+  ['predecessor_5fedge',['predecessor_edge',['../classbellman__ford.html#a367c6fa92aaf08ddbc4c9545eabf6518',1,'bellman_ford::predecessor_edge()'],['../classdijkstra.html#aa3ef1a7d7dfc33e4a39aff309f873929',1,'dijkstra::predecessor_edge()']]],
   ['predecessor_5fnode',['predecessor_node',['../classbellman__ford.html#a403e286ec8cbe3c30a7a729c5041155e',1,'bellman_ford::predecessor_node()'],['../classdijkstra.html#a99c17ee7c2b55574ea8c2952fac09faf',1,'dijkstra::predecessor_node()']]],
   ['push',['push',['../classbin__heap.html#a6d658d61533e66cf83dce2f8e35bed17',1,'bin_heap']]]
 ];

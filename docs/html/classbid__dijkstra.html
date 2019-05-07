@@ -105,7 +105,7 @@ Inheritance diagram for bid_dijkstra:</div>
  <div class="center">
   <img src="classbid__dijkstra.png" usemap="#bid_5Fdijkstra_map" alt=""/>
   <map id="bid_5Fdijkstra_map" name="bid_5Fdijkstra_map">
-<area href="classalgorithm.html" title="Abstract baseclass for all algoritm-classes. " alt="algorithm" shape="rect" coords="0,0,76,24"/>
+<area href="classalgorithm.html" title="Abstract baseclass for all algorithm-classes. " alt="algorithm" shape="rect" coords="0,0,76,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -128,7 +128,7 @@ typedef list&lt; <a class="el" href="classedge.html">edge</a> &gt;::const_iterat
 <tr class="memitem:af1a0078e153aa99c24f9bdf0d97f6710 inherit pub_types_classalgorithm"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classalgorithm.html#af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf">KGL_OK</a> = 1, 
 <a class="el" href="classalgorithm.html#af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556">KGL_ERROR</a> = 0
  }</td></tr>
-<tr class="memdesc:af1a0078e153aa99c24f9bdf0d97f6710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return values for <a class="el" href="classalgorithm.html#a76361fb03ad1cf643affc51821e43bed" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> and <a class="el" href="classalgorithm.html#a734b189509a8d6b56b65f8ff772d43ca" title="Applies algorithm to graph g. ">algorithm::run</a>.  <a href="classalgorithm.html#af1a0078e153aa99c24f9bdf0d97f6710">More...</a><br /></td></tr>
+<tr class="memdesc:af1a0078e153aa99c24f9bdf0d97f6710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return values for <a class="el" href="classalgorithm.html#a05c0f25463eb35a77b2d73fc06bb2c0e" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> and <a class="el" href="classalgorithm.html#a482eb28cacba018b5a86d3a819a50a2f" title="Applies algorithm to graph g. ">algorithm::run</a>.  <a href="classalgorithm.html#af1a0078e153aa99c24f9bdf0d97f6710">More...</a><br /></td></tr>
 <tr class="separator:af1a0078e153aa99c24f9bdf0d97f6710 inherit pub_types_classalgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -139,51 +139,51 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d46b327a3a87ac874e3930227a13757"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a3d46b327a3a87ac874e3930227a13757">~bid_dijkstra</a> ()</td></tr>
 <tr class="memdesc:a3d46b327a3a87ac874e3930227a13757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a3d46b327a3a87ac874e3930227a13757">More...</a><br /></td></tr>
 <tr class="separator:a3d46b327a3a87ac874e3930227a13757"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25dfbd432043e2e642e4dc71f4cb3208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a25dfbd432043e2e642e4dc71f4cb3208">source_target</a> (const <a class="el" href="classnode.html">node</a> &amp;s, const <a class="el" href="classnode.html">node</a> &amp;t)</td></tr>
-<tr class="memdesc:a25dfbd432043e2e642e4dc71f4cb3208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets source and target node.  <a href="#a25dfbd432043e2e642e4dc71f4cb3208">More...</a><br /></td></tr>
-<tr class="separator:a25dfbd432043e2e642e4dc71f4cb3208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33dd3a1cc5eb156b56a72235c9140e7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a33dd3a1cc5eb156b56a72235c9140e7d">weights</a> (const <a class="el" href="classedge__map.html">edge_map</a>&lt; double &gt; &amp;weight)</td></tr>
-<tr class="memdesc:a33dd3a1cc5eb156b56a72235c9140e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets weights of the edges.  <a href="#a33dd3a1cc5eb156b56a72235c9140e7d">More...</a><br /></td></tr>
-<tr class="separator:a33dd3a1cc5eb156b56a72235c9140e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0032d9b44c8b3f6f5733ff3ef94cf169"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a0032d9b44c8b3f6f5733ff3ef94cf169">store_path</a> (bool set)</td></tr>
-<tr class="memdesc:a0032d9b44c8b3f6f5733ff3ef94cf169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the storing of the shortest path.  <a href="#a0032d9b44c8b3f6f5733ff3ef94cf169">More...</a><br /></td></tr>
-<tr class="separator:a0032d9b44c8b3f6f5733ff3ef94cf169"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a504aa04d114f27f2f886ee3b025ad95b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a504aa04d114f27f2f886ee3b025ad95b">check</a> (<a class="el" href="classgraph.html">graph</a> &amp;G)</td></tr>
-<tr class="memdesc:a504aa04d114f27f2f886ee3b025ad95b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the preconditions for bidirectional Dijkstra are satisfied.  <a href="#a504aa04d114f27f2f886ee3b025ad95b">More...</a><br /></td></tr>
-<tr class="separator:a504aa04d114f27f2f886ee3b025ad95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d2f36d3977ef90285442a269a03b919"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a1d2f36d3977ef90285442a269a03b919">run</a> (<a class="el" href="classgraph.html">graph</a> &amp;G)</td></tr>
-<tr class="memdesc:a1d2f36d3977ef90285442a269a03b919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs shortest path algorithm on <code>G</code>.  <a href="#a1d2f36d3977ef90285442a269a03b919">More...</a><br /></td></tr>
-<tr class="separator:a1d2f36d3977ef90285442a269a03b919"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8f5268e008b003e38f25c83ed3fd138"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnode.html">node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#ae8f5268e008b003e38f25c83ed3fd138">source</a> () const</td></tr>
-<tr class="memdesc:ae8f5268e008b003e38f25c83ed3fd138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns source node.  <a href="#ae8f5268e008b003e38f25c83ed3fd138">More...</a><br /></td></tr>
-<tr class="separator:ae8f5268e008b003e38f25c83ed3fd138"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d32d74a93c1be5581f56ba3a2839ff5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnode.html">node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a5d32d74a93c1be5581f56ba3a2839ff5">target</a> () const</td></tr>
-<tr class="memdesc:a5d32d74a93c1be5581f56ba3a2839ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns target node if set, <code><a class="el" href="classnode.html#ad603259398d5667e3b97a6322a2bcc20">node::node()</a></code> else.  <a href="#a5d32d74a93c1be5581f56ba3a2839ff5">More...</a><br /></td></tr>
-<tr class="separator:a5d32d74a93c1be5581f56ba3a2839ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9716d8f542f07e5696aba778417cc12"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#ad9716d8f542f07e5696aba778417cc12">store_path</a> () const</td></tr>
-<tr class="memdesc:ad9716d8f542f07e5696aba778417cc12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the storing of the shortest path is enabled.  <a href="#ad9716d8f542f07e5696aba778417cc12">More...</a><br /></td></tr>
-<tr class="separator:ad9716d8f542f07e5696aba778417cc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97f599b54fe9b030d87474898ff4a64c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a97f599b54fe9b030d87474898ff4a64c">reached</a> () const</td></tr>
-<tr class="memdesc:a97f599b54fe9b030d87474898ff4a64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether target is reachable from source.  <a href="#a97f599b54fe9b030d87474898ff4a64c">More...</a><br /></td></tr>
-<tr class="separator:a97f599b54fe9b030d87474898ff4a64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6150beb75d59f16d0332f42d5ff7e3f3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a6150beb75d59f16d0332f42d5ff7e3f3">distance</a> () const</td></tr>
-<tr class="memdesc:a6150beb75d59f16d0332f42d5ff7e3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance from source node to target node.  <a href="#a6150beb75d59f16d0332f42d5ff7e3f3">More...</a><br /></td></tr>
-<tr class="separator:a6150beb75d59f16d0332f42d5ff7e3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03807bf76c9a75f0e17e79d20d73f48d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbid__dijkstra.html#ada2e642d9f0582d30fe1dd51c4aa1899">shortest_path_node_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a03807bf76c9a75f0e17e79d20d73f48d">shortest_path_nodes_begin</a> ()</td></tr>
-<tr class="memdesc:a03807bf76c9a75f0e17e79d20d73f48d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning (to the source node) of the shortest node path to target node.  <a href="#a03807bf76c9a75f0e17e79d20d73f48d">More...</a><br /></td></tr>
-<tr class="separator:a03807bf76c9a75f0e17e79d20d73f48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af06035d39e06a70a1c44f1c60c347c5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbid__dijkstra.html#ada2e642d9f0582d30fe1dd51c4aa1899">shortest_path_node_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#af06035d39e06a70a1c44f1c60c347c5a">shortest_path_nodes_end</a> ()</td></tr>
-<tr class="memdesc:af06035d39e06a70a1c44f1c60c347c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator one after the end (one after target node) of the shortest node path to target node.  <a href="#af06035d39e06a70a1c44f1c60c347c5a">More...</a><br /></td></tr>
-<tr class="separator:af06035d39e06a70a1c44f1c60c347c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a177bf7ffd4bf83ce364076ab5183dc3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbid__dijkstra.html#a703d0faf9568bc25a9305faa61412fe1">shortest_path_edge_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a177bf7ffd4bf83ce364076ab5183dc3e">shortest_path_edges_begin</a> ()</td></tr>
-<tr class="memdesc:a177bf7ffd4bf83ce364076ab5183dc3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning edge of the shortest edge path to target node.  <a href="#a177bf7ffd4bf83ce364076ab5183dc3e">More...</a><br /></td></tr>
-<tr class="separator:a177bf7ffd4bf83ce364076ab5183dc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c31fda13205cd7905ff2400c60bb5e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbid__dijkstra.html#a703d0faf9568bc25a9305faa61412fe1">shortest_path_edge_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a0c31fda13205cd7905ff2400c60bb5e2">shortest_path_edges_end</a> ()</td></tr>
-<tr class="memdesc:a0c31fda13205cd7905ff2400c60bb5e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator one after the end of a shortest edge path to target node.  <a href="#a0c31fda13205cd7905ff2400c60bb5e2">More...</a><br /></td></tr>
-<tr class="separator:a0c31fda13205cd7905ff2400c60bb5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6df2769941bc73fc5626b084745a2258"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a6df2769941bc73fc5626b084745a2258">reset</a> ()</td></tr>
-<tr class="memdesc:a6df2769941bc73fc5626b084745a2258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets Dijkstra's bidirectional algorithm.  <a href="#a6df2769941bc73fc5626b084745a2258">More...</a><br /></td></tr>
-<tr class="separator:a6df2769941bc73fc5626b084745a2258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f9cf576f64dbb4540655d4625930422"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a8f9cf576f64dbb4540655d4625930422">source_target</a> (const <a class="el" href="classnode.html">node</a> &amp;s, const <a class="el" href="classnode.html">node</a> &amp;t) -&gt; void</td></tr>
+<tr class="memdesc:a8f9cf576f64dbb4540655d4625930422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets source and target node.  <a href="#a8f9cf576f64dbb4540655d4625930422">More...</a><br /></td></tr>
+<tr class="separator:a8f9cf576f64dbb4540655d4625930422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f077bb3c17567414bec7d733bb7daec"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a7f077bb3c17567414bec7d733bb7daec">weights</a> (const <a class="el" href="classedge__map.html">edge_map</a>&lt; double &gt; &amp;weight) -&gt; void</td></tr>
+<tr class="memdesc:a7f077bb3c17567414bec7d733bb7daec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets weights of the edges.  <a href="#a7f077bb3c17567414bec7d733bb7daec">More...</a><br /></td></tr>
+<tr class="separator:a7f077bb3c17567414bec7d733bb7daec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa095beede9c50b1f1e482049a2a4b619"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#aa095beede9c50b1f1e482049a2a4b619">store_path</a> (bool set) -&gt; void</td></tr>
+<tr class="memdesc:aa095beede9c50b1f1e482049a2a4b619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the storing of the shortest path.  <a href="#aa095beede9c50b1f1e482049a2a4b619">More...</a><br /></td></tr>
+<tr class="separator:aa095beede9c50b1f1e482049a2a4b619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a908a240370d578fbd6bf54b4ab09d391"><td class="memItemLeft" align="right" valign="top">virtual auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a908a240370d578fbd6bf54b4ab09d391">check</a> (<a class="el" href="classgraph.html">graph</a> &amp;G) -&gt; int</td></tr>
+<tr class="memdesc:a908a240370d578fbd6bf54b4ab09d391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the preconditions for bidirectional Dijkstra are satisfied.  <a href="#a908a240370d578fbd6bf54b4ab09d391">More...</a><br /></td></tr>
+<tr class="separator:a908a240370d578fbd6bf54b4ab09d391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819e72158a0c594ec5d8bcf07b6a435a"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a819e72158a0c594ec5d8bcf07b6a435a">run</a> (<a class="el" href="classgraph.html">graph</a> &amp;G) -&gt; int</td></tr>
+<tr class="memdesc:a819e72158a0c594ec5d8bcf07b6a435a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs shortest path algorithm on <code>G</code>.  <a href="#a819e72158a0c594ec5d8bcf07b6a435a">More...</a><br /></td></tr>
+<tr class="separator:a819e72158a0c594ec5d8bcf07b6a435a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916d7f45a21259fd1f4e2010924cf276"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a916d7f45a21259fd1f4e2010924cf276">source</a> () const -&gt; <a class="el" href="classnode.html">node</a></td></tr>
+<tr class="memdesc:a916d7f45a21259fd1f4e2010924cf276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns source node.  <a href="#a916d7f45a21259fd1f4e2010924cf276">More...</a><br /></td></tr>
+<tr class="separator:a916d7f45a21259fd1f4e2010924cf276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eea86ca2a83dec8aee865f2f4f00f26"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a3eea86ca2a83dec8aee865f2f4f00f26">target</a> () const -&gt; <a class="el" href="classnode.html">node</a></td></tr>
+<tr class="memdesc:a3eea86ca2a83dec8aee865f2f4f00f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns target node if set, <code><a class="el" href="classnode.html#ad603259398d5667e3b97a6322a2bcc20">node::node()</a></code> else.  <a href="#a3eea86ca2a83dec8aee865f2f4f00f26">More...</a><br /></td></tr>
+<tr class="separator:a3eea86ca2a83dec8aee865f2f4f00f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc92453ccade60d676bf2074c7fb0493"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#abc92453ccade60d676bf2074c7fb0493">store_path</a> () const -&gt; bool</td></tr>
+<tr class="memdesc:abc92453ccade60d676bf2074c7fb0493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the storing of the shortest path is enabled.  <a href="#abc92453ccade60d676bf2074c7fb0493">More...</a><br /></td></tr>
+<tr class="separator:abc92453ccade60d676bf2074c7fb0493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2be4417ba3f1a78b0697ce2f7268812"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#aa2be4417ba3f1a78b0697ce2f7268812">reached</a> () const -&gt; bool</td></tr>
+<tr class="memdesc:aa2be4417ba3f1a78b0697ce2f7268812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether target is reachable from source.  <a href="#aa2be4417ba3f1a78b0697ce2f7268812">More...</a><br /></td></tr>
+<tr class="separator:aa2be4417ba3f1a78b0697ce2f7268812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab379dab835a4d06be909f9c91d1e0806"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#ab379dab835a4d06be909f9c91d1e0806">distance</a> () const -&gt; double</td></tr>
+<tr class="memdesc:ab379dab835a4d06be909f9c91d1e0806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance from source node to target node.  <a href="#ab379dab835a4d06be909f9c91d1e0806">More...</a><br /></td></tr>
+<tr class="separator:ab379dab835a4d06be909f9c91d1e0806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a962906e4dab0dc65ed7aa6afe4ec966c"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a962906e4dab0dc65ed7aa6afe4ec966c">shortest_path_nodes_begin</a> () -&gt; <a class="el" href="classbid__dijkstra.html#ada2e642d9f0582d30fe1dd51c4aa1899">shortest_path_node_iterator</a></td></tr>
+<tr class="memdesc:a962906e4dab0dc65ed7aa6afe4ec966c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning (to the source node) of the shortest node path to target node.  <a href="#a962906e4dab0dc65ed7aa6afe4ec966c">More...</a><br /></td></tr>
+<tr class="separator:a962906e4dab0dc65ed7aa6afe4ec966c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a673043c7caa291e499c055635b31ddff"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a673043c7caa291e499c055635b31ddff">shortest_path_nodes_end</a> () -&gt; <a class="el" href="classbid__dijkstra.html#ada2e642d9f0582d30fe1dd51c4aa1899">shortest_path_node_iterator</a></td></tr>
+<tr class="memdesc:a673043c7caa291e499c055635b31ddff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator one after the end (one after target node) of the shortest node path to target node.  <a href="#a673043c7caa291e499c055635b31ddff">More...</a><br /></td></tr>
+<tr class="separator:a673043c7caa291e499c055635b31ddff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526e88fb20c84fda11d5d4205e6da578"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a526e88fb20c84fda11d5d4205e6da578">shortest_path_edges_begin</a> () -&gt; <a class="el" href="classbid__dijkstra.html#a703d0faf9568bc25a9305faa61412fe1">shortest_path_edge_iterator</a></td></tr>
+<tr class="memdesc:a526e88fb20c84fda11d5d4205e6da578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning edge of the shortest edge path to target node.  <a href="#a526e88fb20c84fda11d5d4205e6da578">More...</a><br /></td></tr>
+<tr class="separator:a526e88fb20c84fda11d5d4205e6da578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bafedb79a967012255d93262a6a18e1"><td class="memItemLeft" align="right" valign="top">auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#a1bafedb79a967012255d93262a6a18e1">shortest_path_edges_end</a> () -&gt; <a class="el" href="classbid__dijkstra.html#a703d0faf9568bc25a9305faa61412fe1">shortest_path_edge_iterator</a></td></tr>
+<tr class="memdesc:a1bafedb79a967012255d93262a6a18e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator one after the end of a shortest edge path to target node.  <a href="#a1bafedb79a967012255d93262a6a18e1">More...</a><br /></td></tr>
+<tr class="separator:a1bafedb79a967012255d93262a6a18e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7fa26bc76c1d3d0e0074fb01c66f72e"><td class="memItemLeft" align="right" valign="top">virtual auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbid__dijkstra.html#ac7fa26bc76c1d3d0e0074fb01c66f72e">reset</a> () -&gt; void</td></tr>
+<tr class="memdesc:ac7fa26bc76c1d3d0e0074fb01c66f72e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets Dijkstra's bidirectional algorithm.  <a href="#ac7fa26bc76c1d3d0e0074fb01c66f72e">More...</a><br /></td></tr>
+<tr class="separator:ac7fa26bc76c1d3d0e0074fb01c66f72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classalgorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classalgorithm')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classalgorithm.html">algorithm</a></td></tr>
 <tr class="memitem:ab79e1ddec2f2afdf4b36b10724db8b15 inherit pub_methods_classalgorithm"><td class="memItemLeft" align="right" valign="top"><a id="ab79e1ddec2f2afdf4b36b10724db8b15"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classalgorithm.html#ab79e1ddec2f2afdf4b36b10724db8b15">algorithm</a> ()</td></tr>
@@ -254,8 +254,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a504aa04d114f27f2f886ee3b025ad95b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a504aa04d114f27f2f886ee3b025ad95b">&#9670;&nbsp;</a></span>check()</h2>
+<a id="a908a240370d578fbd6bf54b4ab09d391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a908a240370d578fbd6bf54b4ab09d391">&#9670;&nbsp;</a></span>check()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,7 +268,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
           <td>(</td>
           <td class="paramtype"><a class="el" href="classgraph.html">graph</a> &amp;&#160;</td>
           <td class="paramname"><em>G</em></td><td>)</td>
-          <td></td>
+          <td> -&gt; int</td>
         </tr>
       </table>
   </td>
@@ -297,14 +297,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <dd>
 dijkstra::weigths </dd>
 <dd>
-<a class="el" href="classalgorithm.html#a76361fb03ad1cf643affc51821e43bed" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> </dd></dl>
+<a class="el" href="classalgorithm.html#a05c0f25463eb35a77b2d73fc06bb2c0e" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> </dd></dl>
 
-<p>Implements <a class="el" href="classalgorithm.html#a76361fb03ad1cf643affc51821e43bed">algorithm</a>.</p>
+<p>Implements <a class="el" href="classalgorithm.html#a05c0f25463eb35a77b2d73fc06bb2c0e">algorithm</a>.</p>
 
 </div>
 </div>
-<a id="a6150beb75d59f16d0332f42d5ff7e3f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6150beb75d59f16d0332f42d5ff7e3f3">&#9670;&nbsp;</a></span>distance()</h2>
+<a id="ab379dab835a4d06be909f9c91d1e0806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab379dab835a4d06be909f9c91d1e0806">&#9670;&nbsp;</a></span>distance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,18 +313,18 @@ dijkstra::weigths </dd>
           <td class="memname">double bid_dijkstra::distance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td> const -&gt; double</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns the distance from source node to target node. </p>
-<dl class="section return"><dt>Returns</dt><dd>distance if target is <a class="el" href="classbid__dijkstra.html#a97f599b54fe9b030d87474898ff4a64c" title="Returns whether target is reachable from source. ">bid_dijkstra::reached</a>, <code>-1.0</code> else </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>distance if target is <a class="el" href="classbid__dijkstra.html#aa2be4417ba3f1a78b0697ce2f7268812" title="Returns whether target is reachable from source. ">bid_dijkstra::reached</a>, <code>-1.0</code> else </dd></dl>
 
 </div>
 </div>
-<a id="a97f599b54fe9b030d87474898ff4a64c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97f599b54fe9b030d87474898ff4a64c">&#9670;&nbsp;</a></span>reached()</h2>
+<a id="aa2be4417ba3f1a78b0697ce2f7268812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2be4417ba3f1a78b0697ce2f7268812">&#9670;&nbsp;</a></span>reached()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,7 +333,7 @@ dijkstra::weigths </dd>
           <td class="memname">bool bid_dijkstra::reached </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td> const -&gt; bool</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -343,8 +343,8 @@ dijkstra::weigths </dd>
 
 </div>
 </div>
-<a id="a6df2769941bc73fc5626b084745a2258"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6df2769941bc73fc5626b084745a2258">&#9670;&nbsp;</a></span>reset()</h2>
+<a id="ac7fa26bc76c1d3d0e0074fb01c66f72e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7fa26bc76c1d3d0e0074fb01c66f72e">&#9670;&nbsp;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +356,7 @@ dijkstra::weigths </dd>
           <td class="memname">void bid_dijkstra::reset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> -&gt; void</td>
         </tr>
       </table>
   </td>
@@ -369,14 +369,14 @@ dijkstra::weigths </dd>
 <p>Resets Dijkstra's bidirectional algorithm. </p>
 <p>It prepares the algorithm to be applied again, possibly to another graph.</p>
 <dl class="section note"><dt>Note</dt><dd>The weights are not reset. You can apply this algorithms</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classalgorithm.html#a21aba63d066ae7897de6ca7d8425c408" title="Resets algorithm. ">algorithm::reset</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classalgorithm.html#aea645f2e39976a477c8f8564656fd1b6" title="Resets algorithm. ">algorithm::reset</a> </dd></dl>
 
-<p>Implements <a class="el" href="classalgorithm.html#a21aba63d066ae7897de6ca7d8425c408">algorithm</a>.</p>
+<p>Implements <a class="el" href="classalgorithm.html#aea645f2e39976a477c8f8564656fd1b6">algorithm</a>.</p>
 
 </div>
 </div>
-<a id="a1d2f36d3977ef90285442a269a03b919"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d2f36d3977ef90285442a269a03b919">&#9670;&nbsp;</a></span>run()</h2>
+<a id="a819e72158a0c594ec5d8bcf07b6a435a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819e72158a0c594ec5d8bcf07b6a435a">&#9670;&nbsp;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,7 +389,7 @@ dijkstra::weigths </dd>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classgraph.html">graph</a> &amp;&#160;</td>
           <td class="paramname"><em>G</em></td><td>)</td>
-          <td></td>
+          <td> -&gt; int</td>
         </tr>
       </table>
   </td>
@@ -414,14 +414,14 @@ dijkstra::weigths </dd>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classalgorithm.html#a734b189509a8d6b56b65f8ff772d43ca" title="Applies algorithm to graph g. ">algorithm::run</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classalgorithm.html#a482eb28cacba018b5a86d3a819a50a2f" title="Applies algorithm to graph g. ">algorithm::run</a> </dd></dl>
 
-<p>Implements <a class="el" href="classalgorithm.html#a734b189509a8d6b56b65f8ff772d43ca">algorithm</a>.</p>
+<p>Implements <a class="el" href="classalgorithm.html#a482eb28cacba018b5a86d3a819a50a2f">algorithm</a>.</p>
 
 </div>
 </div>
-<a id="a177bf7ffd4bf83ce364076ab5183dc3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a177bf7ffd4bf83ce364076ab5183dc3e">&#9670;&nbsp;</a></span>shortest_path_edges_begin()</h2>
+<a id="a526e88fb20c84fda11d5d4205e6da578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a526e88fb20c84fda11d5d4205e6da578">&#9670;&nbsp;</a></span>shortest_path_edges_begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,20 +430,20 @@ dijkstra::weigths </dd>
           <td class="memname"><a class="el" href="classbid__dijkstra.html#a703d0faf9568bc25a9305faa61412fe1">bid_dijkstra::shortest_path_edge_iterator</a> bid_dijkstra::shortest_path_edges_begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> -&gt; <a class="el" href="classbid__dijkstra.html#a703d0faf9568bc25a9305faa61412fe1">shortest_path_edge_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns an iterator to the beginning edge of the shortest edge path to target node. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classbid__dijkstra.html#a0032d9b44c8b3f6f5733ff3ef94cf169" title="Enables or disables the storing of the shortest path. ">bid_dijkstra::store_path</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classbid__dijkstra.html#aa095beede9c50b1f1e482049a2a4b619" title="Enables or disables the storing of the shortest path. ">bid_dijkstra::store_path</a></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>beginning edge iterator of the shortest path</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The method requires that path calculation option was enabled during last run. </dd></dl>
 
 </div>
 </div>
-<a id="a0c31fda13205cd7905ff2400c60bb5e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c31fda13205cd7905ff2400c60bb5e2">&#9670;&nbsp;</a></span>shortest_path_edges_end()</h2>
+<a id="a1bafedb79a967012255d93262a6a18e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bafedb79a967012255d93262a6a18e1">&#9670;&nbsp;</a></span>shortest_path_edges_end()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,20 +452,20 @@ dijkstra::weigths </dd>
           <td class="memname"><a class="el" href="classbid__dijkstra.html#a703d0faf9568bc25a9305faa61412fe1">bid_dijkstra::shortest_path_edge_iterator</a> bid_dijkstra::shortest_path_edges_end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> -&gt; <a class="el" href="classbid__dijkstra.html#a703d0faf9568bc25a9305faa61412fe1">shortest_path_edge_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns an iterator one after the end of a shortest edge path to target node. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classbid__dijkstra.html#a0032d9b44c8b3f6f5733ff3ef94cf169" title="Enables or disables the storing of the shortest path. ">bid_dijkstra::store_path</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classbid__dijkstra.html#aa095beede9c50b1f1e482049a2a4b619" title="Enables or disables the storing of the shortest path. ">bid_dijkstra::store_path</a></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>shortest path end edge iterator</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The method requires that predecessor calculation option was enabled during last run. </dd></dl>
 
 </div>
 </div>
-<a id="a03807bf76c9a75f0e17e79d20d73f48d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03807bf76c9a75f0e17e79d20d73f48d">&#9670;&nbsp;</a></span>shortest_path_nodes_begin()</h2>
+<a id="a962906e4dab0dc65ed7aa6afe4ec966c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a962906e4dab0dc65ed7aa6afe4ec966c">&#9670;&nbsp;</a></span>shortest_path_nodes_begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -474,20 +474,20 @@ dijkstra::weigths </dd>
           <td class="memname"><a class="el" href="classbid__dijkstra.html#ada2e642d9f0582d30fe1dd51c4aa1899">bid_dijkstra::shortest_path_node_iterator</a> bid_dijkstra::shortest_path_nodes_begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> -&gt; <a class="el" href="classbid__dijkstra.html#ada2e642d9f0582d30fe1dd51c4aa1899">shortest_path_node_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns an iterator to the beginning (to the source node) of the shortest node path to target node. </p>
 <dl class="section return"><dt>Returns</dt><dd>beginning node iterator of the shortest path</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classbid__dijkstra.html#a0032d9b44c8b3f6f5733ff3ef94cf169" title="Enables or disables the storing of the shortest path. ">bid_dijkstra::store_path</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classbid__dijkstra.html#aa095beede9c50b1f1e482049a2a4b619" title="Enables or disables the storing of the shortest path. ">bid_dijkstra::store_path</a></dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The method requires that path calculation option was enabled during last run. </dd></dl>
 
 </div>
 </div>
-<a id="af06035d39e06a70a1c44f1c60c347c5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af06035d39e06a70a1c44f1c60c347c5a">&#9670;&nbsp;</a></span>shortest_path_nodes_end()</h2>
+<a id="a673043c7caa291e499c055635b31ddff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a673043c7caa291e499c055635b31ddff">&#9670;&nbsp;</a></span>shortest_path_nodes_end()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -496,20 +496,20 @@ dijkstra::weigths </dd>
           <td class="memname"><a class="el" href="classbid__dijkstra.html#ada2e642d9f0582d30fe1dd51c4aa1899">bid_dijkstra::shortest_path_node_iterator</a> bid_dijkstra::shortest_path_nodes_end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> -&gt; <a class="el" href="classbid__dijkstra.html#ada2e642d9f0582d30fe1dd51c4aa1899">shortest_path_node_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns an iterator one after the end (one after target node) of the shortest node path to target node. </p>
 <dl class="section return"><dt>Returns</dt><dd>shortest path end node iterator</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classbid__dijkstra.html#a0032d9b44c8b3f6f5733ff3ef94cf169" title="Enables or disables the storing of the shortest path. ">bid_dijkstra::store_path</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classbid__dijkstra.html#aa095beede9c50b1f1e482049a2a4b619" title="Enables or disables the storing of the shortest path. ">bid_dijkstra::store_path</a></dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The method requires that path calculation option was enabled during last run. </dd></dl>
 
 </div>
 </div>
-<a id="ae8f5268e008b003e38f25c83ed3fd138"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8f5268e008b003e38f25c83ed3fd138">&#9670;&nbsp;</a></span>source()</h2>
+<a id="a916d7f45a21259fd1f4e2010924cf276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916d7f45a21259fd1f4e2010924cf276">&#9670;&nbsp;</a></span>source()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -518,7 +518,7 @@ dijkstra::weigths </dd>
           <td class="memname"><a class="el" href="classnode.html">node</a> bid_dijkstra::source </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td> const -&gt; <a class="el" href="classnode.html">node</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -528,8 +528,8 @@ dijkstra::weigths </dd>
 
 </div>
 </div>
-<a id="a25dfbd432043e2e642e4dc71f4cb3208"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25dfbd432043e2e642e4dc71f4cb3208">&#9670;&nbsp;</a></span>source_target()</h2>
+<a id="a8f9cf576f64dbb4540655d4625930422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9cf576f64dbb4540655d4625930422">&#9670;&nbsp;</a></span>source_target()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -549,7 +549,7 @@ dijkstra::weigths </dd>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> -&gt; void</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -566,8 +566,8 @@ dijkstra::weigths </dd>
 
 </div>
 </div>
-<a id="a0032d9b44c8b3f6f5733ff3ef94cf169"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0032d9b44c8b3f6f5733ff3ef94cf169">&#9670;&nbsp;</a></span>store_path() <span class="overload">[1/2]</span></h2>
+<a id="aa095beede9c50b1f1e482049a2a4b619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa095beede9c50b1f1e482049a2a4b619">&#9670;&nbsp;</a></span>store_path() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -577,7 +577,7 @@ dijkstra::weigths </dd>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>set</em></td><td>)</td>
-          <td></td>
+          <td> -&gt; void</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -596,8 +596,8 @@ dijkstra::weigths </dd>
 
 </div>
 </div>
-<a id="ad9716d8f542f07e5696aba778417cc12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9716d8f542f07e5696aba778417cc12">&#9670;&nbsp;</a></span>store_path() <span class="overload">[2/2]</span></h2>
+<a id="abc92453ccade60d676bf2074c7fb0493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc92453ccade60d676bf2074c7fb0493">&#9670;&nbsp;</a></span>store_path() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -606,7 +606,7 @@ dijkstra::weigths </dd>
           <td class="memname">bool bid_dijkstra::store_path </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td> const -&gt; bool</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -617,8 +617,8 @@ dijkstra::weigths </dd>
 
 </div>
 </div>
-<a id="a5d32d74a93c1be5581f56ba3a2839ff5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d32d74a93c1be5581f56ba3a2839ff5">&#9670;&nbsp;</a></span>target()</h2>
+<a id="a3eea86ca2a83dec8aee865f2f4f00f26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eea86ca2a83dec8aee865f2f4f00f26">&#9670;&nbsp;</a></span>target()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -627,7 +627,7 @@ dijkstra::weigths </dd>
           <td class="memname"><a class="el" href="classnode.html">node</a> bid_dijkstra::target </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td> const -&gt; <a class="el" href="classnode.html">node</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -637,8 +637,8 @@ dijkstra::weigths </dd>
 
 </div>
 </div>
-<a id="a33dd3a1cc5eb156b56a72235c9140e7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33dd3a1cc5eb156b56a72235c9140e7d">&#9670;&nbsp;</a></span>weights()</h2>
+<a id="a7f077bb3c17567414bec7d733bb7daec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f077bb3c17567414bec7d733bb7daec">&#9670;&nbsp;</a></span>weights()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -648,7 +648,7 @@ dijkstra::weigths </dd>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classedge__map.html">edge_map</a>&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>weight</em></td><td>)</td>
-          <td></td>
+          <td> -&gt; void</td>
         </tr>
       </table>
 </div><div class="memdoc">

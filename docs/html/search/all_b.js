@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['make_5fbiconnected',['make_biconnected',['../classbiconnectivity.html#a774fd08203a6d164605afc4cdc8b9201',1,'biconnectivity::make_biconnected(bool set)'],['../classbiconnectivity.html#a9ca9632a7fc398edb5b505dd0fe706c9',1,'biconnectivity::make_biconnected() const'],['../classplanarity.html#af67236533dce559d2670eae581750f54',1,'planarity::make_biconnected(bool p)'],['../classplanarity.html#a822d67100814e1887494e7213e6f0531',1,'planarity::make_biconnected() const']]],
+  ['make_5fbiconnected',['make_biconnected',['../classbiconnectivity.html#a58014d7166628862c2bb064624b9a888',1,'biconnectivity::make_biconnected(bool set) -&gt; void'],['../classbiconnectivity.html#afc9429b42767ea006ed2bf7f9bee35ff',1,'biconnectivity::make_biconnected() const -&gt; bool'],['../classplanarity.html#af67236533dce559d2670eae581750f54',1,'planarity::make_biconnected(bool p)'],['../classplanarity.html#a822d67100814e1887494e7213e6f0531',1,'planarity::make_biconnected() const']]],
   ['make_5fdirected',['make_directed',['../classgraph.html#a1615678dee6248d6d8a00c553770b3bd',1,'graph']]],
   ['make_5fundirected',['make_undirected',['../classgraph.html#a31c8b895bd842f1b9dcc67649956cfc7',1,'graph']]],
   ['maxflow_5fff',['maxflow_ff',['../classmaxflow__ff.html',1,'maxflow_ff'],['../classmaxflow__ff.html#a47280ecd91e227e529455249ee390ca3',1,'maxflow_ff::maxflow_ff()']]],

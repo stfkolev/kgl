@@ -45,9 +45,9 @@ void \mbox{\hyperlink{classfm__partition_ad0870674a1fb8e1c882f6855e32aec09}{stor
 \item 
 void \mbox{\hyperlink{classfm__partition_a8926005b4637055d2acf6f29ad2d9b97}{store\+\_\+nodes\+AB}} (const bool set)
 \item 
-virtual int \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+virtual auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classfm__partition_a2fadbf126742f659878132159653e102}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G) -\/$>$ int
 \item 
-int \mbox{\hyperlink{classfm__partition_a015b171fcaa01973ebe6c6a46a727097}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classfm__partition_a509615ef1f11bc2334a96c35adafd28e}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G) -\/$>$ int
 \item 
 int \mbox{\hyperlink{classfm__partition_a42fa2e19fb3fde093a1a05d0bd6d8ad1}{get\+\_\+cutsize}} ()
 \item 
@@ -73,7 +73,7 @@ int \mbox{\hyperlink{classfm__partition_a9e380da1dc654fcffdf4ac2418c6ef80}{get\+
 \item 
 \mbox{\hyperlink{classfm__partition_ac8b7b5253476118e5f7bbad2fe8af285}{nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}} \mbox{\hyperlink{classfm__partition_a9682b070cce104bdfe69e576df57f560}{nodes\+\_\+of\+\_\+side\+B\+\_\+end}} () const
 \item 
-virtual void \mbox{\hyperlink{classfm__partition_a6db2eeb6ae968dbab78302f0448c0ced}{reset}} ()
+virtual auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classfm__partition_a05ba0de86d7fe9c2de81b0681d8e0102}{reset}} () -\/$>$ void
 \end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
@@ -348,11 +348,11 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}\label{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}} 
+\mbox{\Hypertarget{classfm__partition_a2fadbf126742f659878132159653e102}\label{classfm__partition_a2fadbf126742f659878132159653e102}} 
 \index{fm\+\_\+partition@{fm\+\_\+partition}!check@{check}}
 \index{check@{check}!fm\+\_\+partition@{fm\+\_\+partition}}
 \subsubsection{\texorpdfstring{check()}{check()}}
-{\footnotesize\ttfamily int fm\+\_\+partition\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption}) -\/$>$ int\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Checks whether following preconditions are satisfied\+: 
 \begin{DoxyItemize}
@@ -373,11 +373,11 @@ Checks whether following preconditions are satisfied\+:
 \begin{DoxySeeAlso}{See also}
 \mbox{\hyperlink{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c}{fm\+\_\+partition\+::set\+\_\+vars}} 
 
-\mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} 
+\mbox{\hyperlink{classalgorithm_a05c0f25463eb35a77b2d73fc06bb2c0e}{algorithm\+::check}} 
 \end{DoxySeeAlso}
 
 
-Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+Implements \mbox{\hyperlink{classalgorithm_a05c0f25463eb35a77b2d73fc06bb2c0e}{algorithm}}.
 
 \mbox{\Hypertarget{classfm__partition_a36990b62c6d2d9e4948f42d805afc626}\label{classfm__partition_a36990b62c6d2d9e4948f42d805afc626}} 
 \index{fm\+\_\+partition@{fm\+\_\+partition}!cut\+\_\+edges\+\_\+begin@{cut\+\_\+edges\+\_\+begin}}
@@ -534,26 +534,26 @@ Gets side of the node after bi-\/partitioning.
 \begin{DoxySeeAlso}{See also}
 \mbox{\hyperlink{classfm__partition_af5f6ad817fe30760f3bc5470bd70c4c9}{fm\+\_\+partition\+::get\+\_\+side\+\_\+of\+\_\+node}} 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{classfm__partition_a6db2eeb6ae968dbab78302f0448c0ced}\label{classfm__partition_a6db2eeb6ae968dbab78302f0448c0ced}} 
+\mbox{\Hypertarget{classfm__partition_a05ba0de86d7fe9c2de81b0681d8e0102}\label{classfm__partition_a05ba0de86d7fe9c2de81b0681d8e0102}} 
 \index{fm\+\_\+partition@{fm\+\_\+partition}!reset@{reset}}
 \index{reset@{reset}!fm\+\_\+partition@{fm\+\_\+partition}}
 \subsubsection{\texorpdfstring{reset()}{reset()}}
-{\footnotesize\ttfamily void fm\+\_\+partition\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ void\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Resets \mbox{\hyperlink{classfm__partition}{fm\+\_\+partition}}, i.\+e. prepares the algorithm to be applied to another graph.
 
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm\+::reset}} 
+\mbox{\hyperlink{classalgorithm_aea645f2e39976a477c8f8564656fd1b6}{algorithm\+::reset}} 
 \end{DoxySeeAlso}
 
 
-Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+Implements \mbox{\hyperlink{classalgorithm_aea645f2e39976a477c8f8564656fd1b6}{algorithm}}.
 
-\mbox{\Hypertarget{classfm__partition_a015b171fcaa01973ebe6c6a46a727097}\label{classfm__partition_a015b171fcaa01973ebe6c6a46a727097}} 
+\mbox{\Hypertarget{classfm__partition_a509615ef1f11bc2334a96c35adafd28e}\label{classfm__partition_a509615ef1f11bc2334a96c35adafd28e}} 
 \index{fm\+\_\+partition@{fm\+\_\+partition}!run@{run}}
 \index{run@{run}!fm\+\_\+partition@{fm\+\_\+partition}}
 \subsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily int fm\+\_\+partition\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption}) -\/$>$ int\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Computes a partitioning with {\ttfamily G}, that means a division of its vertices in two sides {\ttfamily \mbox{\hyperlink{classfm__partition_a973d30e9eb0d21f659ef288176cd4791}{fm\+\_\+partition\+::A}} } and {\ttfamily \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{fm\+\_\+partition\+::B}}}.
 
@@ -566,11 +566,11 @@ Computes a partitioning with {\ttfamily G}, that means a division of its vertice
 {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf}{algorithm\+::\+K\+G\+L\+\_\+\+OK}}} on success, {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556}{algorithm\+::\+K\+G\+L\+\_\+\+E\+R\+R\+OR}}} otherwise 
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}} 
+\mbox{\hyperlink{classalgorithm_a482eb28cacba018b5a86d3a819a50a2f}{algorithm\+::run}} 
 \end{DoxySeeAlso}
 
 
-Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+Implements \mbox{\hyperlink{classalgorithm_a482eb28cacba018b5a86d3a819a50a2f}{algorithm}}.
 
 \mbox{\Hypertarget{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c}\label{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c}} 
 \index{fm\+\_\+partition@{fm\+\_\+partition}!set\+\_\+vars@{set\+\_\+vars}}
@@ -578,7 +578,7 @@ Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{al
 \subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily void fm\+\_\+partition\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{node\+\_\+weight,  }\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&}]{edge\+\_\+weight }\end{DoxyParamCaption})}
 
-Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}}!
+Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_a2fadbf126742f659878132159653e102}{fm\+\_\+partition\+::check}}!
 
 
 \begin{DoxyParams}{Parameters}
@@ -590,7 +590,7 @@ Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}} 
+\mbox{\hyperlink{classfm__partition_a2fadbf126742f659878132159653e102}{fm\+\_\+partition\+::check}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classfm__partition_af4d1b1275050cc7f4327500cec1f6e88}\label{classfm__partition_af4d1b1275050cc7f4327500cec1f6e88}} 
 \index{fm\+\_\+partition@{fm\+\_\+partition}!set\+\_\+vars@{set\+\_\+vars}}
@@ -598,7 +598,7 @@ Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72
 \subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily void fm\+\_\+partition\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{node\+\_\+weight,  }\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&}]{edge\+\_\+weight,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$ \&}]{init\+\_\+side }\end{DoxyParamCaption})}
 
-Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}}! In order to get good results, {\ttfamily init\+\_\+side} should almost be in balance.
+Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_a2fadbf126742f659878132159653e102}{fm\+\_\+partition\+::check}}! In order to get good results, {\ttfamily init\+\_\+side} should almost be in balance.
 
 
 \begin{DoxyParams}{Parameters}
@@ -612,7 +612,7 @@ Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}} 
+\mbox{\hyperlink{classfm__partition_a2fadbf126742f659878132159653e102}{fm\+\_\+partition\+::check}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classfm__partition_ad0bebf48731e99fbf7a8c6526ab0f9a6}\label{classfm__partition_ad0bebf48731e99fbf7a8c6526ab0f9a6}} 
 \index{fm\+\_\+partition@{fm\+\_\+partition}!set\+\_\+vars@{set\+\_\+vars}}
@@ -620,7 +620,7 @@ Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72
 \subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily void fm\+\_\+partition\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{node\+\_\+weight,  }\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&}]{edge\+\_\+weight,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}} $>$ \&}]{fixed }\end{DoxyParamCaption})}
 
-Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}}!
+Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_a2fadbf126742f659878132159653e102}{fm\+\_\+partition\+::check}}!
 
 
 \begin{DoxyParams}{Parameters}
@@ -634,7 +634,7 @@ Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}} 
+\mbox{\hyperlink{classfm__partition_a2fadbf126742f659878132159653e102}{fm\+\_\+partition\+::check}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classfm__partition_a19ade0d3e19eb40841238c1048c4495b}\label{classfm__partition_a19ade0d3e19eb40841238c1048c4495b}} 
 \index{fm\+\_\+partition@{fm\+\_\+partition}!set\+\_\+vars@{set\+\_\+vars}}
@@ -642,7 +642,7 @@ Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72
 \subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily void fm\+\_\+partition\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{node\+\_\+weight,  }\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&}]{edge\+\_\+weight,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$ \&}]{init\+\_\+side,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}} $>$ \&}]{fixed }\end{DoxyParamCaption})}
 
-Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}}! In order to get good results, {\ttfamily init\+\_\+side} should almost be in balance. Fixed nodes are on their fix side, their initial side is overwritten then.
+Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_a2fadbf126742f659878132159653e102}{fm\+\_\+partition\+::check}}! In order to get good results, {\ttfamily init\+\_\+side} should almost be in balance. Fixed nodes are on their fix side, their initial side is overwritten then.
 
 
 \begin{DoxyParams}{Parameters}
@@ -658,7 +658,7 @@ Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}} 
+\mbox{\hyperlink{classfm__partition_a2fadbf126742f659878132159653e102}{fm\+\_\+partition\+::check}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classfm__partition_ad0870674a1fb8e1c882f6855e32aec09}\label{classfm__partition_ad0870674a1fb8e1c882f6855e32aec09}} 
 \index{fm\+\_\+partition@{fm\+\_\+partition}!store\+\_\+cut\+\_\+edges@{store\+\_\+cut\+\_\+edges}}

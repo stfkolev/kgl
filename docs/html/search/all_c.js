@@ -23,10 +23,10 @@ var searchData=
   ['ne_5fmap_3c_20node_2c_20side_5ftype_2c_20graph_2c_20allocator_3c_20side_5ftype_20_3e_20_3e',['ne_map&lt; node, side_type, graph, allocator&lt; side_type &gt; &gt;',['../classne__map.html',1,'']]],
   ['ne_5fmap_3c_20node_2c_20symlist_2c_20graph_2c_20allocator_3c_20symlist_20_3e_20_3e',['ne_map&lt; node, symlist, graph, allocator&lt; symlist &gt; &gt;',['../classne__map.html',1,'']]],
   ['ne_5fmap_3c_20node_2c_20t_2c_20graph_2c_20alloc_20_3e',['ne_map&lt; node, T, graph, Alloc &gt;',['../classne__map.html',1,'']]],
-  ['negative_5fcycle',['negative_cycle',['../classbellman__ford.html#af9cd8be38bb1504089997581d9aa4f64',1,'bellman_ford']]],
+  ['negative_5fcycle',['negative_cycle',['../classbellman__ford.html#ac3767c2dd5c156742b2bba63546543a1',1,'bellman_ford']]],
   ['new_5fedge',['new_edge',['../classgraph.html#a02a0c3a219f75d68caa408ef339d4a1c',1,'graph']]],
   ['new_5fnode',['new_node',['../classgraph.html#ab9505335c20558319b6cce25aed23524',1,'graph']]],
-  ['new_5fstart_5fhandler',['new_start_handler',['../classbfs.html#a4f33f10121240390a5a50b5efc16c1f5',1,'bfs::new_start_handler()'],['../classbiconnectivity.html#ae94213830755f1f4d477ec6bff0f25b8',1,'biconnectivity::new_start_handler()'],['../classcomponents.html#af53365bd737b34cf63e4a6b10879ffcc',1,'components::new_start_handler()'],['../classdfs.html#a3b5fbea7a7baed9946cfb4444a7f20ea',1,'dfs::new_start_handler()']]],
+  ['new_5fstart_5fhandler',['new_start_handler',['../classbfs.html#ab4b0ac22769cedc2a45e72efb3dd5565',1,'bfs::new_start_handler()'],['../classbiconnectivity.html#a64424eec8e317b08605f8b6b952bace4',1,'biconnectivity::new_start_handler()'],['../classcomponents.html#af53365bd737b34cf63e4a6b10879ffcc',1,'components::new_start_handler()'],['../classdfs.html#a3b5fbea7a7baed9946cfb4444a7f20ea',1,'dfs::new_start_handler()']]],
   ['node',['node',['../classnode.html',1,'node'],['../classnode.html#ad603259398d5667e3b97a6322a2bcc20',1,'node::node()']]],
   ['node_5fdata',['node_data',['../classnode__data.html',1,'']]],
   ['node_5fmap',['node_map',['../classnode__map.html',1,'node_map&lt; T, Alloc &gt;'],['../classnode__map.html#a7a4c767f07f348d31a1004776485d17b',1,'node_map::node_map()'],['../classnode__map.html#a5bd24349e3a56379592889abbe4c6b09',1,'node_map::node_map(const graph &amp;g, T t=T())']]],
@@ -51,11 +51,11 @@ var searchData=
   ['nodes_5fof_5fsideb_5fbegin',['nodes_of_sideB_begin',['../classfm__partition.html#a4e433456ed0214c04466c4f1060b0909',1,'fm_partition::nodes_of_sideB_begin()'],['../classratio__cut__partition.html#ae36c08387ff6eae1236076cdbabf4fa5',1,'ratio_cut_partition::nodes_of_sideB_begin()']]],
   ['nodes_5fof_5fsideb_5fend',['nodes_of_sideB_end',['../classfm__partition.html#a9682b070cce104bdfe69e576df57f560',1,'fm_partition::nodes_of_sideB_end()'],['../classratio__cut__partition.html#a838e3ab6d00155c1f3868cc920a4a8f6',1,'ratio_cut_partition::nodes_of_sideB_end()']]],
   ['non_5ftree',['non_tree',['../classbfs.html#aa6783e3e2ac4235403b37df3ee3ee968',1,'bfs']]],
-  ['non_5ftree_5fedges_5fbegin',['non_tree_edges_begin',['../classbfs.html#a06d02d2643f184b4c086678771f0ff90',1,'bfs::non_tree_edges_begin()'],['../classdfs.html#a4efe5bb72d00305e6b226e67c2b2ef6e',1,'dfs::non_tree_edges_begin()']]],
-  ['non_5ftree_5fedges_5fend',['non_tree_edges_end',['../classbfs.html#a9fb470cd36eb487004ca28c1723cabda',1,'bfs::non_tree_edges_end()'],['../classdfs.html#ad9cd92a18bda23edca8ab3ac60a15ef4',1,'dfs::non_tree_edges_end()']]],
+  ['non_5ftree_5fedges_5fbegin',['non_tree_edges_begin',['../classbfs.html#a15d846159cfe9524081ad318fb72661f',1,'bfs::non_tree_edges_begin()'],['../classdfs.html#a4efe5bb72d00305e6b226e67c2b2ef6e',1,'dfs::non_tree_edges_begin()']]],
+  ['non_5ftree_5fedges_5fend',['non_tree_edges_end',['../classbfs.html#ae4d59095371f625a831de4262ab16d31',1,'bfs::non_tree_edges_end()'],['../classdfs.html#ad9cd92a18bda23edca8ab3ac60a15ef4',1,'dfs::non_tree_edges_end()']]],
   ['non_5ftree_5fedges_5fiterator',['non_tree_edges_iterator',['../classbfs.html#aecd86c7c1f1086d4b6b11c2a0eb12afe',1,'bfs::non_tree_edges_iterator()'],['../classdfs.html#ae7301f3d4417e60fb3a499180375194e',1,'dfs::non_tree_edges_iterator()']]],
-  ['number_5fof_5fcomponents',['number_of_components',['../classbiconnectivity.html#ad77634a59ac6a08fae43c1c38540d5f0',1,'biconnectivity::number_of_components()'],['../classcomponents.html#ad3206d2d050ed7719f7140ea3bee81f8',1,'components::number_of_components()']]],
+  ['number_5fof_5fcomponents',['number_of_components',['../classbiconnectivity.html#a831d05bc43e9dffc37132439ca421a97',1,'biconnectivity::number_of_components()'],['../classcomponents.html#ad3206d2d050ed7719f7140ea3bee81f8',1,'components::number_of_components()']]],
   ['number_5fof_5fedges',['number_of_edges',['../classgraph.html#aa4fcbe7bf572dc800068873ccfb4d95a',1,'graph']]],
   ['number_5fof_5fnodes',['number_of_nodes',['../classgraph.html#a42c78e0a9f115655e3ff0efe35ebfc4e',1,'graph']]],
-  ['number_5fof_5freached_5fnodes',['number_of_reached_nodes',['../classbfs.html#abb971551139ed87e6c78062275301c1b',1,'bfs::number_of_reached_nodes()'],['../classdfs.html#ae8849a552721ad4af5d9a81c6da35822',1,'dfs::number_of_reached_nodes()']]]
+  ['number_5fof_5freached_5fnodes',['number_of_reached_nodes',['../classbfs.html#a98b86a661aa5284b77c260908f0872a0',1,'bfs::number_of_reached_nodes()'],['../classdfs.html#ae8849a552721ad4af5d9a81c6da35822',1,'dfs::number_of_reached_nodes()']]]
 ];

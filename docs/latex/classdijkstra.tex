@@ -45,13 +45,13 @@ void \mbox{\hyperlink{classdijkstra_a92f4394b757f6ffcb372535114a6cbf6}{weights}}
 \begin{DoxyCompactList}\small\item\em Sets weights of the edges. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classdijkstra_af79383dbbb6b737afcefd8e32350192d}{store\+\_\+preds}} (bool set)
 \begin{DoxyCompactList}\small\item\em Enables or disables the storing of predecessors. \end{DoxyCompactList}\item 
-virtual int \mbox{\hyperlink{classdijkstra_a51ff4657e0ddb1ca5231a21e6dea1808}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+virtual auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classdijkstra_aec2427139f1e69d358153362a99257ba}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G) -\/$>$ int
 \begin{DoxyCompactList}\small\item\em Checks whether the preconditions for Dijkstra are satisfied. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classdijkstra_a7b30f3d8ad42baae27989bc14befe0d0}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classdijkstra_a4a001133b2d94fd7cd2012ff18b5139b}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G) -\/$>$ int
 \begin{DoxyCompactList}\small\item\em Runs shortest path algorithm on {\ttfamily G}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classdijkstra_a69772d19321b5e4deac66174ec546caa}{source}} () const
+auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classdijkstra_a7a0b3d98168726348964fa238e247c71}{source}} () const -\/$>$ \mbox{\hyperlink{classnode}{node}}
 \begin{DoxyCompactList}\small\item\em Returns source node. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classdijkstra_a4957ef4369386ef2153359ea97da9d88}{target}} () const
+auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classdijkstra_a124934fec15045573a09df2da9e515ea}{target}} () const -\/$>$ \mbox{\hyperlink{classnode}{node}}
 \begin{DoxyCompactList}\small\item\em Returns target node if set, {\ttfamily \mbox{\hyperlink{classnode_ad603259398d5667e3b97a6322a2bcc20}{node\+::node()}}} else. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classdijkstra_a8ef3ee087994a56b774f48fd331725a3}{store\+\_\+preds}} () const
 \begin{DoxyCompactList}\small\item\em Returns whether the storing of predecessors is enabled. \end{DoxyCompactList}\item 
@@ -71,7 +71,7 @@ double \mbox{\hyperlink{classdijkstra_ae350a266dd47091d7f620a7328619426}{distanc
 \begin{DoxyCompactList}\small\item\em Returns an iterator to the beginning edge of a shortest edge path to node {\ttfamily dest}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classdijkstra_ad35d95d4ed7a4202a5d048a63aa115b9}{shortest\+\_\+path\+\_\+edge\+\_\+iterator}} \mbox{\hyperlink{classdijkstra_a031e6fef10aa40aad10edc1053ad9cf0}{shortest\+\_\+path\+\_\+edges\+\_\+end}} (const \mbox{\hyperlink{classnode}{node}} \&dest)
 \begin{DoxyCompactList}\small\item\em Returns an iterator one after the end of a shortest edge path to node {\ttfamily dest}. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classdijkstra_a444c288b3a49ec1c2973459dad55ffb3}{reset}} ()
+virtual auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classdijkstra_a1b767b039cb69c422c5cc3247246e951}{reset}} () -\/$>$ void
 \begin{DoxyCompactList}\small\item\em Resets Dijkstra\textquotesingle{}s algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -120,11 +120,11 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classdijkstra_a51ff4657e0ddb1ca5231a21e6dea1808}\label{classdijkstra_a51ff4657e0ddb1ca5231a21e6dea1808}} 
+\mbox{\Hypertarget{classdijkstra_aec2427139f1e69d358153362a99257ba}\label{classdijkstra_aec2427139f1e69d358153362a99257ba}} 
 \index{dijkstra@{dijkstra}!check@{check}}
 \index{check@{check}!dijkstra@{dijkstra}}
 \subsubsection{\texorpdfstring{check()}{check()}}
-{\footnotesize\ttfamily int dijkstra\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily int dijkstra\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption}) -\/$>$ int\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -155,11 +155,11 @@ Necessary preconditions are\+:
 
 \mbox{\hyperlink{classdijkstra_a92f4394b757f6ffcb372535114a6cbf6}{dijkstra\+::weights}} 
 
-\mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} 
+\mbox{\hyperlink{classalgorithm_a05c0f25463eb35a77b2d73fc06bb2c0e}{algorithm\+::check}} 
 \end{DoxySeeAlso}
 
 
-Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+Implements \mbox{\hyperlink{classalgorithm_a05c0f25463eb35a77b2d73fc06bb2c0e}{algorithm}}.
 
 \mbox{\Hypertarget{classdijkstra_ae350a266dd47091d7f620a7328619426}\label{classdijkstra_ae350a266dd47091d7f620a7328619426}} 
 \index{dijkstra@{dijkstra}!distance@{distance}}
@@ -253,11 +253,11 @@ Returns whether {\ttfamily n} is reachable from source node.
 \begin{DoxyReturn}{Returns}
 {\ttfamily true} iff {\ttfamily n} was reached from source 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classdijkstra_a444c288b3a49ec1c2973459dad55ffb3}\label{classdijkstra_a444c288b3a49ec1c2973459dad55ffb3}} 
+\mbox{\Hypertarget{classdijkstra_a1b767b039cb69c422c5cc3247246e951}\label{classdijkstra_a1b767b039cb69c422c5cc3247246e951}} 
 \index{dijkstra@{dijkstra}!reset@{reset}}
 \index{reset@{reset}!dijkstra@{dijkstra}}
 \subsubsection{\texorpdfstring{reset()}{reset()}}
-{\footnotesize\ttfamily void dijkstra\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void dijkstra\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ void\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -269,17 +269,17 @@ It prepares the algorithm to be applied again, possibly to another graph.
 The weights are not reset. You can apply this algorithms
 \end{DoxyNote}
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm\+::reset}} 
+\mbox{\hyperlink{classalgorithm_aea645f2e39976a477c8f8564656fd1b6}{algorithm\+::reset}} 
 \end{DoxySeeAlso}
 
 
-Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+Implements \mbox{\hyperlink{classalgorithm_aea645f2e39976a477c8f8564656fd1b6}{algorithm}}.
 
-\mbox{\Hypertarget{classdijkstra_a7b30f3d8ad42baae27989bc14befe0d0}\label{classdijkstra_a7b30f3d8ad42baae27989bc14befe0d0}} 
+\mbox{\Hypertarget{classdijkstra_a4a001133b2d94fd7cd2012ff18b5139b}\label{classdijkstra_a4a001133b2d94fd7cd2012ff18b5139b}} 
 \index{dijkstra@{dijkstra}!run@{run}}
 \index{run@{run}!dijkstra@{dijkstra}}
 \subsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily int dijkstra\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily int dijkstra\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption}) -\/$>$ int\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -300,11 +300,11 @@ This should return always \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9b
 \hline
 \end{DoxyRetVals}
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}} 
+\mbox{\hyperlink{classalgorithm_a482eb28cacba018b5a86d3a819a50a2f}{algorithm\+::run}} 
 \end{DoxySeeAlso}
 
 
-Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+Implements \mbox{\hyperlink{classalgorithm_a482eb28cacba018b5a86d3a819a50a2f}{algorithm}}.
 
 \mbox{\Hypertarget{classdijkstra_ad7ef6f747b68f8951322b265844dbb8a}\label{classdijkstra_ad7ef6f747b68f8951322b265844dbb8a}} 
 \index{dijkstra@{dijkstra}!shortest\+\_\+path\+\_\+edges\+\_\+begin@{shortest\+\_\+path\+\_\+edges\+\_\+begin}}
@@ -407,11 +407,11 @@ The default source is the invalid node (\mbox{\hyperlink{classnode_ad603259398d5
 {\em n} & source node \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classdijkstra_a69772d19321b5e4deac66174ec546caa}\label{classdijkstra_a69772d19321b5e4deac66174ec546caa}} 
+\mbox{\Hypertarget{classdijkstra_a7a0b3d98168726348964fa238e247c71}\label{classdijkstra_a7a0b3d98168726348964fa238e247c71}} 
 \index{dijkstra@{dijkstra}!source@{source}}
 \index{source@{source}!dijkstra@{dijkstra}}
 \subsubsection{\texorpdfstring{source()}{source()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} dijkstra\+::source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} dijkstra\+::source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classnode}{node}}}
 
 
 
@@ -475,11 +475,11 @@ If a target is set with this method the algorithm stops if a shortest distance t
 {\em n} & target node \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classdijkstra_a4957ef4369386ef2153359ea97da9d88}\label{classdijkstra_a4957ef4369386ef2153359ea97da9d88}} 
+\mbox{\Hypertarget{classdijkstra_a124934fec15045573a09df2da9e515ea}\label{classdijkstra_a124934fec15045573a09df2da9e515ea}} 
 \index{dijkstra@{dijkstra}!target@{target}}
 \index{target@{target}!dijkstra@{dijkstra}}
 \subsubsection{\texorpdfstring{target()}{target()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} dijkstra\+::target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} dijkstra\+::target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classnode}{node}}}
 
 
 

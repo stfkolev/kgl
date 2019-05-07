@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('classalgorithm.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Abstract baseclass for all algoritm-classes.  
+<p>Abstract baseclass for all algorithm-classes.  
  <a href="classalgorithm.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="algorithm_8h_source.html">algorithm.h</a>&gt;</code></p>
@@ -126,7 +126,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:af1a0078e153aa99c24f9bdf0d97f6710"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classalgorithm.html#af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf">KGL_OK</a> = 1, 
 <a class="el" href="classalgorithm.html#af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556">KGL_ERROR</a> = 0
  }</td></tr>
-<tr class="memdesc:af1a0078e153aa99c24f9bdf0d97f6710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return values for <a class="el" href="classalgorithm.html#a76361fb03ad1cf643affc51821e43bed" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> and <a class="el" href="classalgorithm.html#a734b189509a8d6b56b65f8ff772d43ca" title="Applies algorithm to graph g. ">algorithm::run</a>.  <a href="classalgorithm.html#af1a0078e153aa99c24f9bdf0d97f6710">More...</a><br /></td></tr>
+<tr class="memdesc:af1a0078e153aa99c24f9bdf0d97f6710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return values for <a class="el" href="classalgorithm.html#a05c0f25463eb35a77b2d73fc06bb2c0e" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> and <a class="el" href="classalgorithm.html#a482eb28cacba018b5a86d3a819a50a2f" title="Applies algorithm to graph g. ">algorithm::run</a>.  <a href="classalgorithm.html#af1a0078e153aa99c24f9bdf0d97f6710">More...</a><br /></td></tr>
 <tr class="separator:af1a0078e153aa99c24f9bdf0d97f6710"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -139,18 +139,18 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classalgorithm.html#adca9b1e7fa3afd914519a9dbb44e9fd5">~algorithm</a> ()</td></tr>
 <tr class="memdesc:adca9b1e7fa3afd914519a9dbb44e9fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the algorithm object. <br /></td></tr>
 <tr class="separator:adca9b1e7fa3afd914519a9dbb44e9fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a734b189509a8d6b56b65f8ff772d43ca"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classalgorithm.html#a734b189509a8d6b56b65f8ff772d43ca">run</a> (<a class="el" href="classgraph.html">graph</a> &amp;g)=0</td></tr>
-<tr class="memdesc:a734b189509a8d6b56b65f8ff772d43ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies algorithm to graph g.  <a href="#a734b189509a8d6b56b65f8ff772d43ca">More...</a><br /></td></tr>
-<tr class="separator:a734b189509a8d6b56b65f8ff772d43ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76361fb03ad1cf643affc51821e43bed"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classalgorithm.html#a76361fb03ad1cf643affc51821e43bed">check</a> (<a class="el" href="classgraph.html">graph</a> &amp;g)=0</td></tr>
-<tr class="memdesc:a76361fb03ad1cf643affc51821e43bed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether all preconditions are satisfied.  <a href="#a76361fb03ad1cf643affc51821e43bed">More...</a><br /></td></tr>
-<tr class="separator:a76361fb03ad1cf643affc51821e43bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21aba63d066ae7897de6ca7d8425c408"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classalgorithm.html#a21aba63d066ae7897de6ca7d8425c408">reset</a> ()=0</td></tr>
-<tr class="memdesc:a21aba63d066ae7897de6ca7d8425c408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets algorithm.  <a href="#a21aba63d066ae7897de6ca7d8425c408">More...</a><br /></td></tr>
-<tr class="separator:a21aba63d066ae7897de6ca7d8425c408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482eb28cacba018b5a86d3a819a50a2f"><td class="memItemLeft" align="right" valign="top">virtual auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classalgorithm.html#a482eb28cacba018b5a86d3a819a50a2f">run</a> (<a class="el" href="classgraph.html">graph</a> &amp;g)=0 -&gt; int</td></tr>
+<tr class="memdesc:a482eb28cacba018b5a86d3a819a50a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies algorithm to graph g.  <a href="#a482eb28cacba018b5a86d3a819a50a2f">More...</a><br /></td></tr>
+<tr class="separator:a482eb28cacba018b5a86d3a819a50a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c0f25463eb35a77b2d73fc06bb2c0e"><td class="memItemLeft" align="right" valign="top">virtual auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classalgorithm.html#a05c0f25463eb35a77b2d73fc06bb2c0e">check</a> (<a class="el" href="classgraph.html">graph</a> &amp;g)=0 -&gt; int</td></tr>
+<tr class="memdesc:a05c0f25463eb35a77b2d73fc06bb2c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether all preconditions are satisfied.  <a href="#a05c0f25463eb35a77b2d73fc06bb2c0e">More...</a><br /></td></tr>
+<tr class="separator:a05c0f25463eb35a77b2d73fc06bb2c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea645f2e39976a477c8f8564656fd1b6"><td class="memItemLeft" align="right" valign="top">virtual auto __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classalgorithm.html#aea645f2e39976a477c8f8564656fd1b6">reset</a> ()=0 -&gt; void</td></tr>
+<tr class="memdesc:aea645f2e39976a477c8f8564656fd1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets algorithm.  <a href="#aea645f2e39976a477c8f8564656fd1b6">More...</a><br /></td></tr>
+<tr class="separator:aea645f2e39976a477c8f8564656fd1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract baseclass for all algoritm-classes. </p>
+<div class="textblock"><p>Abstract baseclass for all algorithm-classes. </p>
 <dl class="section rcs"><dt>Date</dt><dd>2019/05/07 15:58:54 </dd></dl>
 <dl class="section rcs"><dt>Revision</dt><dd>1.14 </dd></dl>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
@@ -166,19 +166,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
       </table>
 </div><div class="memdoc">
 
-<p>Return values for <a class="el" href="classalgorithm.html#a76361fb03ad1cf643affc51821e43bed" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> and <a class="el" href="classalgorithm.html#a734b189509a8d6b56b65f8ff772d43ca" title="Applies algorithm to graph g. ">algorithm::run</a>. </p>
+<p>Return values for <a class="el" href="classalgorithm.html#a05c0f25463eb35a77b2d73fc06bb2c0e" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> and <a class="el" href="classalgorithm.html#a482eb28cacba018b5a86d3a819a50a2f" title="Applies algorithm to graph g. ">algorithm::run</a>. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf"></a>KGL_OK&#160;</td><td class="fielddoc"><p>Used as (positive) return value of <a class="el" href="classalgorithm.html#a76361fb03ad1cf643affc51821e43bed" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> and <a class="el" href="classalgorithm.html#a734b189509a8d6b56b65f8ff772d43ca" title="Applies algorithm to graph g. ">algorithm::run</a>. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf"></a>KGL_OK&#160;</td><td class="fielddoc"><p>Used as (positive) return value of <a class="el" href="classalgorithm.html#a05c0f25463eb35a77b2d73fc06bb2c0e" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> and <a class="el" href="classalgorithm.html#a482eb28cacba018b5a86d3a819a50a2f" title="Applies algorithm to graph g. ">algorithm::run</a>. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556"></a>KGL_ERROR&#160;</td><td class="fielddoc"><p>Used as (negative) return value of <a class="el" href="classalgorithm.html#a76361fb03ad1cf643affc51821e43bed" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> and <a class="el" href="classalgorithm.html#a734b189509a8d6b56b65f8ff772d43ca" title="Applies algorithm to graph g. ">algorithm::run</a>. </p>
+<tr><td class="fieldname"><a id="af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556"></a>KGL_ERROR&#160;</td><td class="fielddoc"><p>Used as (negative) return value of <a class="el" href="classalgorithm.html#a05c0f25463eb35a77b2d73fc06bb2c0e" title="Checks whether all preconditions are satisfied. ">algorithm::check</a> and <a class="el" href="classalgorithm.html#a482eb28cacba018b5a86d3a819a50a2f" title="Applies algorithm to graph g. ">algorithm::run</a>. </p>
 </td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a76361fb03ad1cf643affc51821e43bed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76361fb03ad1cf643affc51821e43bed">&#9670;&nbsp;</a></span>check()</h2>
+<a id="a05c0f25463eb35a77b2d73fc06bb2c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c0f25463eb35a77b2d73fc06bb2c0e">&#9670;&nbsp;</a></span>check()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,11 +187,11 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int algorithm::check </td>
+          <td class="memname">virtual auto __cdecl algorithm::check </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classgraph.html">graph</a> &amp;&#160;</td>
           <td class="paramname"><em>g</em></td><td>)</td>
-          <td></td>
+          <td> -&gt;  int</td>
         </tr>
       </table>
   </td>
@@ -202,7 +202,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Checks whether all preconditions are satisfied. </p>
-<p><em>Please</em> <em>note:</em> It is definitly required (and <a class="el" href="classalgorithm.html#a734b189509a8d6b56b65f8ff772d43ca" title="Applies algorithm to graph g. ">run</a> relies on it), that this method was called in advance.</p>
+<p><em>Please</em> <em>note:</em> It is definitly required (and <a class="el" href="classalgorithm.html#a482eb28cacba018b5a86d3a819a50a2f" title="Applies algorithm to graph g. ">run</a> relies on it), that this method was called in advance.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">g</td><td>graph </td></tr>
@@ -217,12 +217,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classst__number.html#a2aad4550b821c52d6998bff35fd8648f">st_number</a>, <a class="el" href="classratio__cut__partition.html#a469c613c69db19cb63e492075346fea2">ratio_cut_partition</a>, <a class="el" href="classfm__partition.html#af72a9fcc300ab0f202168c819b089e5d">fm_partition</a>, <a class="el" href="classdijkstra.html#a51ff4657e0ddb1ca5231a21e6dea1808">dijkstra</a>, <a class="el" href="classbid__dijkstra.html#a504aa04d114f27f2f886ee3b025ad95b">bid_dijkstra</a>, <a class="el" href="classdfs.html#a1af70060897529e67910f589b047e576">dfs</a>, <a class="el" href="classbfs.html#a6dd7e852f7768814aafba8962befca56">bfs</a>, <a class="el" href="classtopsort.html#a777a9a68c4081d22e7b698ed3c515343">topsort</a>, <a class="el" href="classmaxflow__sap.html#aa2974bf25fb597677848fdb23c12d338">maxflow_sap</a>, <a class="el" href="classmaxflow__ff.html#a4d0deee7d70bac4c9dad942341d87e37">maxflow_ff</a>, <a class="el" href="classmaxflow__pp.html#a7ea24bd88999718e5e4e28ac028131cd">maxflow_pp</a>, <a class="el" href="classplanarity.html#ae06c471d957a116aad14e338c341f8b1">planarity</a>, <a class="el" href="classbiconnectivity.html#a65e0e821f5e9ce8d210648d462fd2cfa">biconnectivity</a>, <a class="el" href="classbellman__ford.html#a9da2fb7d20ef1f726ee935474302d80b">bellman_ford</a>, <a class="el" href="classmin__tree.html#ad87b1bfbc687ad943c07538fa0c3d270">min_tree</a>, and <a class="el" href="classcomponents.html#aeeda901d02c65d6c31c8b6148540d7c1">components</a>.</p>
+<p>Implemented in <a class="el" href="classst__number.html#a2aad4550b821c52d6998bff35fd8648f">st_number</a>, <a class="el" href="classratio__cut__partition.html#aae4e0e3f2758ecb191807e3bef605f81">ratio_cut_partition</a>, <a class="el" href="classfm__partition.html#a2fadbf126742f659878132159653e102">fm_partition</a>, <a class="el" href="classdijkstra.html#aec2427139f1e69d358153362a99257ba">dijkstra</a>, <a class="el" href="classbid__dijkstra.html#a908a240370d578fbd6bf54b4ab09d391">bid_dijkstra</a>, <a class="el" href="classdfs.html#a1af70060897529e67910f589b047e576">dfs</a>, <a class="el" href="classbfs.html#a57bc562775d63c4bbec63ee403e0fde7">bfs</a>, <a class="el" href="classtopsort.html#a777a9a68c4081d22e7b698ed3c515343">topsort</a>, <a class="el" href="classmaxflow__sap.html#acc6035b666d6db078ef1442ac847bd74">maxflow_sap</a>, <a class="el" href="classmaxflow__ff.html#ac1ae43b4e24d9b433892c073c8b244d3">maxflow_ff</a>, <a class="el" href="classmaxflow__pp.html#a1535468f547b80ea750432f5e27c338d">maxflow_pp</a>, <a class="el" href="classplanarity.html#ae06c471d957a116aad14e338c341f8b1">planarity</a>, <a class="el" href="classbiconnectivity.html#a372daa6b7897a5b284ee4695584ca81c">biconnectivity</a>, <a class="el" href="classbellman__ford.html#a7aadad38ac3fcccc8dee69896e183ccc">bellman_ford</a>, <a class="el" href="classmin__tree.html#ad87b1bfbc687ad943c07538fa0c3d270">min_tree</a>, and <a class="el" href="classcomponents.html#aeeda901d02c65d6c31c8b6148540d7c1">components</a>.</p>
 
 </div>
 </div>
-<a id="a21aba63d066ae7897de6ca7d8425c408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21aba63d066ae7897de6ca7d8425c408">&#9670;&nbsp;</a></span>reset()</h2>
+<a id="aea645f2e39976a477c8f8564656fd1b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea645f2e39976a477c8f8564656fd1b6">&#9670;&nbsp;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,10 +231,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void algorithm::reset </td>
+          <td class="memname">virtual auto __cdecl algorithm::reset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> -&gt;  void</td>
         </tr>
       </table>
   </td>
@@ -247,12 +247,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Resets algorithm. </p>
 <p>Prepares the algorithm to be applied to another graph. <em>Please</em> <em>note:</em> The options an algorithm may support do <em>not</em> get reset by this. It is just to reset internally used datastructures. </p>
 
-<p>Implemented in <a class="el" href="classst__number.html#ae6f86706b8ae3495d3794b8c684fff0f">st_number</a>, <a class="el" href="classratio__cut__partition.html#ad017eaf98f9ae4ca9dbe6b3eda9fc94d">ratio_cut_partition</a>, <a class="el" href="classfm__partition.html#a6db2eeb6ae968dbab78302f0448c0ced">fm_partition</a>, <a class="el" href="classdijkstra.html#a444c288b3a49ec1c2973459dad55ffb3">dijkstra</a>, <a class="el" href="classbid__dijkstra.html#a6df2769941bc73fc5626b084745a2258">bid_dijkstra</a>, <a class="el" href="classmaxflow__sap.html#a14574d2f9ce31a3cdeb0888e57fc0616">maxflow_sap</a>, <a class="el" href="classmaxflow__ff.html#a893e5136d4f7f1d4b67ef5b67306d17b">maxflow_ff</a>, <a class="el" href="classmaxflow__pp.html#a2179764baf624f1414211f3a7181b1a0">maxflow_pp</a>, <a class="el" href="classdfs.html#affaffda8be8418d6dbf396c5b1d6b81a">dfs</a>, <a class="el" href="classbfs.html#a6398bc230f9723cd5fdd32cd603647cc">bfs</a>, <a class="el" href="classplanarity.html#aca500e3d46a99c6231aff86afa2a71b1">planarity</a>, <a class="el" href="classtopsort.html#af93d2f617ceae83ee2a4f9106fbc32c3">topsort</a>, <a class="el" href="classbellman__ford.html#a7d28afa62ce8068c4d0f2d1f96136fd6">bellman_ford</a>, <a class="el" href="classbiconnectivity.html#a4393dd1e626887472f6967722349abc6">biconnectivity</a>, <a class="el" href="classmin__tree.html#a0edbe612424dc5f4de4701b8fd0df931">min_tree</a>, and <a class="el" href="classcomponents.html#a07b6bab5962524ae26ccb478b35cd76c">components</a>.</p>
+<p>Implemented in <a class="el" href="classst__number.html#ae6f86706b8ae3495d3794b8c684fff0f">st_number</a>, <a class="el" href="classratio__cut__partition.html#aa8a67cb521749dc9c25322157563fb8e">ratio_cut_partition</a>, <a class="el" href="classfm__partition.html#a05ba0de86d7fe9c2de81b0681d8e0102">fm_partition</a>, <a class="el" href="classdijkstra.html#a1b767b039cb69c422c5cc3247246e951">dijkstra</a>, <a class="el" href="classbid__dijkstra.html#ac7fa26bc76c1d3d0e0074fb01c66f72e">bid_dijkstra</a>, <a class="el" href="classmaxflow__sap.html#a66cd0fdc3d4372c26c282129e9275894">maxflow_sap</a>, <a class="el" href="classmaxflow__ff.html#ab9fcde7ee97a160c2be797d35c2a3204">maxflow_ff</a>, <a class="el" href="classmaxflow__pp.html#a479e6e218f81d20acdc706b5771e38cb">maxflow_pp</a>, <a class="el" href="classdfs.html#affaffda8be8418d6dbf396c5b1d6b81a">dfs</a>, <a class="el" href="classbfs.html#a9f93abba43ea1fa130a4c26b32793f2f">bfs</a>, <a class="el" href="classplanarity.html#aca500e3d46a99c6231aff86afa2a71b1">planarity</a>, <a class="el" href="classtopsort.html#af93d2f617ceae83ee2a4f9106fbc32c3">topsort</a>, <a class="el" href="classbellman__ford.html#a6aa4092aaa71b77d634749ded48068e9">bellman_ford</a>, <a class="el" href="classbiconnectivity.html#a16d4b175efeff663004ae4cca6faa906">biconnectivity</a>, <a class="el" href="classmin__tree.html#a0edbe612424dc5f4de4701b8fd0df931">min_tree</a>, and <a class="el" href="classcomponents.html#a07b6bab5962524ae26ccb478b35cd76c">components</a>.</p>
 
 </div>
 </div>
-<a id="a734b189509a8d6b56b65f8ff772d43ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a734b189509a8d6b56b65f8ff772d43ca">&#9670;&nbsp;</a></span>run()</h2>
+<a id="a482eb28cacba018b5a86d3a819a50a2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482eb28cacba018b5a86d3a819a50a2f">&#9670;&nbsp;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,11 +261,11 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int algorithm::run </td>
+          <td class="memname">virtual auto __cdecl algorithm::run </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classgraph.html">graph</a> &amp;&#160;</td>
           <td class="paramname"><em>g</em></td><td>)</td>
-          <td></td>
+          <td> -&gt;  int</td>
         </tr>
       </table>
   </td>
@@ -290,7 +290,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classst__number.html#af902a0c05d07d47b587e8f7a6b7beaa1">st_number</a>, <a class="el" href="classratio__cut__partition.html#a4ab180ca4cf57c811e3478c3de4c4dc3">ratio_cut_partition</a>, <a class="el" href="classfm__partition.html#a015b171fcaa01973ebe6c6a46a727097">fm_partition</a>, <a class="el" href="classdijkstra.html#a7b30f3d8ad42baae27989bc14befe0d0">dijkstra</a>, <a class="el" href="classbid__dijkstra.html#a1d2f36d3977ef90285442a269a03b919">bid_dijkstra</a>, <a class="el" href="classdfs.html#af0863b8974d5fd58cd0375c78ed8163b">dfs</a>, <a class="el" href="classbfs.html#a06ae16bd0f3bb2f8eb6b3e36659ba82e">bfs</a>, <a class="el" href="classmaxflow__sap.html#ab4305a2bb370ad9c43cc68d339b2dda0">maxflow_sap</a>, <a class="el" href="classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc">planarity</a>, <a class="el" href="classmaxflow__ff.html#a0a4391b9093d6966b47c023a555099e2">maxflow_ff</a>, <a class="el" href="classmaxflow__pp.html#a07c7cb1ae5db23d87cf49ce7769b2814">maxflow_pp</a>, <a class="el" href="classbellman__ford.html#a226308389f3c36dfc02768c09f777a3b">bellman_ford</a>, and <a class="el" href="classmin__tree.html#ac025e8dad0db7a6a1e0e7b476b547802">min_tree</a>.</p>
+<p>Implemented in <a class="el" href="classst__number.html#a02f5a12e151f29839f6f12a2d45523a7">st_number</a>, <a class="el" href="classratio__cut__partition.html#a640cf0da64358d0e0af167c32458ac51">ratio_cut_partition</a>, <a class="el" href="classfm__partition.html#a509615ef1f11bc2334a96c35adafd28e">fm_partition</a>, <a class="el" href="classdijkstra.html#a4a001133b2d94fd7cd2012ff18b5139b">dijkstra</a>, <a class="el" href="classbid__dijkstra.html#a819e72158a0c594ec5d8bcf07b6a435a">bid_dijkstra</a>, <a class="el" href="classbfs.html#aaeebfe1628febd8d4ba658efc0ef51ed">bfs</a>, <a class="el" href="classdfs.html#af0863b8974d5fd58cd0375c78ed8163b">dfs</a>, <a class="el" href="classmaxflow__sap.html#ab46f7d6fbabeaf7b252b9f9a0e018f24">maxflow_sap</a>, <a class="el" href="classplanarity.html#afec6108c6b48164d6e1451b6be49d033">planarity</a>, <a class="el" href="classmaxflow__ff.html#a0060613409391c3a6d7e6fe473af21f1">maxflow_ff</a>, <a class="el" href="classmaxflow__pp.html#a6c6fa792d7f0441048361778697e8e1e">maxflow_pp</a>, <a class="el" href="classbellman__ford.html#a2c15782095c4fc37eb2a8d66c431c821">bellman_ford</a>, and <a class="el" href="classmin__tree.html#ac025e8dad0db7a6a1e0e7b476b547802">min_tree</a>.</p>
 
 </div>
 </div>

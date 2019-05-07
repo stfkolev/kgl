@@ -26,9 +26,9 @@ void \mbox{\hyperlink{classmaxflow__sap_ac50ba0330c169c7ce697947a76702e13}{set\+
 \item 
 void \mbox{\hyperlink{classmaxflow__sap_a936f6afa25de80046c7bd69dc47fdfa9}{set\+\_\+vars}} (const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ double $>$ \&edge\+\_\+capacity, const \mbox{\hyperlink{classnode}{node}} \&net\+\_\+source, const \mbox{\hyperlink{classnode}{node}} \&net\+\_\+target)
 \item 
-virtual int \mbox{\hyperlink{classmaxflow__sap_aa2974bf25fb597677848fdb23c12d338}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+virtual auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classmaxflow__sap_acc6035b666d6db078ef1442ac847bd74}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G) -\/$>$ int
 \item 
-int \mbox{\hyperlink{classmaxflow__sap_ab4305a2bb370ad9c43cc68d339b2dda0}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classmaxflow__sap_ab46f7d6fbabeaf7b252b9f9a0e018f24}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G) -\/$>$ int
 \item 
 double \mbox{\hyperlink{classmaxflow__sap_ae90889b16323a2af0ab13e04c87953a5}{get\+\_\+max\+\_\+flow}} (const \mbox{\hyperlink{classedge}{edge}} \&e) const
 \item 
@@ -36,7 +36,7 @@ double \mbox{\hyperlink{classmaxflow__sap_a81251d546cbdabc837f24fc3caf9fe0d}{get
 \item 
 double \mbox{\hyperlink{classmaxflow__sap_a634835664542d5d181e1b63b99dda36c}{get\+\_\+rem\+\_\+cap}} (const \mbox{\hyperlink{classedge}{edge}} \&e) const
 \item 
-virtual void \mbox{\hyperlink{classmaxflow__sap_a14574d2f9ce31a3cdeb0888e57fc0616}{reset}} ()
+virtual auto \+\_\+\+\_\+cdecl \mbox{\hyperlink{classmaxflow__sap_a66cd0fdc3d4372c26c282129e9275894}{reset}} () -\/$>$ void
 \end{DoxyCompactItemize}
 \subsection*{Protected Types}
 \begin{DoxyCompactItemize}
@@ -167,11 +167,11 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classmaxflow__sap_aa2974bf25fb597677848fdb23c12d338}\label{classmaxflow__sap_aa2974bf25fb597677848fdb23c12d338}} 
+\mbox{\Hypertarget{classmaxflow__sap_acc6035b666d6db078ef1442ac847bd74}\label{classmaxflow__sap_acc6035b666d6db078ef1442ac847bd74}} 
 \index{maxflow\+\_\+sap@{maxflow\+\_\+sap}!check@{check}}
 \index{check@{check}!maxflow\+\_\+sap@{maxflow\+\_\+sap}}
 \subsubsection{\texorpdfstring{check()}{check()}}
-{\footnotesize\ttfamily int maxflow\+\_\+sap\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily int maxflow\+\_\+sap\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption}) -\/$>$ int\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Checks whether following preconditions are satisfied\+: 
 \begin{DoxyItemize}
@@ -193,11 +193,11 @@ Checks whether following preconditions are satisfied\+:
 {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf}{algorithm\+::\+K\+G\+L\+\_\+\+OK}}} on success {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556}{algorithm\+::\+K\+G\+L\+\_\+\+E\+R\+R\+OR}}} otherwise 
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} 
+\mbox{\hyperlink{classalgorithm_a05c0f25463eb35a77b2d73fc06bb2c0e}{algorithm\+::check}} 
 \end{DoxySeeAlso}
 
 
-Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+Implements \mbox{\hyperlink{classalgorithm_a05c0f25463eb35a77b2d73fc06bb2c0e}{algorithm}}.
 
 \mbox{\Hypertarget{classmaxflow__sap_ae90889b16323a2af0ab13e04c87953a5}\label{classmaxflow__sap_ae90889b16323a2af0ab13e04c87953a5}} 
 \index{maxflow\+\_\+sap@{maxflow\+\_\+sap}!get\+\_\+max\+\_\+flow@{get\+\_\+max\+\_\+flow}}
@@ -242,26 +242,26 @@ Returns the remaining free capacity of an edge.
 \begin{DoxyReturn}{Returns}
 remaining capacity 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmaxflow__sap_a14574d2f9ce31a3cdeb0888e57fc0616}\label{classmaxflow__sap_a14574d2f9ce31a3cdeb0888e57fc0616}} 
+\mbox{\Hypertarget{classmaxflow__sap_a66cd0fdc3d4372c26c282129e9275894}\label{classmaxflow__sap_a66cd0fdc3d4372c26c282129e9275894}} 
 \index{maxflow\+\_\+sap@{maxflow\+\_\+sap}!reset@{reset}}
 \index{reset@{reset}!maxflow\+\_\+sap@{maxflow\+\_\+sap}}
 \subsubsection{\texorpdfstring{reset()}{reset()}}
-{\footnotesize\ttfamily void maxflow\+\_\+sap\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void maxflow\+\_\+sap\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ void\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Resets maximum flow algorithm, i.\+e. prepares the algorithm to be applied to another graph.
 
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm\+::reset}} 
+\mbox{\hyperlink{classalgorithm_aea645f2e39976a477c8f8564656fd1b6}{algorithm\+::reset}} 
 \end{DoxySeeAlso}
 
 
-Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+Implements \mbox{\hyperlink{classalgorithm_aea645f2e39976a477c8f8564656fd1b6}{algorithm}}.
 
-\mbox{\Hypertarget{classmaxflow__sap_ab4305a2bb370ad9c43cc68d339b2dda0}\label{classmaxflow__sap_ab4305a2bb370ad9c43cc68d339b2dda0}} 
+\mbox{\Hypertarget{classmaxflow__sap_ab46f7d6fbabeaf7b252b9f9a0e018f24}\label{classmaxflow__sap_ab46f7d6fbabeaf7b252b9f9a0e018f24}} 
 \index{maxflow\+\_\+sap@{maxflow\+\_\+sap}!run@{run}}
 \index{run@{run}!maxflow\+\_\+sap@{maxflow\+\_\+sap}}
 \subsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily int maxflow\+\_\+sap\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily int maxflow\+\_\+sap\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption}) -\/$>$ int\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Computes maximum flow of graph {\ttfamily G}.
 
@@ -274,11 +274,11 @@ Computes maximum flow of graph {\ttfamily G}.
 {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf}{algorithm\+::\+K\+G\+L\+\_\+\+OK}}} on success {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710ae67bf27b2ef31f73e545a7f9f4a69556}{algorithm\+::\+K\+G\+L\+\_\+\+E\+R\+R\+OR}}} otherwise 
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}} 
+\mbox{\hyperlink{classalgorithm_a482eb28cacba018b5a86d3a819a50a2f}{algorithm\+::run}} 
 \end{DoxySeeAlso}
 
 
-Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+Implements \mbox{\hyperlink{classalgorithm_a482eb28cacba018b5a86d3a819a50a2f}{algorithm}}.
 
 \mbox{\Hypertarget{classmaxflow__sap_ac50ba0330c169c7ce697947a76702e13}\label{classmaxflow__sap_ac50ba0330c169c7ce697947a76702e13}} 
 \index{maxflow\+\_\+sap@{maxflow\+\_\+sap}!set\+\_\+vars@{set\+\_\+vars}}
