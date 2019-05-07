@@ -1,0 +1,258 @@
+\hypertarget{classcomponents}{}\section{components Class Reference}
+\label{classcomponents}\index{components@{components}}
+
+
+Connected components algorithm.  
+
+
+
+
+{\ttfamily \#include $<$components.\+h$>$}
+
+Inheritance diagram for components\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcomponents}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcomponents_a5f9e3d26b8f7bc14b8f482754a38cb61}\label{classcomponents_a5f9e3d26b8f7bc14b8f482754a38cb61}} 
+typedef list$<$ pair$<$ list$<$ \mbox{\hyperlink{classnode}{node}} $>$, list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ $>$ $>$\+::iterator {\bfseries component\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomponents_a41b8782301c7985dfa202a04df76712d}{components}} ()
+\begin{DoxyCompactList}\small\item\em Creates connected components algorithm object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classcomponents_aa38e55d08dd484dad3175617264056a5}{$\sim$components}} ()
+\begin{DoxyCompactList}\small\item\em Destroys connected components algorithm object. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcomponents_aeeda901d02c65d6c31c8b6148540d7c1}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\begin{DoxyCompactList}\small\item\em Checks whether the connected components algorithm can be applied. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcomponents_a07b6bab5962524ae26ccb478b35cd76c}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets algorithm. \end{DoxyCompactList}\item 
+component\+\_\+iterator \mbox{\hyperlink{classcomponents_a8a645639044375cdaefabffda3ae70e0}{components\+\_\+begin}} ()
+\begin{DoxyCompactList}\small\item\em Start iteration over all components (if enabled during last call to run). \end{DoxyCompactList}\item 
+component\+\_\+iterator \mbox{\hyperlink{classcomponents_a8537c6e4c6a29a4ae05a937b5fda1fb9}{components\+\_\+end}} ()
+\begin{DoxyCompactList}\small\item\em End of iteration over all components. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcomponents_ad3206d2d050ed7719f7140ea3bee81f8}{number\+\_\+of\+\_\+components}} () const
+\begin{DoxyCompactList}\small\item\em Number of components detected during the last run. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcomponents_a587a9c44a80deb4260ccd0728bfeab0f}{before\+\_\+recursive\+\_\+call\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&, \mbox{\hyperlink{classedge}{edge}} \&, \mbox{\hyperlink{classnode}{node}} \&)
+\begin{DoxyCompactList}\small\item\em Handler called when a unused node {\itshape n} connected to the actual node by {\itshape e} is found. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcomponents_afcf7a0bee5104bba7986039a9d6bd1ee}{old\+\_\+adj\+\_\+node\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&, \mbox{\hyperlink{classedge}{edge}} \&, \mbox{\hyperlink{classnode}{node}} \&)
+\begin{DoxyCompactList}\small\item\em Handler called when a already marked node {\itshape n} connected to the actual node by {\itshape e} is found during the search of all adjacent edges of the actual node. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcomponents_af53365bd737b34cf63e4a6b10879ffcc}{new\+\_\+start\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&, \mbox{\hyperlink{classnode}{node}} \&)
+\begin{DoxyCompactList}\small\item\em Called when D\+FS is started with start-\/node {\itshape n}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcomponents_ad5a54d7313e23f8c6a2c6347e6ee70a0}\label{classcomponents_ad5a54d7313e23f8c6a2c6347e6ee70a0}} 
+int {\bfseries num\+\_\+of\+\_\+components}
+\item 
+\mbox{\Hypertarget{classcomponents_a8ea32e0ef95a2d707b88cfa80209d357}\label{classcomponents_a8ea32e0ef95a2d707b88cfa80209d357}} 
+list$<$ pair$<$ list$<$ \mbox{\hyperlink{classnode}{node}} $>$, list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ $>$ $>$ {\bfseries comp}
+\item 
+\mbox{\Hypertarget{classcomponents_ae88ffb062b1ea4931ecfaa53e871825f}\label{classcomponents_ae88ffb062b1ea4931ecfaa53e871825f}} 
+component\+\_\+iterator {\bfseries li}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Connected components algorithm. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcomponents_a41b8782301c7985dfa202a04df76712d}\label{classcomponents_a41b8782301c7985dfa202a04df76712d}} 
+\index{components@{components}!components@{components}}
+\index{components@{components}!components@{components}}
+\subsubsection{\texorpdfstring{components()}{components()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+K\+G\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE components\+::components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates connected components algorithm object. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classdfs_a5232bc41ab202b6278a84bd97c803a0d}{dfs\+::dfs}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcomponents_aa38e55d08dd484dad3175617264056a5}\label{classcomponents_aa38e55d08dd484dad3175617264056a5}} 
+\index{components@{components}!````~components@{$\sim$components}}
+\index{````~components@{$\sim$components}!components@{components}}
+\subsubsection{\texorpdfstring{$\sim$components()}{~components()}}
+{\footnotesize\ttfamily virtual components\+::$\sim$components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroys connected components algorithm object. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classdfs_aff2e95c12935221a94551393f7e36c6e}{dfs\+::$\sim$dfs}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcomponents_a587a9c44a80deb4260ccd0728bfeab0f}\label{classcomponents_a587a9c44a80deb4260ccd0728bfeab0f}} 
+\index{components@{components}!before\+\_\+recursive\+\_\+call\+\_\+handler@{before\+\_\+recursive\+\_\+call\+\_\+handler}}
+\index{before\+\_\+recursive\+\_\+call\+\_\+handler@{before\+\_\+recursive\+\_\+call\+\_\+handler}!components@{components}}
+\subsubsection{\texorpdfstring{before\+\_\+recursive\+\_\+call\+\_\+handler()}{before\_recursive\_call\_handler()}}
+{\footnotesize\ttfamily void components\+::before\+\_\+recursive\+\_\+call\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classedge}{edge}} \&}]{e,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handler called when a unused node {\itshape n} connected to the actual node by {\itshape e} is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+{\em e} & edge connecting the actual node to the unused one. \\
+\hline
+{\em n} & unused node. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_ae3f095c9fe6106e82c24543da4844ea3}{dfs}}.
+
+\mbox{\Hypertarget{classcomponents_aeeda901d02c65d6c31c8b6148540d7c1}\label{classcomponents_aeeda901d02c65d6c31c8b6148540d7c1}} 
+\index{components@{components}!check@{check}}
+\index{check@{check}!components@{components}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int components\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks whether the connected components algorithm can be applied. 
+
+Necessary preconditions\+:
+\begin{DoxyItemize}
+\item G is undirected.
+\item scanning of whole graph is enabled.
+\item D\+FS may be applied
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf}{algorithm\+::\+K\+G\+L\+\_\+\+OK}} if connected components can be computed for G. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classdfs_aa7c864a6f3a120720138b187b3ed95b5}{dfs\+::scan\+\_\+whole\+\_\+graph}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_a1af70060897529e67910f589b047e576}{dfs}}.
+
+\mbox{\Hypertarget{classcomponents_a8a645639044375cdaefabffda3ae70e0}\label{classcomponents_a8a645639044375cdaefabffda3ae70e0}} 
+\index{components@{components}!components\+\_\+begin@{components\+\_\+begin}}
+\index{components\+\_\+begin@{components\+\_\+begin}!components@{components}}
+\subsubsection{\texorpdfstring{components\+\_\+begin()}{components\_begin()}}
+{\footnotesize\ttfamily component\+\_\+iterator components\+::components\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start iteration over all components (if enabled during last call to run). 
+
+Components are represented as a pair consisting of a list of nodes and a list of edges, i.\+e. if {\ttfamily it} is of type {\ttfamily component\+\_\+iterator} then {\ttfamily $\ast$it} is of type {\ttfamily pair$<$list$<$node$>$},list$<$edge$>$~$>$.
+
+\begin{DoxyReturn}{Returns}
+iterator to first component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcomponents_a8537c6e4c6a29a4ae05a937b5fda1fb9}\label{classcomponents_a8537c6e4c6a29a4ae05a937b5fda1fb9}} 
+\index{components@{components}!components\+\_\+end@{components\+\_\+end}}
+\index{components\+\_\+end@{components\+\_\+end}!components@{components}}
+\subsubsection{\texorpdfstring{components\+\_\+end()}{components\_end()}}
+{\footnotesize\ttfamily component\+\_\+iterator components\+::components\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+End of iteration over all components. 
+
+\begin{DoxyReturn}{Returns}
+end of iteration over biconnected components 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a1234e7a70f50fd60c855529fe6fa4acb}{biconnectivity\+::store\+\_\+components}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcomponents_af53365bd737b34cf63e4a6b10879ffcc}\label{classcomponents_af53365bd737b34cf63e4a6b10879ffcc}} 
+\index{components@{components}!new\+\_\+start\+\_\+handler@{new\+\_\+start\+\_\+handler}}
+\index{new\+\_\+start\+\_\+handler@{new\+\_\+start\+\_\+handler}!components@{components}}
+\subsubsection{\texorpdfstring{new\+\_\+start\+\_\+handler()}{new\_start\_handler()}}
+{\footnotesize\ttfamily void components\+::new\+\_\+start\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when D\+FS is started with start-\/node {\itshape n}. 
+
+This is particularly useful when D\+FS was invoked with the \mbox{\hyperlink{classdfs_aa7c864a6f3a120720138b187b3ed95b5}{scan\+\_\+whole\+\_\+graph}} option.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+{\em n} & start-\/node. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_a3b5fbea7a7baed9946cfb4444a7f20ea}{dfs}}.
+
+\mbox{\Hypertarget{classcomponents_ad3206d2d050ed7719f7140ea3bee81f8}\label{classcomponents_ad3206d2d050ed7719f7140ea3bee81f8}} 
+\index{components@{components}!number\+\_\+of\+\_\+components@{number\+\_\+of\+\_\+components}}
+\index{number\+\_\+of\+\_\+components@{number\+\_\+of\+\_\+components}!components@{components}}
+\subsubsection{\texorpdfstring{number\+\_\+of\+\_\+components()}{number\_of\_components()}}
+{\footnotesize\ttfamily int components\+::number\+\_\+of\+\_\+components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Number of components detected during the last run. 
+
+\begin{DoxyReturn}{Returns}
+number of components. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcomponents_afcf7a0bee5104bba7986039a9d6bd1ee}\label{classcomponents_afcf7a0bee5104bba7986039a9d6bd1ee}} 
+\index{components@{components}!old\+\_\+adj\+\_\+node\+\_\+handler@{old\+\_\+adj\+\_\+node\+\_\+handler}}
+\index{old\+\_\+adj\+\_\+node\+\_\+handler@{old\+\_\+adj\+\_\+node\+\_\+handler}!components@{components}}
+\subsubsection{\texorpdfstring{old\+\_\+adj\+\_\+node\+\_\+handler()}{old\_adj\_node\_handler()}}
+{\footnotesize\ttfamily void components\+::old\+\_\+adj\+\_\+node\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classedge}{edge}} \&}]{e,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handler called when a already marked node {\itshape n} connected to the actual node by {\itshape e} is found during the search of all adjacent edges of the actual node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+{\em e} & edge connecting the actual node to the old one. \\
+\hline
+{\em n} & used node. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_adf1c667188e632761c63f529537c544c}{dfs}}.
+
+\mbox{\Hypertarget{classcomponents_a07b6bab5962524ae26ccb478b35cd76c}\label{classcomponents_a07b6bab5962524ae26ccb478b35cd76c}} 
+\index{components@{components}!reset@{reset}}
+\index{reset@{reset}!components@{components}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void components\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets algorithm. 
+
+Prepares the algorithm to be applied to another graph. {\itshape Please} {\itshape note\+:} The options an algorithm may support do {\itshape not} get reset by this. It is just to reset internally used datastructures. 
+
+Reimplemented from \mbox{\hyperlink{classdfs_affaffda8be8418d6dbf396c5b1d6b81a}{dfs}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/components.\+h\item 
+src/components.\+cpp\end{DoxyCompactItemize}

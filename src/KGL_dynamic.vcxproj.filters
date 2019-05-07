@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2019">
+  <ItemGroup>
+    <Filter Include="Quellcodedateien">
+      <UniqueIdentifier>{8e8563d9-89dd-4edf-86c0-e2e8170c3f67}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header-Dateien">
+      <UniqueIdentifier>{38b96607-e348-498f-b7a4-2b7e8df3161d}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{e3a6c0eb-6f24-4448-8de3-98412a41e7fd}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bellman_ford.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="bfs.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="biconnectivity.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="bid_dijkstra.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="components.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="dfs.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="dijkstra.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="edge.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="embedding.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="fm_partition.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="kml_parser.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="kml_scanner.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="graph.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="maxflow_ff.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="maxflow_pp.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="maxflow_sap.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="min_tree.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="node.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="planarity.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="pq_node.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="pq_tree.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ratio_cut_partition.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="st_number.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="topsort.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\KGL\algorithm.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\bellman_ford.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\bfs.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\biconnectivity.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\bid_dijkstra.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\bin_heap.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\components.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\debug.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\dfs.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\dijkstra.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\edge.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\edge_data.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\edge_map.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\embedding.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\fm_partition.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\kml_parser.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\kml_scanner.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\graph.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\KGL_.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\maxflow_ff.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\maxflow_pp.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\maxflow_sap.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\min_tree.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\ne_map.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\node.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\node_data.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\node_map.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\planarity.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\pq_node.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\pq_tree.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\ratio_cut_partition.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\st_number.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\symlist.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\topsort.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\version.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

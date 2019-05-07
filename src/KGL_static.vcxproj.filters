@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2019">
+  <ItemGroup>
+    <Filter Include="includes">
+      <UniqueIdentifier>{1ce0a102-f97d-4f8f-96a5-28eae1199601}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{67500de1-724a-46c5-964d-dfb1d48e5a70}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bellman_ford.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="bfs.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="biconnectivity.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="bid_dijkstra.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="components.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="dfs.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="dijkstra.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="edge.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="embedding.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="fm_partition.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="kml_parser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="kml_scanner.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="graph.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="maxflow_ff.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="maxflow_pp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="maxflow_sap.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="min_tree.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="node.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="planarity.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="pq_node.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="pq_tree.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ratio_cut_partition.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="st_number.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="topsort.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\KGL\algorithm.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\bellman_ford.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\bfs.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\biconnectivity.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\bid_dijkstra.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\bin_heap.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\components.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\debug.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\dfs.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\dijkstra.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\edge.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\edge_data.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\edge_map.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\embedding.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\fm_partition.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\kml_parser.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\kml_scanner.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\graph.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\KGL_.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\maxflow_ff.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\maxflow_pp.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\maxflow_sap.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\min_tree.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\ne_map.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\node.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\node_data.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\node_map.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\planarity.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\pq_node.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\pq_tree.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\ratio_cut_partition.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\st_number.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\symlist.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\topsort.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KGL\version.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

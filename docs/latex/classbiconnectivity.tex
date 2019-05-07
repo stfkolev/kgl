@@ -1,0 +1,615 @@
+\hypertarget{classbiconnectivity}{}\section{biconnectivity Class Reference}
+\label{classbiconnectivity}\index{biconnectivity@{biconnectivity}}
+
+
+Biconnectivity-\/test and low-\/numbers.  
+
+
+
+
+{\ttfamily \#include $<$biconnectivity.\+h$>$}
+
+Inheritance diagram for biconnectivity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbiconnectivity}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_ad3823f78779cb1f2d4cf2117667f5ce7}\label{classbiconnectivity_ad3823f78779cb1f2d4cf2117667f5ce7}} 
+typedef list$<$ \mbox{\hyperlink{classnode}{node}} $>$\+::iterator {\bfseries cutpoint\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_acf09990ddb220487655b4f57ccc5226f}\label{classbiconnectivity_acf09990ddb220487655b4f57ccc5226f}} 
+typedef list$<$ pair$<$ list$<$ \mbox{\hyperlink{classnode}{node}} $>$, list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ $>$ $>$\+::iterator {\bfseries component\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbiconnectivity_aec8c11afda486322b872f468cabd1f56}{biconnectivity}} ()
+\begin{DoxyCompactList}\small\item\em Creates biconnectivity algorithm object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classbiconnectivity_af8e2bb061de4a08f95a2a3a94fdbd797}{$\sim$biconnectivity}} ()
+\begin{DoxyCompactList}\small\item\em Destroys biconnectivity algorithm object. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classbiconnectivity_a65e0e821f5e9ce8d210648d462fd2cfa}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\begin{DoxyCompactList}\small\item\em Checks whether the algorithm can be applied. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbiconnectivity_a4393dd1e626887472f6967722349abc6}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets algorithm. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbiconnectivity_ab61a092bfc7cf9e9b27210d339186327}{low\+\_\+number}} (const \mbox{\hyperlink{classnode}{node}} \&n) const
+\begin{DoxyCompactList}\small\item\em low-\/number. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbiconnectivity_a50e7cee997b6d56ccbb9ae3fd039d9cd}{is\+\_\+biconnected}} () const
+\begin{DoxyCompactList}\small\item\em Biconnectivity-\/test. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbiconnectivity_a1234e7a70f50fd60c855529fe6fa4acb}{store\+\_\+components}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the storing of components is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbiconnectivity_ab7c9e256a4d7a4ffea33b20f014e1f69}{store\+\_\+components}} (bool set)
+\begin{DoxyCompactList}\small\item\em Enables or disables the storing of biconnected components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbiconnectivity_a774fd08203a6d164605afc4cdc8b9201}{make\+\_\+biconnected}} (bool set)
+\begin{DoxyCompactList}\small\item\em If enabled edges will be added to the graph in order to make it biconnected, if cutpoints are discovered. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbiconnectivity_a9ca9632a7fc398edb5b505dd0fe706c9}{make\+\_\+biconnected}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether addition of edges neccessary to make graph biconnected is enabled. \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{classedge}{edge}} $>$\+::iterator \mbox{\hyperlink{classbiconnectivity_ac5295da180114bffbbfd621d644d4c58}{additional\+\_\+begin}} ()
+\begin{DoxyCompactList}\small\item\em Begin of edges added to make graph biconnected. \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{classedge}{edge}} $>$\+::iterator \mbox{\hyperlink{classbiconnectivity_a447a86f387efd181b25b8bacf3365e75}{additional\+\_\+end}} ()
+\begin{DoxyCompactList}\small\item\em End of edges added to make graph biconnected. \end{DoxyCompactList}\item 
+cutpoint\+\_\+iterator \mbox{\hyperlink{classbiconnectivity_a473197552874aaf148e847838144eed7}{cut\+\_\+points\+\_\+begin}} ()
+\begin{DoxyCompactList}\small\item\em Start iteration over all cutpoints found. \end{DoxyCompactList}\item 
+cutpoint\+\_\+iterator \mbox{\hyperlink{classbiconnectivity_a78cb06c1d056b9519622a67a92e85b6e}{cut\+\_\+points\+\_\+end}} ()
+\begin{DoxyCompactList}\small\item\em End of iteration over all cutpoints. \end{DoxyCompactList}\item 
+component\+\_\+iterator \mbox{\hyperlink{classbiconnectivity_ac0b7253533edc3f1412f771cb35bf04a}{components\+\_\+begin}} ()
+\begin{DoxyCompactList}\small\item\em Start iteration over all biconnected components (if enabled during last call to run). \end{DoxyCompactList}\item 
+component\+\_\+iterator \mbox{\hyperlink{classbiconnectivity_a0bd1c70975e664174e591efd64f8dc71}{components\+\_\+end}} ()
+\begin{DoxyCompactList}\small\item\em End of iteration over all biconnected components. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbiconnectivity_ad77634a59ac6a08fae43c1c38540d5f0}{number\+\_\+of\+\_\+components}} () const
+\begin{DoxyCompactList}\small\item\em Number von biconnected components detected during the last run. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbiconnectivity_a64adab869e0080e3a1f8479e70010317}{init\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&)
+\begin{DoxyCompactList}\small\item\em Handler called before the start of D\+FS. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbiconnectivity_acb402f2d144f84429b3cd009121245b0}{entry\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&, \mbox{\hyperlink{classnode}{node}} \&, \mbox{\hyperlink{classnode}{node}} \&)
+\begin{DoxyCompactList}\small\item\em Handler called when touching node {\itshape n}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbiconnectivity_a19261e91eef3f7d6b8586fa1eae9f277}{before\+\_\+recursive\+\_\+call\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&, \mbox{\hyperlink{classedge}{edge}} \&, \mbox{\hyperlink{classnode}{node}} \&)
+\begin{DoxyCompactList}\small\item\em Handler called when a unused node {\itshape n} connected to the actual node by {\itshape e} is found. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbiconnectivity_a69ca91409485b57c486b188596080d7a}{after\+\_\+recursive\+\_\+call\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&, \mbox{\hyperlink{classedge}{edge}} \&, \mbox{\hyperlink{classnode}{node}} \&)
+\begin{DoxyCompactList}\small\item\em Handler called after the algorithm returns from the subtree starting at {\itshape n} connected to the actual node by {\itshape e}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbiconnectivity_a92228b87472140374dffea7d9f7ee20d}{old\+\_\+adj\+\_\+node\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&, \mbox{\hyperlink{classedge}{edge}} \&, \mbox{\hyperlink{classnode}{node}} \&)
+\begin{DoxyCompactList}\small\item\em Handler called when a already marked node {\itshape n} connected to the actual node by {\itshape e} is found during the search of all adjacent edges of the actual node. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbiconnectivity_ae94213830755f1f4d477ec6bff0f25b8}{new\+\_\+start\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&, \mbox{\hyperlink{classnode}{node}} \&)
+\begin{DoxyCompactList}\small\item\em Called when D\+FS is started with start-\/node {\itshape n}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbiconnectivity_a868587fdc4dbb3bf80899d1c7d49b558}{leave\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&, \mbox{\hyperlink{classnode}{node}} \&, \mbox{\hyperlink{classnode}{node}} \&)
+\begin{DoxyCompactList}\small\item\em Handler called after all the adjacent edges of {\itshape n} have been examined. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbiconnectivity_a2583331a4561f3db221ab674d2e5d75e}{end\+\_\+handler}} (\mbox{\hyperlink{classgraph}{graph}} \&)
+\begin{DoxyCompactList}\small\item\em Handler called at the end of D\+FS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_ab32b1a6264c24c6eec564cf082e980a1}\label{classbiconnectivity_ab32b1a6264c24c6eec564cf082e980a1}} 
+list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ {\bfseries self\+\_\+loops}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a487da69817fa89ab3d1523ad9846ae8e}\label{classbiconnectivity_a487da69817fa89ab3d1523ad9846ae8e}} 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ component\+\_\+iterator $>$ {\bfseries in\+\_\+component}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_ac5817e2122477ed591ef229c081745f3}\label{classbiconnectivity_ac5817e2122477ed591ef229c081745f3}} 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ {\bfseries low\+\_\+num}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a89fbd540b8a61aad150020be657ddfb7}\label{classbiconnectivity_a89fbd540b8a61aad150020be657ddfb7}} 
+int {\bfseries num\+\_\+of\+\_\+components}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a989307b07f4a976649bd7551173bd564}\label{classbiconnectivity_a989307b07f4a976649bd7551173bd564}} 
+bool {\bfseries store\+\_\+comp}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a70c1310b4ba83dbe10594f3a33f94763}\label{classbiconnectivity_a70c1310b4ba83dbe10594f3a33f94763}} 
+bool {\bfseries add\+\_\+edges}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a6f2e474efeb8ccb023d9b84385798193}\label{classbiconnectivity_a6f2e474efeb8ccb023d9b84385798193}} 
+\mbox{\hyperlink{classnode}{node}} {\bfseries last}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a6b33fabd4da60c573adfb0538f28e0ed}\label{classbiconnectivity_a6b33fabd4da60c573adfb0538f28e0ed}} 
+stack$<$ \mbox{\hyperlink{classnode}{node}} $>$ {\bfseries node\+\_\+stack}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_aaf715d6044028c456515389e879dd5d8}\label{classbiconnectivity_aaf715d6044028c456515389e879dd5d8}} 
+stack$<$ \mbox{\hyperlink{classedge}{edge}} $>$ {\bfseries edge\+\_\+stack}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a1d484917f1822478d148647cfae05605}\label{classbiconnectivity_a1d484917f1822478d148647cfae05605}} 
+list$<$ pair$<$ list$<$ \mbox{\hyperlink{classnode}{node}} $>$, list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ $>$ $>$ {\bfseries components}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a1591f1872a681e0dce0066ea00763c67}\label{classbiconnectivity_a1591f1872a681e0dce0066ea00763c67}} 
+list$<$ \mbox{\hyperlink{classnode}{node}} $>$ {\bfseries cut\+\_\+points}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a67756de28954d13df615d8f2a93b22da}\label{classbiconnectivity_a67756de28954d13df615d8f2a93b22da}} 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ {\bfseries cut\+\_\+count}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a14148f2d705d6ed29f1b2370104a41b1}\label{classbiconnectivity_a14148f2d705d6ed29f1b2370104a41b1}} 
+list$<$ \mbox{\hyperlink{classedge}{edge}} $>$ {\bfseries additional}
+\item 
+\mbox{\Hypertarget{classbiconnectivity_a3292c5b6bf3b91947509a380cf779706}\label{classbiconnectivity_a3292c5b6bf3b91947509a380cf779706}} 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classnode}{node}} $>$ {\bfseries first\+\_\+child}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Biconnectivity-\/test and low-\/numbers. 
+
+\begin{DoxyParagraph}{Date}
+2019/05/07 13\+:37\+:14 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Revision}
+1.\+18 
+\end{DoxyParagraph}
+
+
+Obviously there is a close relationship between D\+FS and the testing of biconnectivity. Thus this test takes advantage of the possibility to add pieces of code to the D\+F\+S-\/class in order to calculate the low-\/numbers.
+
+As default no biconnected components will be stored and no edges will be added to make the graph biconnected. The test will run on the whole graph, even if it is not connected. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbiconnectivity_aec8c11afda486322b872f468cabd1f56}\label{classbiconnectivity_aec8c11afda486322b872f468cabd1f56}} 
+\index{biconnectivity@{biconnectivity}!biconnectivity@{biconnectivity}}
+\index{biconnectivity@{biconnectivity}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{biconnectivity()}{biconnectivity()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+K\+G\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE biconnectivity\+::biconnectivity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates biconnectivity algorithm object. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classdfs_a5232bc41ab202b6278a84bd97c803a0d}{dfs\+::dfs}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classbiconnectivity_af8e2bb061de4a08f95a2a3a94fdbd797}\label{classbiconnectivity_af8e2bb061de4a08f95a2a3a94fdbd797}} 
+\index{biconnectivity@{biconnectivity}!````~biconnectivity@{$\sim$biconnectivity}}
+\index{````~biconnectivity@{$\sim$biconnectivity}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{$\sim$biconnectivity()}{~biconnectivity()}}
+{\footnotesize\ttfamily virtual biconnectivity\+::$\sim$biconnectivity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroys biconnectivity algorithm object. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classdfs_aff2e95c12935221a94551393f7e36c6e}{dfs\+::$\sim$dfs}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbiconnectivity_ac5295da180114bffbbfd621d644d4c58}\label{classbiconnectivity_ac5295da180114bffbbfd621d644d4c58}} 
+\index{biconnectivity@{biconnectivity}!additional\+\_\+begin@{additional\+\_\+begin}}
+\index{additional\+\_\+begin@{additional\+\_\+begin}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{additional\+\_\+begin()}{additional\_begin()}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{classedge}{edge}}$>$\+::iterator biconnectivity\+::additional\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Begin of edges added to make graph biconnected. 
+
+\begin{DoxyReturn}{Returns}
+begin of additional edges 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a774fd08203a6d164605afc4cdc8b9201}{biconnectivity\+::make\+\_\+biconnected}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classbiconnectivity_a447a86f387efd181b25b8bacf3365e75}\label{classbiconnectivity_a447a86f387efd181b25b8bacf3365e75}} 
+\index{biconnectivity@{biconnectivity}!additional\+\_\+end@{additional\+\_\+end}}
+\index{additional\+\_\+end@{additional\+\_\+end}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{additional\+\_\+end()}{additional\_end()}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{classedge}{edge}}$>$\+::iterator biconnectivity\+::additional\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+End of edges added to make graph biconnected. 
+
+\begin{DoxyReturn}{Returns}
+end of additional edges 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a774fd08203a6d164605afc4cdc8b9201}{biconnectivity\+::make\+\_\+biconnected}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classbiconnectivity_a69ca91409485b57c486b188596080d7a}\label{classbiconnectivity_a69ca91409485b57c486b188596080d7a}} 
+\index{biconnectivity@{biconnectivity}!after\+\_\+recursive\+\_\+call\+\_\+handler@{after\+\_\+recursive\+\_\+call\+\_\+handler}}
+\index{after\+\_\+recursive\+\_\+call\+\_\+handler@{after\+\_\+recursive\+\_\+call\+\_\+handler}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{after\+\_\+recursive\+\_\+call\+\_\+handler()}{after\_recursive\_call\_handler()}}
+{\footnotesize\ttfamily void biconnectivity\+::after\+\_\+recursive\+\_\+call\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classedge}{edge}} \&}]{e,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handler called after the algorithm returns from the subtree starting at {\itshape n} connected to the actual node by {\itshape e}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+{\em e} & edge connecting the actual node to the unused one. \\
+\hline
+{\em n} & unused node. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_a25ae75fe08f1d8c0fedcf9dcae09d092}{dfs}}.
+
+\mbox{\Hypertarget{classbiconnectivity_a19261e91eef3f7d6b8586fa1eae9f277}\label{classbiconnectivity_a19261e91eef3f7d6b8586fa1eae9f277}} 
+\index{biconnectivity@{biconnectivity}!before\+\_\+recursive\+\_\+call\+\_\+handler@{before\+\_\+recursive\+\_\+call\+\_\+handler}}
+\index{before\+\_\+recursive\+\_\+call\+\_\+handler@{before\+\_\+recursive\+\_\+call\+\_\+handler}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{before\+\_\+recursive\+\_\+call\+\_\+handler()}{before\_recursive\_call\_handler()}}
+{\footnotesize\ttfamily void biconnectivity\+::before\+\_\+recursive\+\_\+call\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classedge}{edge}} \&}]{e,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handler called when a unused node {\itshape n} connected to the actual node by {\itshape e} is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+{\em e} & edge connecting the actual node to the unused one. \\
+\hline
+{\em n} & unused node. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_ae3f095c9fe6106e82c24543da4844ea3}{dfs}}.
+
+\mbox{\Hypertarget{classbiconnectivity_a65e0e821f5e9ce8d210648d462fd2cfa}\label{classbiconnectivity_a65e0e821f5e9ce8d210648d462fd2cfa}} 
+\index{biconnectivity@{biconnectivity}!check@{check}}
+\index{check@{check}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int biconnectivity\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks whether the algorithm can be applied. 
+
+Necessary preconditions\+:
+\begin{DoxyItemize}
+\item G is undirected.
+\item storing of predecessors is enabled.
+\item D\+FS may be applied
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710aae4c1cd7fe8d8cf4b143241a6e7c31cf}{algorithm\+::\+K\+G\+L\+\_\+\+OK}} if binconnectivity-\/test can be applied to {\itshape G}. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classdfs_aa7c864a6f3a120720138b187b3ed95b5}{dfs\+::scan\+\_\+whole\+\_\+graph}}, \mbox{\hyperlink{classdfs_a7043f46eb3887cbcbb1391fc783407a4}{dfs\+::store\+\_\+preds}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_a1af70060897529e67910f589b047e576}{dfs}}.
+
+\mbox{\Hypertarget{classbiconnectivity_ac0b7253533edc3f1412f771cb35bf04a}\label{classbiconnectivity_ac0b7253533edc3f1412f771cb35bf04a}} 
+\index{biconnectivity@{biconnectivity}!components\+\_\+begin@{components\+\_\+begin}}
+\index{components\+\_\+begin@{components\+\_\+begin}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{components\+\_\+begin()}{components\_begin()}}
+{\footnotesize\ttfamily component\+\_\+iterator biconnectivity\+::components\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start iteration over all biconnected components (if enabled during last call to run). 
+
+Components are represented as a pair consisting of a list of nodes and a list of edges, i.\+e. if it is of type component\+\_\+iterator then $\ast$it is of type pair$<$list$<$node$>$,list$<$edge$>$ $>$.
+
+\begin{DoxyReturn}{Returns}
+iterator to first component 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a1234e7a70f50fd60c855529fe6fa4acb}{biconnectivity\+::store\+\_\+components}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classbiconnectivity_a0bd1c70975e664174e591efd64f8dc71}\label{classbiconnectivity_a0bd1c70975e664174e591efd64f8dc71}} 
+\index{biconnectivity@{biconnectivity}!components\+\_\+end@{components\+\_\+end}}
+\index{components\+\_\+end@{components\+\_\+end}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{components\+\_\+end()}{components\_end()}}
+{\footnotesize\ttfamily component\+\_\+iterator biconnectivity\+::components\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+End of iteration over all biconnected components. 
+
+\begin{DoxyReturn}{Returns}
+end of iteration over biconnected components 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a1234e7a70f50fd60c855529fe6fa4acb}{biconnectivity\+::store\+\_\+components}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classbiconnectivity_a473197552874aaf148e847838144eed7}\label{classbiconnectivity_a473197552874aaf148e847838144eed7}} 
+\index{biconnectivity@{biconnectivity}!cut\+\_\+points\+\_\+begin@{cut\+\_\+points\+\_\+begin}}
+\index{cut\+\_\+points\+\_\+begin@{cut\+\_\+points\+\_\+begin}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{cut\+\_\+points\+\_\+begin()}{cut\_points\_begin()}}
+{\footnotesize\ttfamily cutpoint\+\_\+iterator biconnectivity\+::cut\+\_\+points\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start iteration over all cutpoints found. 
+
+A cutpoints is a node whose removal will disconnect the graph, thus a graph with no cutpoints is biconnected and vice versa.
+
+\begin{DoxyReturn}{Returns}
+iterator to first cutpoint. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a78cb06c1d056b9519622a67a92e85b6e}{biconnectivity\+::cut\+\_\+points\+\_\+end}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classbiconnectivity_a78cb06c1d056b9519622a67a92e85b6e}\label{classbiconnectivity_a78cb06c1d056b9519622a67a92e85b6e}} 
+\index{biconnectivity@{biconnectivity}!cut\+\_\+points\+\_\+end@{cut\+\_\+points\+\_\+end}}
+\index{cut\+\_\+points\+\_\+end@{cut\+\_\+points\+\_\+end}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{cut\+\_\+points\+\_\+end()}{cut\_points\_end()}}
+{\footnotesize\ttfamily cutpoint\+\_\+iterator biconnectivity\+::cut\+\_\+points\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+End of iteration over all cutpoints. 
+
+\begin{DoxyReturn}{Returns}
+one-\/past-\/the-\/end iterator. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a473197552874aaf148e847838144eed7}{biconnectivity\+::cut\+\_\+points\+\_\+begin}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classbiconnectivity_a2583331a4561f3db221ab674d2e5d75e}\label{classbiconnectivity_a2583331a4561f3db221ab674d2e5d75e}} 
+\index{biconnectivity@{biconnectivity}!end\+\_\+handler@{end\+\_\+handler}}
+\index{end\+\_\+handler@{end\+\_\+handler}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{end\+\_\+handler()}{end\_handler()}}
+{\footnotesize\ttfamily void biconnectivity\+::end\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handler called at the end of D\+FS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_ab96c7c6183856dd9e356fdcf50835b32}{dfs}}.
+
+\mbox{\Hypertarget{classbiconnectivity_acb402f2d144f84429b3cd009121245b0}\label{classbiconnectivity_acb402f2d144f84429b3cd009121245b0}} 
+\index{biconnectivity@{biconnectivity}!entry\+\_\+handler@{entry\+\_\+handler}}
+\index{entry\+\_\+handler@{entry\+\_\+handler}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{entry\+\_\+handler()}{entry\_handler()}}
+{\footnotesize\ttfamily void biconnectivity\+::entry\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{n,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handler called when touching node {\itshape n}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+{\em n} & actual node. \\
+\hline
+{\em f} & predecessor. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_a73dabe5882226b53494a487b7c34f1d1}{dfs}}.
+
+\mbox{\Hypertarget{classbiconnectivity_a64adab869e0080e3a1f8479e70010317}\label{classbiconnectivity_a64adab869e0080e3a1f8479e70010317}} 
+\index{biconnectivity@{biconnectivity}!init\+\_\+handler@{init\+\_\+handler}}
+\index{init\+\_\+handler@{init\+\_\+handler}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{init\+\_\+handler()}{init\_handler()}}
+{\footnotesize\ttfamily void biconnectivity\+::init\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handler called before the start of D\+FS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_acc82574cd42ab8256e685374bee5fabb}{dfs}}.
+
+\mbox{\Hypertarget{classbiconnectivity_a50e7cee997b6d56ccbb9ae3fd039d9cd}\label{classbiconnectivity_a50e7cee997b6d56ccbb9ae3fd039d9cd}} 
+\index{biconnectivity@{biconnectivity}!is\+\_\+biconnected@{is\+\_\+biconnected}}
+\index{is\+\_\+biconnected@{is\+\_\+biconnected}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{is\+\_\+biconnected()}{is\_biconnected()}}
+{\footnotesize\ttfamily bool biconnectivity\+::is\+\_\+biconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Biconnectivity-\/test. 
+
+\begin{DoxyReturn}{Returns}
+true iff graph is biconnected. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbiconnectivity_a868587fdc4dbb3bf80899d1c7d49b558}\label{classbiconnectivity_a868587fdc4dbb3bf80899d1c7d49b558}} 
+\index{biconnectivity@{biconnectivity}!leave\+\_\+handler@{leave\+\_\+handler}}
+\index{leave\+\_\+handler@{leave\+\_\+handler}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{leave\+\_\+handler()}{leave\_handler()}}
+{\footnotesize\ttfamily void biconnectivity\+::leave\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{n,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handler called after all the adjacent edges of {\itshape n} have been examined. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+{\em n} & actual node. \\
+\hline
+{\em f} & predecessor. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_a8071fc4e82deff7ceb2790cd4eb42280}{dfs}}.
+
+\mbox{\Hypertarget{classbiconnectivity_ab61a092bfc7cf9e9b27210d339186327}\label{classbiconnectivity_ab61a092bfc7cf9e9b27210d339186327}} 
+\index{biconnectivity@{biconnectivity}!low\+\_\+number@{low\+\_\+number}}
+\index{low\+\_\+number@{low\+\_\+number}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{low\+\_\+number()}{low\_number()}}
+{\footnotesize\ttfamily int biconnectivity\+::low\+\_\+number (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+low-\/number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+low-\/number of n. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbiconnectivity_a774fd08203a6d164605afc4cdc8b9201}\label{classbiconnectivity_a774fd08203a6d164605afc4cdc8b9201}} 
+\index{biconnectivity@{biconnectivity}!make\+\_\+biconnected@{make\+\_\+biconnected}}
+\index{make\+\_\+biconnected@{make\+\_\+biconnected}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{make\+\_\+biconnected()}{make\_biconnected()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void biconnectivity\+::make\+\_\+biconnected (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If enabled edges will be added to the graph in order to make it biconnected, if cutpoints are discovered. 
+
+The list of added edges can be accessed via additional\+\_\+begin and additional\+\_\+end.
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & if true additional edges will we inserted to make the graph biconnected. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_ac5295da180114bffbbfd621d644d4c58}{biconnectivity\+::additional\+\_\+begin}}, \mbox{\hyperlink{classbiconnectivity_a447a86f387efd181b25b8bacf3365e75}{biconnectivity\+::additional\+\_\+end}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classbiconnectivity_a9ca9632a7fc398edb5b505dd0fe706c9}\label{classbiconnectivity_a9ca9632a7fc398edb5b505dd0fe706c9}} 
+\index{biconnectivity@{biconnectivity}!make\+\_\+biconnected@{make\+\_\+biconnected}}
+\index{make\+\_\+biconnected@{make\+\_\+biconnected}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{make\+\_\+biconnected()}{make\_biconnected()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool biconnectivity\+::make\+\_\+biconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether addition of edges neccessary to make graph biconnected is enabled. 
+
+\begin{DoxyReturn}{Returns}
+true iff addition edges is enabled. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_ac5295da180114bffbbfd621d644d4c58}{biconnectivity\+::additional\+\_\+begin}}, \mbox{\hyperlink{classbiconnectivity_a447a86f387efd181b25b8bacf3365e75}{biconnectivity\+::additional\+\_\+end}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classbiconnectivity_ae94213830755f1f4d477ec6bff0f25b8}\label{classbiconnectivity_ae94213830755f1f4d477ec6bff0f25b8}} 
+\index{biconnectivity@{biconnectivity}!new\+\_\+start\+\_\+handler@{new\+\_\+start\+\_\+handler}}
+\index{new\+\_\+start\+\_\+handler@{new\+\_\+start\+\_\+handler}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{new\+\_\+start\+\_\+handler()}{new\_start\_handler()}}
+{\footnotesize\ttfamily void biconnectivity\+::new\+\_\+start\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when D\+FS is started with start-\/node {\itshape n}. 
+
+This is particularly useful when D\+FS was invoked with the \mbox{\hyperlink{classdfs_aa7c864a6f3a120720138b187b3ed95b5}{scan\+\_\+whole\+\_\+graph}} option.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+{\em n} & start-\/node. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_a3b5fbea7a7baed9946cfb4444a7f20ea}{dfs}}.
+
+\mbox{\Hypertarget{classbiconnectivity_ad77634a59ac6a08fae43c1c38540d5f0}\label{classbiconnectivity_ad77634a59ac6a08fae43c1c38540d5f0}} 
+\index{biconnectivity@{biconnectivity}!number\+\_\+of\+\_\+components@{number\+\_\+of\+\_\+components}}
+\index{number\+\_\+of\+\_\+components@{number\+\_\+of\+\_\+components}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{number\+\_\+of\+\_\+components()}{number\_of\_components()}}
+{\footnotesize\ttfamily int biconnectivity\+::number\+\_\+of\+\_\+components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Number von biconnected components detected during the last run. 
+
+\begin{DoxyReturn}{Returns}
+number of biconnected components. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbiconnectivity_a92228b87472140374dffea7d9f7ee20d}\label{classbiconnectivity_a92228b87472140374dffea7d9f7ee20d}} 
+\index{biconnectivity@{biconnectivity}!old\+\_\+adj\+\_\+node\+\_\+handler@{old\+\_\+adj\+\_\+node\+\_\+handler}}
+\index{old\+\_\+adj\+\_\+node\+\_\+handler@{old\+\_\+adj\+\_\+node\+\_\+handler}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{old\+\_\+adj\+\_\+node\+\_\+handler()}{old\_adj\_node\_handler()}}
+{\footnotesize\ttfamily void biconnectivity\+::old\+\_\+adj\+\_\+node\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classedge}{edge}} \&}]{e,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handler called when a already marked node {\itshape n} connected to the actual node by {\itshape e} is found during the search of all adjacent edges of the actual node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph for which D\+FS was invoked. \\
+\hline
+{\em e} & edge connecting the actual node to the old one. \\
+\hline
+{\em n} & used node. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classdfs_adf1c667188e632761c63f529537c544c}{dfs}}.
+
+\mbox{\Hypertarget{classbiconnectivity_a4393dd1e626887472f6967722349abc6}\label{classbiconnectivity_a4393dd1e626887472f6967722349abc6}} 
+\index{biconnectivity@{biconnectivity}!reset@{reset}}
+\index{reset@{reset}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void biconnectivity\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets algorithm. 
+
+Prepares the algorithm to be applied to another graph. {\itshape Please} {\itshape note\+:} The options an algorithm may support do {\itshape not} get reset by this. It is just to reset internally used datastructures. 
+
+Reimplemented from \mbox{\hyperlink{classdfs_affaffda8be8418d6dbf396c5b1d6b81a}{dfs}}.
+
+\mbox{\Hypertarget{classbiconnectivity_a1234e7a70f50fd60c855529fe6fa4acb}\label{classbiconnectivity_a1234e7a70f50fd60c855529fe6fa4acb}} 
+\index{biconnectivity@{biconnectivity}!store\+\_\+components@{store\+\_\+components}}
+\index{store\+\_\+components@{store\+\_\+components}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{store\+\_\+components()}{store\_components()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool biconnectivity\+::store\+\_\+components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the storing of components is enabled. 
+
+\begin{DoxyReturn}{Returns}
+true iff storing of components is enabled. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_ac0b7253533edc3f1412f771cb35bf04a}{biconnectivity\+::components\+\_\+begin}}, \mbox{\hyperlink{classbiconnectivity_a0bd1c70975e664174e591efd64f8dc71}{biconnectivity\+::components\+\_\+end}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classbiconnectivity_ab7c9e256a4d7a4ffea33b20f014e1f69}\label{classbiconnectivity_ab7c9e256a4d7a4ffea33b20f014e1f69}} 
+\index{biconnectivity@{biconnectivity}!store\+\_\+components@{store\+\_\+components}}
+\index{store\+\_\+components@{store\+\_\+components}!biconnectivity@{biconnectivity}}
+\subsubsection{\texorpdfstring{store\+\_\+components()}{store\_components()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void biconnectivity\+::store\+\_\+components (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enables or disables the storing of biconnected components. 
+
+If this feature is enabled, the whole graph will be scanned in order to get all the biconnected components even if the graph isn\textquotesingle{}t connected. By default this feature is disabled.
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & if true each biconnected component will be stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_ac0b7253533edc3f1412f771cb35bf04a}{biconnectivity\+::components\+\_\+begin}}, \mbox{\hyperlink{classbiconnectivity_a0bd1c70975e664174e591efd64f8dc71}{biconnectivity\+::components\+\_\+end}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+K\+G\+L/biconnectivity.\+h\item 
+src/biconnectivity.\+cpp\end{DoxyCompactItemize}
