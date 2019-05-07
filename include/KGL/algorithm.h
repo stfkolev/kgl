@@ -59,7 +59,8 @@ public:
      * @retval algorithm::KGL_OK on success
      * @retval algorithm::KGL_ERROR otherwise
      */
-    virtual int run (graph& g) = 0;
+    [[nodiscard]]
+    virtual auto __cdecl run (graph& g) = 0 -> int;
     
     /**
      * @brief Checks whether all preconditions are satisfied.
@@ -72,7 +73,8 @@ public:
      * @retval algorithm::KGL_OK if %algorithm can be applied
      * @retval algorithm::KGL_ERROR otherwise.
      */
-    virtual int check (graph& g) = 0;
+    [[nodiscard]]
+    virtual auto __cdecl check (graph& g) = 0 -> int;
     
     /**
      * @brief Resets %algorithm 
@@ -82,7 +84,7 @@ public:
      * %algorithm may support do @em not get reset by
      * this. It is just to reset internally used datastructures.
      */
-    virtual void reset () = 0;
+    virtual auto __cdecl reset () = 0 -> void;
 };
 
 __KGL_END_NAMESPACE

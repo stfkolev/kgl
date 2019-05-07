@@ -63,9 +63,10 @@ public:
      * be applied to @a G.
      * @sa dfs::scan_whole_graph, dfs::store_preds
      */
-    virtual int check (graph& G);
+    [[nodiscard]]
+    virtual auto __cdecl check (graph& G) -> int;
 
-    virtual void reset ();
+    virtual auto __cdecl reset () -> void;
 
     /**
      * @brief low-number. 
@@ -73,7 +74,8 @@ public:
      * @param n node.
      * @return low-number of n.
      */
-    int low_number (const node& n) const 
+    [[nodiscard]]
+    auto __cdecl low_number (const node& n) const -> int
 	{return low_num[n];}
 
     /**
@@ -81,7 +83,8 @@ public:
      * 
      * @return true iff graph is biconnected.
      */
-    bool is_biconnected () const 
+    [[nodiscard]]
+    auto __cdecl is_biconnected () const -> bool
 	{return num_of_components == 1;}
 
     /**
@@ -90,7 +93,8 @@ public:
      * @return true iff storing of components is enabled.
      * @sa biconnectivity::components_begin, biconnectivity::components_end
      */
-    bool store_components () const
+    [[nodiscard]]
+    auto __cdecl store_components () const -> bool
 	{ return store_comp; }
 
     /**
@@ -103,7 +107,7 @@ public:
      * @param set if true each biconnected component will be stored.
      * @sa biconnectivity::components_begin, biconnectivity::components_end
      */
-    void store_components (bool set) 
+    auto __cdecl store_components (bool set) -> void
 	{ store_comp  = set; if (set) scan_whole_graph (set); }
     
     /**
@@ -117,7 +121,7 @@ public:
      *    to make the graph biconnected.
      * @sa biconnectivity::additional_begin, biconnectivity::additional_end
      */
-    void make_biconnected (bool set) 
+    auto __cdecl make_biconnected (bool set) -> void
 	{ add_edges = set; if (set) scan_whole_graph (set); }
     
     /**
@@ -127,7 +131,8 @@ public:
      * @return true iff addition edges is enabled.
      * @sa biconnectivity::additional_begin, biconnectivity::additional_end
      */
-    bool make_biconnected () const 
+    [[nodiscard]]
+    auto __cdecl make_biconnected () const -> bool
 	{ return add_edges; }
     
     /**
@@ -136,7 +141,8 @@ public:
      * @return begin of additional edges
      * @sa biconnectivity::make_biconnected
      */
-    list<edge>::iterator additional_begin ()
+    [[nodiscard]]
+    auto __cdecl additional_begin () -> list<edge>::iterator
 	{ return additional.begin (); }
 
     /**
@@ -145,7 +151,8 @@ public:
      * @return end of additional edges
      * @sa biconnectivity::make_biconnected
      */
-    list<edge>::iterator additional_end ()
+    [[nodiscard]]
+    auto __cdecl additional_end () -> list<edge>::iterator
 	{ return additional.end (); }
     
     /**
@@ -162,7 +169,8 @@ public:
      * @return iterator to first cutpoint.
      * @sa biconnectivity::cut_points_end
      */
-    cutpoint_iterator cut_points_begin () 
+    [[nodiscard]]
+    auto __cdecl cut_points_begin () -> cutpoint_iterator
 	{ return cut_points.begin(); }
 
     /**
@@ -171,7 +179,8 @@ public:
      * @return one-past-the-end iterator.
      * @sa biconnectivity::cut_points_begin
      */
-    cutpoint_iterator cut_points_end () 
+    [[nodiscard]]
+    auto __cdecl cut_points_end () -> cutpoint_iterator
 	{ return cut_points.end(); }
 
 
@@ -193,7 +202,8 @@ public:
      * @return iterator to first component
      * @sa biconnectivity::store_components
      */
-    component_iterator components_begin ()
+    [[nodiscard]]
+    auto __cdecl components_begin () -> component_iterator
 	{ return components.begin(); }
 
 
@@ -203,7 +213,7 @@ public:
      * @return end of iteration over biconnected components
      * @sa biconnectivity::store_components
      */
-    component_iterator components_end ()
+    auto __cdecl components_end () -> component_iterator
 	{ return components.end(); }
 
     /**
@@ -211,7 +221,8 @@ public:
      * 
      * @return number of biconnected components.
      */
-    int number_of_components () const
+    [[nodiscard]]
+    auto __cdecl number_of_components () const -> int
 	{return num_of_components; }
 
     //-----------------------------------------------------------------------
@@ -220,42 +231,42 @@ public:
     /**
      * @internal
      */
-    virtual void init_handler (graph&);
+    virtual auto __cdecl init_handler (graph&) -> void;
 
     /**
      * @internal
      */
-    virtual void entry_handler (graph&, node&, node&);
+    virtual auto __cdecl entry_handler (graph&, node&, node&) -> void;
 
     /**
      * @internal
      */
-    virtual void before_recursive_call_handler (graph&, edge&, node&);
+    virtual auto __cdecl before_recursive_call_handler (graph&, edge&, node&) -> void;
 
     /**
      * @internal
      */
-    virtual void after_recursive_call_handler (graph&, edge&, node&);
+    virtual auto __cdecl after_recursive_call_handler (graph&, edge&, node&) -> void;
 
     /**
      * @internal
      */
-    virtual void old_adj_node_handler (graph&, edge&, node&);
+    virtual auto __cdecl old_adj_node_handler (graph&, edge&, node&) -> void;
 
     /**
      * @internal
      */
-    virtual void new_start_handler (graph&, node&);    
+    virtual auto __cdecl new_start_handler (graph&, node&) -> void;    
 
     /**
      * @internal
      */
-    virtual void leave_handler (graph&, node&, node&);    
+    virtual auto __cdecl leave_handler (graph&, node&, node&) -> void;    
 
     /**
      * @internal
      */
-    virtual void end_handler (graph&);    
+    virtual auto __cdecl end_handler (graph&) -> void;    
 
 
 protected:

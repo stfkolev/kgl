@@ -55,9 +55,11 @@ public:
      * @retval algorithm::KGL_OK if %algorithm can be applied
      * @retval algorithm::KGL_ERROR otherwise.
      */
-    int check (graph& G);
+    [[nodiscard]]
+    auto __cdecl check (graph& G) -> int;
 
-    int run (graph& G);
+    [[nodiscard]]
+    auto __cdecl run (graph& G) -> int;
 
     /**
      * @brief Resets the algorithm. 
@@ -65,7 +67,7 @@ public:
      * The weights are not reset. You can apply this algorithms
      * twice without setting the weights for the second call.
      */
-    void reset ();
+    auto __cdecl reset () -> void;
 
     /**
      * @brief Sets source. 
@@ -76,14 +78,15 @@ public:
      *
      * @param n source.
      */
-    void source (const node& n) {s = n;}    
+    inline auto __cdecl source (const node& n) -> void {s = n;}    
 
     /**
      * @brief Returns source.
      *
      * @return source.
      */
-    node source () const {return s;}
+    [[nodiscard]]
+    auto __cdecl source () const -> node {return s;}
 
     /**
      * @brief Sets weights of the edges. 
@@ -92,7 +95,7 @@ public:
      *
      * @param w weights of the edges.
      */
-    void weights (const edge_map<double>& weight) {w = weight; vars_set = true; }
+    auto __cdecl weights (const edge_map<double>& weight) -> void {w = weight; vars_set = true; }
     
     /**
      * @brief Enables or disables the storing of predecessors. 
@@ -104,7 +107,7 @@ public:
      * @sa bellman_ford::predecessor_node,
      * bellman_ford::predecessor_edge
      */
-    void store_preds (bool set);
+    auto __cdecl store_preds (bool set) -> void;
 
     /**
      * @brief Returns whether the storing of predecessors is enabled.
@@ -114,21 +117,24 @@ public:
      * @sa bellman_ford::predecessor_node,
      * bellman_ford::predecessor_edge
      */
-    bool store_preds () const {return preds != 0;}
+    [[nodiscard]]
+    auto __cdecl store_preds () const -> bool {return preds != 0;}
 
     /**
      * @brief Returns whether is reachable from source.
      * 
      * @param n node
      */    
-    bool reached (const node& n) const {return !inf[n];}
+    [[nodiscard]]
+    auto __cdecl reached (const node& n) const -> bool {return !inf[n];}
 
     /**
      * @brief Returns the distance from source to @a n
      * 
      * @param n node
      */
-    double distance (const node& n) const {return d[n];}
+    [[nodiscard]]
+    auto __cdecl distance (const node& n) const -> double {return d[n];}
 
     /**
      * @brief edge to predecessor of %node @a n on the shortest
@@ -144,7 +150,8 @@ public:
      * @return predecessor of @a n.
      * @sa bellman_ford::store_preds
      */
-    edge predecessor_edge (const node& n) const
+    [[nodiscard]]
+    auto __cdecl predecessor_edge (const node& n) const -> edge
 	{assert (preds); return (*preds)[n];}
 
     /**
@@ -168,7 +175,8 @@ public:
      * @brief Returns whether there is a cycle with negative
      * weight.
      */
-    bool negative_cycle() const
+    [[nodiscard]]
+    auto __cdecl negative_cycle() const -> bool
 	{return cycle;}
 
 private:
@@ -178,8 +186,8 @@ private:
      * @brief Main method for Bellman Ford
      * 
      * @param e edge to be relaxed
-     */    
-    void relax (const edge& e, bool dir);
+     */
+    auto __cdecl relax (const edge& e, bool dir) -> void;
 
     /**
      * @brief Stores source.

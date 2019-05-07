@@ -75,7 +75,7 @@ public:
      * @param s source %node
      * @param t target %node
      */
-    void source_target(const node& s, const node& t);
+    auto __cdecl source_target(const node& s, const node& t) -> void;
 
     /**
      * @brief Sets weights of the edges. 
@@ -84,7 +84,7 @@ public:
      *
      * @param weight weights of the %edges
      */
-    void weights(const edge_map<double>& weight);
+    auto __cdecl weights(const edge_map<double>& weight) -> void;
     
     /**
      * @brief Enables or disables the storing of the shortest path. 
@@ -97,7 +97,7 @@ public:
      * @sa dijkstra::predecessor_node
      * @sa dijkstra::predecessor_edge
      */
-    void store_path(bool set);
+    auto __cdecl store_path(bool set) -> void;
 
     /**
      * @brief Checks whether the preconditions for bidirectional Dijkstra are
@@ -117,7 +117,8 @@ public:
      * @sa dijkstra::weigths
      * @sa algorithm::check
      */
-    virtual int check(graph& G);
+    [[nodiscard]]
+    virtual auto __cdecl check(graph& G) -> int;
 	    
     /**
      * @brief Runs shortest path algorithm on @p G.
@@ -133,21 +134,24 @@ public:
      *
      * @sa algorithm::run
      */
-    int run(graph& G);
+    [[nodiscard]]
+    auto __cdecl run(graph& G) -> int;
 
     /**
      * @brief Returns source %node.
      *
      * @return source %node
      */
-    node source() const;
+    [[nodiscard]]
+    auto __cdecl source() const -> node;
 
     /**
      * @brief Returns target %node if set, <code>node::node()</code> else.
      *
      * @return target %node
      */
-    node target() const;
+    [[nodiscard]]
+    auto __cdecl target() const -> node;
 
     /**
      * @brief Returns whether the storing of the shortest path is enabled.
@@ -156,14 +160,16 @@ public:
      *
      * @sa dijkstra::predecessor
      */
-    bool store_path() const;
+    [[nodiscard]]
+    auto __cdecl store_path() const -> bool;
 
     /**
      * @brief Returns whether target is reachable from source.
      *
      * @return @c true iff target was reached from source
      */    
-    bool reached() const;
+    [[nodiscard]]
+    auto __cdecl reached() const -> bool;
 
     /**
      * @brief Returns the distance from source %node to target %node.
@@ -171,7 +177,8 @@ public:
      * @return distance if target is bid_dijkstra::reached, <code>-1.0</code>
      * else
      */
-    double distance() const;
+    [[nodiscard]]
+    auto __cdecl distance() const -> double;
 
     /**
      * @brief Returns an iterator to the beginning (to the source %node) of
@@ -184,7 +191,8 @@ public:
      * @note The method requires that path calculation option was
      * enabled during last run.
      */
-    shortest_path_node_iterator shortest_path_nodes_begin();
+    [[nodiscard]]
+    auto __cdecl shortest_path_nodes_begin() -> shortest_path_node_iterator;
 
     /**
      * @brief Returns an iterator one after the end (one after target
@@ -197,7 +205,8 @@ public:
      * @note The method requires that path calculation option was
      * enabled during last run.
      */
-    shortest_path_node_iterator shortest_path_nodes_end();
+    [[nodiscard]]
+    auto __cdecl shortest_path_nodes_end() -> shortest_path_node_iterator;
 
     /**
      * @brief Returns an iterator to the beginning %edge of the shortest
@@ -210,7 +219,8 @@ public:
      * @note The method requires that path calculation option was
      * enabled during last run.
      */
-    shortest_path_edge_iterator shortest_path_edges_begin();
+    [[nodiscard]]
+    auto __cdecl shortest_path_edges_begin() -> shortest_path_edge_iterator;
 
     /**
      * @brief Returns an iterator one after the end of a shortest %edge path
@@ -223,7 +233,8 @@ public:
      * @note The method requires that predecessor calculation option was
      * enabled during last run.
      */
-    shortest_path_edge_iterator shortest_path_edges_end();
+    [[nodiscard]]
+    auto __cdecl shortest_path_edges_end() -> shortest_path_edge_iterator;
 
     /**
      * @brief Resets Dijkstra's bidirectional algorithm.
@@ -235,7 +246,7 @@ public:
      *
      * @sa algorithm::reset
      */
-    virtual void reset();
+    virtual auto __cdecl reset() -> void;
 private:
     /**
      * @internal
@@ -359,13 +370,13 @@ private:
      * @internal
      * Prepares the %algorithm to be applied once again.
      */
-    void reset_algorithm();
+    auto __cdecl reset_algorithm() -> void;
     
     /**
      * @internal
      * Inits data structure.
      */
-    void init(graph& G);
+    auto __cdecl init(graph& G) -> void;
 
     /**
      * @internal
@@ -375,7 +386,7 @@ private:
      *
      * @param n first white node of the two directions
      */
-    void fill_node_edge_lists(const node& n);
+    auto __cdecl fill_node_edge_lists(const node& n) -> void;
 };
 
 __KGL_END_NAMESPACE

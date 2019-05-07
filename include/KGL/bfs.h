@@ -98,7 +98,8 @@ public:
      */
     virtual ~bfs ();
 
-    int run (graph& G);
+    [[nodiscard]]
+    auto __cdecl run (graph& G) -> int;
 
     /**
      * @brief Checks whether the preconditions for BFS are satisfied. 
@@ -109,9 +110,10 @@ public:
      * @retval algorithm::KGL_OK if %algorithm can be applied
      * @retval algorithm::KGL_ERROR otherwise.
      */
-    virtual int check (graph& G) { return KGL_OK; }
+    [[nodiscard]]
+    virtual auto __cdecl check (graph& G) -> int { return KGL_OK; }
 
-    virtual void reset ();
+    virtual auto __cdecl reset () -> void;
     
     //-----------------------------------------------------------------------
     //  Parameters
@@ -126,14 +128,15 @@ public:
      *
      * @param n start-%node.
      */
-    void start_node (const node& n) {start = n;}
+    auto __cdecl start_node (const node& n) -> void {start = n;}
 
     /**
      * @brief Returns start-%node for BFS.
      *
      * @return start-%node.
      */
-    node start_node () const {return start;}
+    [[nodiscard]]
+    auto __cdecl start_node () const -> node {return start;}
 
     /**
      * @brief Enables or disables scanning of the whole %graph. 
@@ -152,7 +155,8 @@ public:
      * @param set if true enable scanning the whole %graph.
      * @sa bfs::roots_begin, bfs::roots_end
      */
-    void scan_whole_graph (bool set) {whole_graph = set;}
+    
+    auto __cdecl scan_whole_graph (bool set) -> void {whole_graph = set;}
     
     /**
      * @brief Returns whether the whole graph will be scanned.
@@ -160,7 +164,8 @@ public:
      * @retval true iff the whole graph will be scanned.
      * @sa bfs::roots_begin, bfs::roots_end
      */
-    bool scan_whole_graph () const {return whole_graph;}
+    [[nodiscard]]
+    auto __cdecl scan_whole_graph () const -> void { return whole_graph;}
 
     /**
      * @brief Enables or disables the calculation of level-numbers for each 
@@ -172,7 +177,7 @@ public:
      * @param set if true level-number will be calculated.
      * @sa bfs::level
      */
-    void calc_level (bool set);
+    auto __cdecl calc_level (bool set) -> void;
     
     /**
      * @brief Returns whether level-numbers will be calculated.
@@ -180,7 +185,8 @@ public:
      * @retval true iff level-numbers will be calculated.
      * @sa bfs::level
      */
-    bool calc_level () const {return level_number != 0;}
+    [[nodiscard]]
+    auto __cdecl calc_level () const -> bool {return level_number != 0;}
 
     /**
      * @brief Enables or disables the storing of non-tree-edges. 
@@ -191,7 +197,7 @@ public:
      * @param set if true non-tree-edges will be stored.
      * @sa bfs::non_tree_edges_begin, bfs::non_tree_edges_end
      */
-    void store_non_tree_edges (bool set);
+    auto __cdecl store_non_tree_edges (bool set) -> void;
 
     /**
      * @brief Returns whether the storing of non-tree-edges is
@@ -200,7 +206,8 @@ public:
      * @retval true iff the storing of non-tree-edges is enabled.
      * @sa bfs::non_tree_edges_begin, bfs::non_tree_edges_end
      */
-    bool store_non_tree_edges () const {return non_tree != 0;}
+    [[nodiscard]]
+    auto __cdecl store_non_tree_edges () const -> bool {return non_tree != 0;}
 
 
     /**
@@ -212,7 +219,7 @@ public:
      * @param set if true predecessors will be stored.
      * @sa bfs::father
      */
-    void store_preds (bool set);
+    auto __cdecl store_preds (bool set) -> void;
 
     /**
      * @brief Returns whether the storing of predecessors is enabled.
@@ -220,7 +227,8 @@ public:
      * @retval true iff the storing of predecessors is enabled.
      * @sa bfs::father
      */
-    bool store_preds () const {return preds != 0;}
+    [[nodiscard]]
+    auto __cdecl store_preds () const -> bool {return preds != 0;}
 
     /**
      * @brief Checks whether %node @a n was reached in BFS.
@@ -228,7 +236,8 @@ public:
      * @param n %node.
      * @retval true iff @a n was reached.
      */
-    bool reached (const node& n) const
+    [[nodiscard]]
+    auto __cdecl reached (const node& n) const -> bool
 	{return bfs_number[n] != 0;}
 
     /**
@@ -240,7 +249,8 @@ public:
      * @param n %node.
      * @return BFS-number of @a n.
      */
-    int bfs_num (const node& n) const 
+    [[nodiscard]]
+    auto __cdecl bfs_num (const node& n) const -> int
 	{return bfs_number[n];}
 
     /**
@@ -252,7 +262,8 @@ public:
      * @param n %node.
      * @return BFS-number of @a n.
      */
-    int operator[] (const node& n) const 
+    [[nodiscard]]
+    auto __cdecl operator[] (const node& n) const -> int
 	{return bfs_number[n];}
 
     /**
@@ -265,7 +276,8 @@ public:
      * @return level-number of @a n.
      * @sa bfs::calc_level
      */
-    int level (const node& n) const
+    [[nodiscard]]
+    auto __cdecl level (const node& n) const -> int
 	{assert (level_number); return (*level_number)[n];}
 
     /**
@@ -281,7 +293,8 @@ public:
      * @return Father of @a n.
      * @sa bfs::store_preds
      */
-    node father (const node& n) const
+    [[nodiscard]]
+    auto __cdecl father (const node& n) const -> node
 	{assert (preds); return (*preds)[n];}
 
     /**
@@ -298,7 +311,8 @@ public:
      * 
      * @return Start for iteration through all tree-edges.
      */
-    tree_edges_iterator tree_edges_begin () const 
+    [[nodiscard]]
+    auto __cdecl tree_edges_begin () const -> tree_edges_iterator
 	{return tree.begin();}
 
     /**
@@ -307,7 +321,8 @@ public:
      *
      * @return End for iteration through all tree-edges.
      */
-    tree_edges_iterator tree_edges_end () const
+    [[nodiscard]]
+    auto __cdecl tree_edges_end () const -> tree_edges_iterator
 	{return tree.end();}
    
     /**
@@ -320,7 +335,8 @@ public:
      *
      * @return Start for iteration through all nodes in BFS-order.
      */
-    bfs_iterator begin () const 
+    [[nodiscard]]
+    auto __cdecl begin () const -> bfs_iterator
 	{return bfs_order.begin();}
 
     /**
@@ -329,7 +345,8 @@ public:
      *
      * @return End for iteration through all (reached) nodes
      */
-    bfs_iterator end () const 
+    [[nodiscard]]
+    auto __cdecl end () const -> bfs_iterator
 	{return bfs_order.end();}
 
     /**
@@ -343,7 +360,8 @@ public:
      * @return Start for iteration through all non-tree-edges.
      * @sa bfs::store_non_tree_edges
      */
-    non_tree_edges_iterator non_tree_edges_begin () const 
+    [[nodiscard]]
+    auto __cdecl non_tree_edges_begin () const -> non_tree_edges_iterator
 	{assert (non_tree);  return non_tree->begin(); }
 
     /**
@@ -353,7 +371,8 @@ public:
      * @return End for iteration through all non-tree-edges.
      * @sa bfs::store_non_tree_edges
      */
-    non_tree_edges_iterator non_tree_edges_end () const 
+    [[nodiscard]]
+    auto __cdecl non_tree_edges_end () const -> non_tree_edges_iterator
 	{assert (non_tree); return non_tree->end(); }
     
     /**
@@ -390,7 +409,8 @@ public:
      * @return Start for iteration through all roots in BFS-forest.
      * @sa bfs::scan_whole_graph
      */
-    roots_iterator roots_begin () const 
+    [[nodiscard]]
+    auto __cdecl roots_begin () const -> roots_iterator
 	{return roots.begin();}
 
     /**
@@ -399,7 +419,8 @@ public:
      * @return End for iteration through all roots in BFS-forest.
      * @sa bfs::scan_whole_graph
      */
-    roots_iterator roots_end () const 
+    [[nodiscard]]
+    auto __cdecl roots_end () const -> roots_iterator
 	{return roots.end();}
 
     /**
@@ -408,7 +429,8 @@ public:
      * @return Number of reached nodes.
      * @sa bfs::scan_whole_graph
      */
-    int number_of_reached_nodes () const
+    [[nodiscard]]
+    auto __cdecl number_of_reached_nodes () const -> int
 	{return reached_nodes;}
 
     //-----------------------------------------------------------------------
@@ -420,14 +442,14 @@ public:
      *
      * @param G %graph for which BFS was invoked.
      */
-    virtual void init_handler (graph& G) { };
+    virtual auto __cdecl init_handler (graph& G) -> void { };
 
     /**
      * @brief Called right before the end of BFS.
      *
      * @param G %graph for which BFS was invoked.
      */
-    virtual void end_handler (graph& G) { };
+    virtual auto __cdecl end_handler (graph& G) -> void { };
 
     /**
      * @brief Called after the %node @a n was taken out of the queue.
@@ -435,7 +457,7 @@ public:
      * @param G %graph for which BFS was invoked.
      * @param n %node taken out of the queue.
      */
-    virtual void popped_node_handler (graph& G, node& n) { };
+    virtual auto __cdecl popped_node_handler (graph& G, node& n) -> void { };
 
     /**
      * @brief Called when finished with the %node @a n.
@@ -446,7 +468,7 @@ public:
      * @param G %graph for which BFS was invoked.
      * @param n finished %node.
      */
-    virtual void finished_node_handler (graph& G, node& n) { };
+    virtual auto __cdecl finished_node_handler (graph& G, node& n) -> void { };
 
     /**
      * @brief Called when an unused %node @a n was discovered. 
@@ -458,7 +480,7 @@ public:
      * @param n unused %node.
      * @param f actual %node.
      */
-    virtual void unused_node_handler (graph& G, node& n, node& f) { };
+    virtual auto __cdecl unused_node_handler (graph& G, node& n, node& f) -> void { };
 
     /**
      * @brief Called when an used %node @a n was found. 
@@ -470,7 +492,7 @@ public:
      * @param n used %node.
      * @param f actual %node.
      */
-    virtual void used_node_handler (graph& G, node& n, node& f) { };
+    virtual auto __cdecl used_node_handler (graph& G, node& n, node& f) -> void { };
 
     /**
      * @brief Called when BFS is started with start-%node
@@ -483,11 +505,11 @@ public:
      * @param n start-%node.
      * @sa bfs::scan_whole_graph
      */
-    virtual void new_start_handler (graph& G, node& n) { };
+    virtual auto __cdecl new_start_handler (graph& G, node& n) -> void { };
 
 private:
 
-    void bfs_sub (graph&, const node&, edge_map<int>*);
+    auto __cdecl bfs_sub (graph&, const node&, edge_map<int>*) -> void;
 
 protected:
 

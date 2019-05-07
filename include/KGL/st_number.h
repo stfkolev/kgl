@@ -392,7 +392,7 @@ public:
      *
      * @sa algorithm::run
      */
-    int run(graph& G);
+    auto __cdecl run(graph& G) -> int;
 
 
     /**

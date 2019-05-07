@@ -78,7 +78,7 @@ public:
      * otherwise
      * @see algorithm#check
      */
-    virtual int check(graph& G);
+    virtual auto __cdecl check(graph& G) -> int;
 
     /**
      * Computes maximum flow of graph <code>G</code>.
@@ -88,7 +88,7 @@ public:
      * <code>algorithm::KGL_ERROR</code> otherwise 
      * @see algorithm#run
      */
-    int run(graph& G);
+    auto __cdecl run(graph& G) -> int;
 
     /**
      * Returns the maximum flow of an edge.
@@ -118,7 +118,7 @@ public:
      * algorithm to be applied to another graph. 
      * @see algorithm#reset
      */
-    virtual void reset();
+    virtual auto __cdecl reset() -> void;
 protected:
     /**
      * @internal

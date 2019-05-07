@@ -199,7 +199,7 @@ public:
      * @see fm_partition#set_vars
      * @see algorithm#check
      */
-    virtual int check(graph& G);
+    virtual auto __cdecl check(graph& G) -> int;
 
     /**
      * Computes a partitioning with <code>G</code>, that means a
@@ -211,7 +211,7 @@ public:
      * <code>algorithm::KGL_ERROR</code> otherwise
      * @see algorithm#run
      */
-    int run(graph& G);
+    auto __cdecl run(graph& G) -> int;
 
     /**
      * Gets the size of the cut after bi-partitioning.
@@ -337,7 +337,7 @@ public:
      *
      * @see algorithm#reset
      */
-    virtual void reset();
+    virtual auto __cdecl reset() -> void;
 protected:
     /**
      * @internal

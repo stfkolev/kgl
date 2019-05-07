@@ -57,14 +57,14 @@ public:
      * 
      * @return source
      */
-    node source() const;
+    auto __cdecl source() const -> node;
 
     /**
      * Returns the target node of the edge.
      * 
      * @return target
      */
-    node target() const;
+    auto __cdecl target() const -> node;
 
     /**
      * Changes the direction of this edge. 

@@ -123,7 +123,7 @@ public:
      * @sa dijkstra::weights
      * @sa algorithm::check
      */
-    virtual int check(graph& G);
+    virtual auto __cdecl check(graph& G) -> int;
 	    
     /**
      * @brief Runs shortest path %algorithm on @p G.
@@ -139,21 +139,21 @@ public:
      *
      * @sa algorithm::run
      */
-    int run(graph& G);
+    auto __cdecl run(graph& G) -> int;
 
     /**
      * @brief Returns source %node.
      *
      * @return source %node
      */
-    node source() const;
+    auto __cdecl source() const -> node;
 
     /**
      * @brief Returns target %node if set, <code>node::node()</code> else.
      *
      * @return target %node
      */
-    node target() const;
+    auto __cdecl target() const -> node;
 
     /**
      * @brief Returns whether the storing of predecessors is enabled.
@@ -294,7 +294,7 @@ public:
      *
      * @sa algorithm::reset
      */
-    virtual void reset();
+    virtual auto __cdecl reset() -> void;
 private:
     /**
      * @internal
